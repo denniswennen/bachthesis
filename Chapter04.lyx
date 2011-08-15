@@ -1,0 +1,176 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass classicthesis
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_numerical
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Methods & solutions
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Final chapter, references and appendices
+\end_layout
+
+\begin_layout Plain Layout
+Conclusions and suggestions for further work Your abstract should include
+ your conclusions in very brief form, because it must also include some
+ other material.
+ A summary of conclusions is usually longer than the final section of the
+ abstract, and you have the space to be more explicit and more careful with
+ qualifications.
+ You might find it helpful to put your conclusions in point form.
+ It is often the case with scientific investigations that more questions
+ than answers are produced.
+ Does your work suggest any interesting further avenues? Are there ways
+ in which your work could be improved by future workers? What are the practical
+ implications of your work?
+\end_layout
+
+\begin_layout Plain Layout
+This chapter should usually be reasonably short---a few pages perhaps.
+ As with the introduction, I think that it is a good idea to ask someone
+ who is not a specialist to read this section and to comment.
+\end_layout
+
+\begin_layout Plain Layout
+References (See also under literature review) It is tempting to omit the
+ titles of the articles cited, and the university allows this, but think
+ of all the times when you have seen a reference in a paper and gone to
+ look it up only to find that it was not helpful after all.
+ Should you reference web sites and, if so, how? If you cite a journal article
+ or book, the reader can go to a library and check that the cited document
+ and check whether or not it says what you say it did.
+ A web site may disappear, and it may have been updated or changed completely.
+ So references to the web are usually less satisfactory.
+ Nevertheless, there are some very useful and authoritative sources.
+ So, if the rules of your institution permit it, it may be appropriate to
+ cite web sites.
+ (Be cautious, and don't overuse such citations.
+ In particular, don't use a web citation where you could reasonably use
+ a "hard" citation.
+ Remember that your examiners are likely to be older and more conservative.)
+ You should give the URL and also the date you downloaded it.
+ If there is a date on the site itself (last updated on .....) you should included
+ that, too.
+\end_layout
+
+\begin_layout Plain Layout
+Appendices If there is material that should be in the thesis but which would
+ break up the flow or bore the reader unbearably, include it as an appendix.
+ Some things which are typically included in appendices are: important and
+ original computer programs, data files that are too large to be represented
+ simply in the results chapters, pictures or diagrams of results which are
+ not important enough to keep in the main text.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It going to be a short quick fast improving good road!
+\end_layout
+
+\begin_layout Section
+Time
+\end_layout
+
+\begin_layout Section
+Critical analysis of the results
+\end_layout
+
+\begin_layout Standard
+Some time has passed between the assignment and the actual implementation.
+ A lot of time.
+ Also the technologies have evolved, already some things are forseen as
+ implementation.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+Take a look at this 
+\family typewriter
+.lyx
+\family default
+ file in LyX for coding examples.
+ Make use of contextual menus (right click) and the properties dialogs for
+ the insets.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Future work
+\end_layout
+
+\begin_layout Standard
+What still has to be implemented, what could be improved, achieved..
+\end_layout
+
+\end_body
+\end_document

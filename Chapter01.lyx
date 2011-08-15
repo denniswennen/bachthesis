@@ -1,0 +1,459 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass classicthesis
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 0
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_numerical
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+Introduction
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+What is the topic and why is it important? State the problem(s) as simply
+ as you can.
+ Remember that you have been working on this project for a few years, so
+ you will be very close to it.
+ Try to step back mentally and take a broader view of the problem.
+ How does it fit into the broader world of your discipline? Especially in
+ the introduction, do not overestimate the reader's familiarity with your
+ topic.
+ You are writing for researchers in the general area, but not all of them
+ need be specialists in your particular topic.
+ It may help to imagine such a person---think of some researcher whom you
+ might have met at a conference for your subject, but who was working in
+ a different area.
+ S/he is intelligent, has the same general background, but knows little
+ of the literature or tricks that apply to your particular topic.
+\end_layout
+
+\begin_layout Plain Layout
+The introduction should be interesting.
+ If you bore the reader here, then you are unlikely to revive his/her interest
+ in the materials and methods section.
+ For the first paragraph or two, tradition permits prose that is less dry
+ than the scientific norm.
+ If want to wax lyrical about your topic, here is the place to do it.
+ Try to make the reader want to read the heavy bundle that has arrived uninvited
+ on his/her desk.
+ Go to the library and read several thesis introductions.
+ Did any make you want to read on? Which ones were boring?
+\end_layout
+
+\begin_layout Plain Layout
+This section might go through several drafts to make it read well and logically,
+ while keeping it short.
+ For this section, I think that it is a good idea to ask someone who is
+ not a specialist to read it and to comment.
+ Is it an adequate introduction? Is it easy to follow? There is an argument
+ for writing this section---or least making a major revision of it---towards
+ the end of the thesis writing.
+ Your introduction should tell where the thesis is going, and this may become
+ clearer during the writing.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Problem statement
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+as simple and clear as possible: understanded by the audience, problems,
+ preview, survey, area of study, I've looked to the following problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Javascript in Visualisation libraries
+\end_layout
+
+\begin_layout Standard
+It seems that there is not much support for JSON or input of data for visualisat
+ion libraries.
+ Google has a good way for inserting data in their charts, trough Google
+ Docs, wich works fine with Google Chart.
+ But like we are used to, it protects it's market by recommending their
+ own apps.
+ So the possibilities for example are to use a Google document, to which
+ a chart can be coupled, so the spreadsheet is used as database.
+ Another option is to load a JSON object.
+ This is more complicated.
+ In fact it a more simple thing because the a json object can be very handy
+ and easily managed.
+ It has many advantages, which I explain in an other section about JSON
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+reffer to other section/ write more in detail about json
+\end_layout
+
+\end_inset
+
+On one hand it seems to be easy to insert the JSON data for using with Google
+ chart.
+ But that's the trick; the data needs to be in a specific format to be supported.
+ Otherwise it won't work.
+ So eventually you allready have to know the exact data structure from the
+ beginning to use it.
+ But can your source work with it or is a conversion necessary.
+ Here my library forms a coupling between the data.
+ The original data can be any JSON object and the library will convert it
+ into the right JSON object which can be used for the visualisation.
+ 
+\end_layout
+
+\begin_layout Standard
+Sometimes users want just more than visualising their data.
+ Or not all the data inserted is necessary or comparision of data is wanted.
+ The user wants for example select a subset of the data or compare different
+ 'versions' of data.
+ In the library this functionality is forseen; it is possible to select
+ the source data, make subsets of data and compare different data with each
+ other.
+ By this I mean for example data from two different times, which then can
+ be compared to highlight differences or similarities.
+\end_layout
+
+\begin_layout Standard
+The access to data in Javascript.Visualisations need a lot of data.
+ But how can we transfer this data in an easy way into Javascript without
+ doing it manually.
+\end_layout
+
+\begin_layout Section
+Why is it important
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+area of study
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is about data and the flow of data.
+ It's also about usability.
+ Some kind of layer in between to technologies.
+ I need to connect the dots.
+ In Javascripting you can write libraries.
+ What can you do with JavaScript? It a language for scripting and developing
+ web applications.
+ So users can write code and perform tasks more easily or have tasks automated.
+ One type of libraries are visualisation libraries, by which the user can
+ create charts, plots, geomaps and all others kinds of interesting visualisation
+s.
+ Visualisation is a widely and quite vage description.
+ I shall explain it some more in detail.
+ Mostly it is used when users have some kind of data that they want to represent
+ in a different way.
+ An important thing in developing applications is that data and visualisation
+ should be two different things and also be handled with seperatly.
+ It's not a good solution to bind a certain type of visualisation to the
+ data.
+ If you then want to have another view, another font or color for example,
+ it's hard to change it.
+ When you seperate things, the display of the information can be modified
+ and choosen freely.
+\end_layout
+
+\begin_layout Standard
+So in the first part you have the data, which can contain any type of data:
+ text, numbers, relationships, etc..
+ The size of the data also matters for the processing quality and speed.
+ Large amounts of data are more difficult to handle and take more time,
+ which can decrease a good user experience, for example if one has to wait
+ to long for results.
+ If the visualisation is added up with that, the time increases even more.
+ That's a part why performance is important, the performance of the code.
+ This means performance of several parts: querying data, updating data,
+ creating new data structures and data views.
+ This last part is in general what a visualisation library in Javascript
+ is doing; it takes a set of data and creates a 'view' on this data in the
+ form of a table, a chart or something else.
+\end_layout
+
+\begin_layout Standard
+Let me now explain where the difficult part comes in this problem: where
+ do we get the data? Mostly data is stored in databases of all sorts, online
+ or offline.
+ The data can be already provided in some sort of form or it can be necessary
+ that the data still needs to be accquired.
+ So you have two parts in the origin of the data: one, the creation of data
+ and two, the handling/usage of the data.
+\end_layout
+
+\begin_layout Standard
+The source for your data can be retrieved for example from the internet.
+ That's were Yahoo Pipes comes in.
+ It's a very handy tool to get data from the internet in all forms; web
+ content, rss feed items, geolocations, csv-files.
+ It is clear that the possibilities are endless, all kinds of data can be
+ retrieved from the web.
+ In first instance, Yahoo Pipes seems to be used for aggregating or manipulating
+ RSS feeds.
+ One could think of mainly text and news feeds, but it can reach further
+ than that.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Write some more here about RSS, what it is used for.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+CSV files with financial data, a lot of numbers etc..or even XML files containing
+ a structured way of data with several caracteristics, maplocations, gps-coordin
+ates..There are no limits on the data you can provide.
+ This is a very interesting thing, but which makes everything also a lot
+ more complex.
+ So the input should be handled with care and parsed correctly.
+ Yahoo Pipes provides a lot of good things for this.
+ It has some nice functionality to handle the data correctly.
+ The user than can design it's own mashup or output what they want to do
+ with it.
+ For example different views, filters etc can be applied on the data.
+ It a little like a database where the user can query things etc..Yahoo Pipes
+ is a data processor for the web.
+\end_layout
+
+\begin_layout Standard
+So here's step two.
+ Now that we have collected the data, what can we do with it? Like a already
+ previously mentioned, Yahoo Pipes can manipulate and filter the data, even
+ based on user inputs.
+ So you can either just collect data in a central place of go a step further
+ by manipulating.
+\end_layout
+
+\begin_layout Subsection*
+Freewriting on introduction
+\end_layout
+
+\begin_layout Standard
+Here I want to talk about my project.
+ I can call it my project, in the meaning that it has become part of myself.
+ I procrastinated on it for a long time.
+ It took me 3 years in fact to complete it.
+ Not that I worked for 3 years.
+ Most of the time has been gone doing nothing, changing subject, circumstances
+ that I thought were not good.
+ But it was only until recently that I got started.
+ they say better late than never.
+ And that is what my mission was.
+ This thesis, called 'bachelorproef' is more than just a test for getting
+ my bachelor degree in Computer Science.
+ On this moment in time it was the greatest challenge that ever came across
+ my path.
+ Why it took me so long? I don't know.
+ The most lessons are learned the hard way.
+ During the time this work had a large mental weight on myself.
+ Was I not good enough to complete it, would I ever complete it? My self-esteem
+ and capabilities were very low I said myself for a long time.
+ Until recently i noticed that change was necessary.
+ I had to complete this work.
+ Maybe it's some test of life for me, to see if I am capable of completing
+ things.
+ Things that in the first place I thought were easy and would work out quite
+ easy.
+ But it was different, a lot different.
+ Things that are worth having, don't come easy.
+ And I wanted my bachelor degree, so I needed to complete this final task.
+ And that's how this thesis came to life.
+\end_layout
+
+\begin_layout Standard
+First I had an other subject for my thesis: RFID, which means 'Radio Frequency
+ Identification Protocol'.
+ I did some research on the topic.
+ I searched the internet and the University library for information, a lot
+ of information.
+ A lot of articles I found on the topic.
+ I did some reading and searching for solutions, but never came very far.
+ After that I got the message that my supportor for this thesis quit working
+ at EDM, the research center.
+ So I was a little left behind, also my fault.
+ What I'm talking about now dates from the year after the initial assignment.
+ I made a lot of excuses and procrastinated a lot, in the end leading to
+ no result.
+ And a lot of mental pain.
+ It was heavy, everytime I realised the thesis was waiting for me to get
+ my hands on.
+ But the time never came.
+ Or I neglected the work, or I said it would all be fine in the end, or
+ I did some little work and gave up, or I didn't do anything and said to
+ myself that I was not capable, finally there were no results.
+\end_layout
+
+\begin_layout Standard
+Until recently, which is about 2 months ago when I came to the realisation
+ that I was wasting all the work I did before to get here.
+ I am in my tirth year of study and more than 5 years of higher education,
+ depending on one assignment.
+ I have to complete this.
+ A degree is so important in life.
+ They say sometimes it's not everything, sometimes that it is everything.
+ I not really have figured that out yet, what it means for me.
+ I think time will tell what the impact is.
+ But for now it matters that I get these things done and close a chapter
+ of my life.
+ A chapter that has been way to long and now is necessary to finish.
+\end_layout
+
+\begin_layout Standard
+So I got to work, more work than ever.
+ I have the general habit of thinking a lot and by that I mean really a
+ lot.
+ Sometimes just too much.
+ Than my thinking starts to work against me.
+ But I'm working on it to keep things right and in control.
+\end_layout
+
+\begin_layout Standard
+That brings my in the present, where I tackeled the problem.
+ I rather like the word 'challenge', looked at the circumstances and also
+ my state of mind.
+ Problems are negative.
+ Challenges sound possible and achieveable.
+ And that's were the assignement came in: 
+\begin_inset Quotes eld
+\end_inset
+
+Hacking and Mashing with Yahoo Pipes: Onto a new way of visualizing data.
+\begin_inset Quotes erd
+\end_inset
+
+ And so my first draft is a written fact.
+\end_layout
+
+\begin_layout Section
+Fit into the broader world of computer science
+\end_layout
+
+\begin_layout Section
+Organization
+\end_layout
+
+\begin_layout Standard
+A lot of reading and research.
+ As a story troughout the text.
+ From previous work untill the conclusion.
+\end_layout
+
+\begin_layout Section
+Structure
+\end_layout
+
+\begin_layout Standard
+Based on an thesis template.
+ And also looked to other thesisses and bachelortests.
+\end_layout
+
+\begin_layout Section
+Customization
+\end_layout
+
+\begin_layout Section
+Issues
+\end_layout
+
+\begin_layout Standard
+Writing text is not easy.
+ Handling with several problems about implementation.
+ Making choises.
+ Generalization/details.
+\end_layout
+
+\begin_layout Section
+Future Work
+\end_layout
+
+\begin_layout Standard
+Adding more functionality to the library.
+\end_layout
+
+\begin_layout Section
+Beyond a thesis
+\end_layout
+
+\begin_layout Section
+License/copyright
+\end_layout
+
+\end_body
+\end_document

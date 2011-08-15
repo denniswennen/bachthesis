@@ -1,0 +1,617 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass classicthesis
+\use_default_options true
+\maintain_unincluded_children false
+\language american
+\language_package default
+\inputencoding default
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine natbib_numerical
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Chapter
+My Research - Description of problems and open questions, How do I tackle
+ this problem 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Middle chapters
+\end_layout
+
+\begin_layout Plain Layout
+In some theses, the middle chapters are the journal articles of which the
+ student was major author.
+ There are several disadvantages to this format.
+ One is that a thesis is both allowed and expected to have more detail than
+ a journal article.
+ For journal articles, one usually has to reduce the number of figures.
+ In many cases, all of the interesting and relevant data can go in the thesis,
+ and not just those which appeared in the journal.
+ The degree of experimental detail is usually greater in a thesis.
+ Relatively often a researcher requests a thesis in order to obtain more
+ detail about how a study was performed.
+\end_layout
+
+\begin_layout Plain Layout
+Another disadvantage is that your journal articles may have some common
+ material in the introduction and the "Materials and Methods" sections.
+\end_layout
+
+\begin_layout Plain Layout
+The exact structure in the middle chapters will vary among theses.
+ In some theses, it is necessary to establish some theory, to describe the
+ experimental techniques, then to report what was done on several different
+ problems or different stages of the problem, and then finally to present
+ a model or a new theory based on the new work.
+ For such a thesis, the chapter headings might be: Theory, Materials and
+ Methods, {first problem}, {second problem}, {third problem}, {proposed
+ theory/model} and then the conclusion chapter.
+ For other theses, it might be appropriate to discuss different techniques
+ in different chapters, rather than to have a single Materials and Methods
+ chapter.
+\end_layout
+
+\begin_layout Plain Layout
+Here follow some comments on the elements Materials and Methods, Theory,
+ Results and discussion which may or may not correspond to thesis chapters.
+\end_layout
+
+\begin_layout Plain Layout
+Materials and Methods 
+\end_layout
+
+\begin_layout Plain Layout
+This varies enormously from thesis to thesis, and may be absent in theoretical
+ theses.
+ It should be possible for a competent researcher to reproduce exactly what
+ you have done by following your description.
+ There is a good chance that this test will be applied: sometime after you
+ have left, another researcher will want to do a similar experiment either
+ with your gear, or on a new set-up in a foreign country.
+ Please write for the benefit of that researcher.
+ In some theses, particularly multi-disciplinary or developmental ones,
+ there may be more than one such chapter.
+ In this case, the different disciplines should be indicated in the chapter
+ titles.
+\end_layout
+
+\begin_layout Plain Layout
+Theory 
+\end_layout
+
+\begin_layout Plain Layout
+When you are reporting theoretical work that is not original, you will usually
+ need to include sufficient material to allow the reader to understand the
+ arguments used and their physical bases.
+ Sometimes you will be able to present the theory ab initio, but you should
+ not reproduce two pages of algebra that the reader could find in a standard
+ text.
+ Do not include theory that you are not going to relate to the work you
+ have done.
+ When writing this section, concentrate at least as much on the physical
+ arguments as on the equations.
+ What do the equations mean? What are the important cases?
+\end_layout
+
+\begin_layout Plain Layout
+When you are reporting your own theoretical work, you must include rather
+ more detail, but you should consider moving lengthy derivations to appendices.
+ Think too about the order and style of presentation: the order in which
+ you did the work may not be the clearest presentation.
+\end_layout
+
+\begin_layout Plain Layout
+Suspense is not necessary in reporting science: you should tell the reader
+ where you are going before you start.
+\end_layout
+
+\begin_layout Plain Layout
+Results and discussion 
+\end_layout
+
+\begin_layout Plain Layout
+The results and discussion are very often combined in theses.
+ This is sensible because of the length of a thesis: you may have several
+ chapters of results and, if you wait till they are all presented before
+ you begin discussion, the reader may have difficulty remembering what you
+ are talking about.
+ The division of Results and Discussion material into chapters is usually
+ best done according to subject matter.
+ Make sure that you have described the conditions which obtained for each
+ set of results.
+ What was held constant? What were the other relevant parameters? Make sure
+ too that you have used appropriate statistical analyses.
+ Where applicable, show measurement errors and standard errors on the graphs.
+ Use appropriate statistical tests.
+\end_layout
+
+\begin_layout Plain Layout
+Take care plotting graphs.
+ The origin and intercepts are often important so, unless the ranges of
+ your data make it impractical, the zeros of one or both scales should usually
+ appear on the graph.
+ You should show error bars on the data, unless the errors are very small.
+ For single measurements, the bars should be your best estimate of the experimen
+tal errors in each coordinate.
+ For multiple measurements these should include the standard error in the
+ data.
+ The errors in different data are often different, so, where this is the
+ case, regressions and fits should be weighted (i.e.
+ they should minimize the sum of squares of the differences weighted inversely
+ as the size of the errors.) (A common failing in many simple software packages
+ that draw graphs and do regressions is that they do not treat errors adequately.
+ UNSW student Mike Johnston has written a plotting routine[24] that plots
+ data with error bars and performs weighted least square regressions.
+ It is at http://www.phys.unsw.edu.au/3rdyearlab/graphing/graph.html).
+ You can just 'paste' your data into the input and it generates a .ps file
+ of the graph.
+\end_layout
+
+\begin_layout Plain Layout
+In most cases, your results need discussion.
+ What do they mean? How do they fit into the existing body of knowledge?
+ Are they consistent with current theories? Do they give new insights? Do
+ they suggest new theories or mechanisms?
+\end_layout
+
+\begin_layout Plain Layout
+Try to distance yourself from your usual perspective and look at your work.
+ Do not just ask yourself what it means in terms of the orthodoxy of your
+ own research group, but also how other people in the field might see it.
+ Does it have any implications that do not relate to the questions that
+ you set out to answer?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A lot of searching and analysing the problem.
+ I spend a lot of time trying to figure out what exactly the problem is
+ and how to define it.
+ Also in this view, where I can bring the most value.
+ What are the difficult parts, which ones are already investigated or need
+ some more attention.
+ It's not just one item to research, but a complex situation.
+ This can have several views and approached, each aimed at specific targets.
+\end_layout
+
+\begin_layout Standard
+Here in this section I provide more detail on my approach.
+ There is a difference between the theory and the implementation.
+ The first is a general synthesis, an idea or a problem which requires some
+ thinking work to come up with a solution.
+ The second part is, as it were, a more lined selection of the problem which
+ than can be tackeld.
+\end_layout
+
+\begin_layout Standard
+Description of problems and open questions, How do I tackle this problem
+ Middle chapters A lot of searching and analysing the problem.
+ I spend a lot of time trying to figure out what exactly the problem is
+ and how to define it.
+ Also in this view, Where I can bring the most value? What are the difficult
+ parts? Which ones are already investigated or need some more attention?
+ It seems that there is already done a lot of investigation about cross
+ domain exchange of data.
+ On the web JavaScript is a commonly used scripting language.
+ My vision of the technology was not the right one it seems.
+ And also for a lot of people Javascript is equal to annoying popups, malicious
+ script and some fancy stuff that is not quite necessary.
+ But it's more than that.
+ There is a wide variety of libraries available for the language, of which
+ the most popular are JQuery, Dojo and Prototype.
+ These provide an extra layer above the scripting language.
+\end_layout
+
+\begin_layout Subsection*
+MASHUP
+\end_layout
+
+\begin_layout Standard
+In Web development, a mashup is a Web page or application that uses and
+ combines data, presentation or functionality from two or more sources to
+ create new services.
+ The term implies easy, fast integration, frequently using open APIs and
+ data sources to produce enriched results that were not necessarily the
+ original reason for producing the raw source data.
+ The main characteristics of the mashup are combination, visualization,
+ and aggregation.
+ It is important to make existing data more useful, moreover for personal
+ and professional use.
+ To be able to permanently access the data of other services, mashups are
+ generally client applications or hosted online.
+ Since 2010, two major mashup vendors have added support for hosted deployment
+ based on Cloud computing solutions; that are Internet-based computing,
+ whereby shared resources, software, and information are provided to computers
+ and other devices on demand, like the electricity grid.
+ In the past years, more and more Web applications have published APIs that
+ enable software developers to easily integrate data and functions instead
+ of building them by themselves.
+ Mashups can be considered to have an active role in the evolution of social
+ software and Web 2.0.
+ Mashup composition tools are usually simple enough to be used by end-users.
+ They generally do not require programming skills and rather support visual
+ wiring of GUI widgets, services and components together.
+ Therefore, these tools contribute to a new vision of the Web, where users
+ are able to contribute.
+ Yahoo Pipes is a fairly easy application for aggreating data, with a visual
+ User Interface.
+ Users can easily via drag and drop create the pipe they want.
+ Documentation with examples are provided, so the use is learned easily.
+ There is also a community with a forum to post questions and pipes created
+ by other can be browsed and forked onto your own creations.
+ That way work done by others don't have to be done again.
+ The knowledge can be used to create even more complex and utilary pipes.
+ The possibilities are endless.
+ The complete experience of the service can be used easily by the end users,
+ which enables a lot of creativity in collecting and creating content.
+ There is a lot of power in Yahoo Pipes.
+ Different pieces from the web can be used to create the content you need
+ or like.
+ In my library, this line of simplicity is continued.
+ The library provides additionaly functionality by going on step further:
+ making the data more easily accessable for visualisation.
+ In JavaScript, there are written a lot of libraries to visualise data in
+ all kinds of ways.
+ But there is one mayor drawback and that is the access to the data itself.
+ The libraries that make use of JavaScript, have limited or lined functionality
+ in terms of data access.
+ For example in Google Chart, data can be inserted via a spreadsheet.
+ This spreadsheet must be accessed by Google Docs.
+ The JSON data format in visualisation libraries.
+ One of the most important functions in visualisation libraries is the access
+ to the data.
+ For small projects the libraries have functionality to manually add the
+ data.
+ For that you have to know a (minimum) of knowledge in programming languages.
+ When the amount of data gets larger, this way of working becomes inefficiënt
+ and a long work.
+ That's why another method of data provision is supported: the JSON format.
+ As explained previously, it is a very simple open format to exchange data.
+ This way a lot more data can be easily queries and a lot more easilier.
+ No more manual adding.
+ The data is provided in a structured way.
+ But here it is where there arises another problem: which format does the
+ data has to be? It seems that this is not such a simple question.
+ Altough many libraries provide JSON support, it has to be in the right
+ format.
+ Otherwise the library can't handle the data.
+ Also different libraries have different standard or ways of working with
+ the data input.
+ There is no general abstraction of using the JSON structured data.
+ It seems to be the good choice on one hand, it's not really possible to
+ define a standard, that will do no right to the easy use of JSON.
+ On the other hand, it makes the implementation more difficult.
+ The provided data can have any structure, properties or different types
+ of data like strings, numbers for example.
+ There is no easy use of the data.
+ And that's when the functionality of my library comes in.
+ It provides an abstraction layer between Yahoo Pipes and JavaScript visualisati
+on libraries.
+ It's even more than that, it provides easy handling of JSON data.
+ For Yahoo Pipes, the most commonly and best practice of the data is by
+ exporting it by JSON.
+ You can use other formats but it will only get more complicated.
+ JSON does the job well.
+ Valve loads in the JSON data et voila.
+ Ready to go.
+ From here on you can get a clear view on the data itself, in JSON format.
+ JSON is in fact just a text string that is not realy human readable.
+ So it would be good to have something that makes it more readable without
+ losing the overal view over the data.
+ A decent JSON viewer can come in handy to have a good view on the used
+ input data.
+ This way characteristics of the data, types, faults, stats can be easily
+ viewed without any hassle.
+ Then it's up to part 2: visualising the data.
+ Here it get's tricky.
+ How does the user want to see it's input data and what does he wants to
+ do with it? At this moment visualisation libraries provided endless possibiliti
+es and beautiful examples of what you can do with data.
+ The visualisations are appealing.
+ One and the most important use is to get a better view what's happening.
+ By visualising, the data can be analysed and investigated to gain new insights.
+ Another advantage is to have the data compared with an other version of
+ the data.
+ This way differences or similarities in time can be spotted.
+ Another topic is filtering.
+ It's possible that the user has collected the data from different sources,
+ and that the data contains a lot of overhead which is not necessary.
+ This way it should be possible for the library to provide filtering.
+ There are 2 possibilities: The first one is filtering the view of the data.
+ By that I mean that the original data is used and not modified, but when
+ for example only certain parts or attributes of the data want to be used.
+ If the original data has a lot of attributes and only a few are necessary,
+ these are visualised and the other attributes are filtered out.
+ Another possibilty is that the user wants a subset of the data; like say
+ the first 300 items instead of everything.
+ Or only the items that belongs to a specific category.
+ An interesting fact is that the data can be filtered by using the data
+ itself.
+ For example defining maximums and miminums, using the bounds of the provided
+ data or division into categories using an attribute of the original data.
+ Sorting of the data is another function: sorting by data, category or time.
+\end_layout
+
+\begin_layout Subsection*
+SAME ORIGIN POLICY
+\end_layout
+
+\begin_layout Standard
+In computing, the same origin policy is an important security concept for
+ a number of browser-side programming languages, such as JavaScript.
+ The policy permits scripts running on pages originating from the same site
+ to access each other's methods and properties with no specific restrictions,
+ but prevents access to most methods and properties across pages on different
+ sites.(Wikipedia) YAHOO PIPES is a web application from Yahoo! that provides
+ a graphical user interface for building data mashups that aggregate web
+ feeds, web pages, and other services, creating Web-based apps from various
+ sources, and publishing those apps.
+ The application works by enabling users to "pipe" information from different
+ sources and then set up rules for how that content should be modified (for
+ example, filtering).
+ A typical example is New York Times through Flickr,[1] a pipe which takes
+ The New York Times RSS feed and adds a photo from Flickr based on the keywords
+ of each item.
+ Other than the pipe edition page, the website has a documentation page
+ and a discussion page.
+ Documentation page contains information about pipes, a user guide on pipe
+ edition and a troubleshooting guide.
+ The discussion page enables users to discuss the pipes with other users.
+ The site is currently in beta.
+ JSON IN PIPES: Previously in the first versions of Yahoo Pipes, there was
+ only some limited support for data output and JSON was not available.
+ The adding of this feature was mainly the push for making this thesis.
+ In addition that there are more possibilities in the future.
+ Not only Yahoo Pipes celebrates the adding of JSON, but other applications
+ will soon follow.
+ It is what is called mashing up the web: What is a scripting language and
+ in particular Javascript? ..add here some information about javascript
+\end_layout
+
+\begin_layout Standard
+What can you do with it? Why use it? Advantages/disadvantages? - Run locally,
+ so server included - Adds functionality and also better user interaction.
+ It's not just one item to research, but a complex situation.
+ This can have several views and approached, each aimed at specific targets.
+ Here in this section I provide more detail on my approach.
+ There is a difference between the theory and the implementation.
+ The first is a general synthesis, an idea or a problem which requires some
+ thinking work to come up with a solution.
+ The second part is, as it were, a more lined selection of the problem which
+ than can be tackeld.
+\end_layout
+
+\begin_layout Section
+Philosophy of approach
+\end_layout
+
+\begin_layout Section
+Plan of attack
+\end_layout
+
+\begin_layout Section
+Data handling & JavaScript integration
+\end_layout
+
+\begin_layout Standard
+Information about the skills and knowledge I needed to attain to develop
+ the following research.
+\end_layout
+
+\begin_layout Subsection*
+General JavaScript
+\end_layout
+
+\begin_layout Standard
+Refreshing my skills about the JavaScript language.
+ I had a course about it in the curriculum about 2 years ago.
+ It was a basic course.
+ Now and than I used some Javascript for the design of a few personal webpages.
+\end_layout
+
+\begin_layout Standard
+I also followed a lot of tutorials online.
+ I did a few at NetTuts about more advanced topics.
+ Also some general subjects to improve my view.
+ 
+\end_layout
+
+\begin_layout Subsection*
+JSON
+\end_layout
+
+\begin_layout Standard
+JSON (JavaScript Object Notation) is a lightweight data-interchange format.
+ It is easy for humans to read and write.
+ It is easy for machines to parse and generate.
+ It is based on a subset of the JavaScript Programming Language, Standard
+ ECMA-262 3rd Edition - December 1999.
+ JSON is a text format that is completely language independent but uses
+ conventions that are familiar to programmers of the C-family of languages,
+ including C, C++, C#, Java, JavaScript, Perl, Python, and many others.
+ These properties make JSON an ideal data-interchange language.
+ 
+\begin_inset CommandInset citation
+LatexCommand citeyear
+key "web_json"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+JSON is built on two structures:
+\end_layout
+
+\begin_layout Enumerate
+A collection of name/value pairs.
+ In various languages, this is realized as an object, record, struct, dictionary
+, hash table, keyed list, or associative array.
+ An ordered list of values.
+ In most languages, this is realized as an array, vector, list, or sequence.
+\end_layout
+
+\begin_layout Enumerate
+These are universal data structures.
+ Virtually all modern programming languages support them in one form or
+ another.
+ It makes sense that a data format that is interchangeable with programming
+ languages also be based on these structures.
+\end_layout
+
+\begin_layout Subsection*
+JQuery
+\end_layout
+
+\begin_layout Subsection*
+Yahoo Pipes
+\end_layout
+
+\begin_layout Subsection*
+Data flow
+\end_layout
+
+\begin_layout Standard
+About cross domain scripting.
+ JavaScript locally or get information from remote server.
+\end_layout
+
+\begin_layout Section
+Visualization
+\end_layout
+
+\begin_layout Subsection
+General visualisation techniques
+\end_layout
+
+\begin_layout Standard
+Information graphics or infographics are graphic visual representations
+ of information, data or knowledge.
+ These graphics present complex information quickly and clearly, such as
+ in signs, maps, journalism, technical writing, and education.
+ With an information graphic, computer scientists, mathematicians, and statistic
+ians develop and communicate concepts using a single symbol to process informati
+on.
+\end_layout
+
+\begin_layout Subsection
+Javascript Visualization libraries
+\end_layout
+
+\begin_layout Subsection*
+Google Chart
+\end_layout
+
+\begin_layout Subsection*
+d3.js
+\end_layout
+
+\begin_layout Standard
+Exploration of mainly Google Chart API and D3.js library.
+ In fact D3 it is the succession of the formerly Protovis library.
+ As the author suggest, the development of Protovis is not active any more.
+ It's true, D3 as the successor has a lot of improvements compared to Protovis.
+ 
+\end_layout
+
+\begin_layout Subsection*
+Processing
+\end_layout
+
+\begin_layout Subsection*
+Other
+\end_layout
+
+\begin_layout Section
+Security
+\end_layout
+
+\begin_layout Section
+Storage of Data
+\end_layout
+
+\begin_layout Section
+Making decisions
+\end_layout
+
+\begin_layout Standard
+About the functionality.
+ Where can I bring the most value.
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "ch:mathtest"
+
+\end_inset
+
+Ei choro aeterno antiopam mea, labitur bonorum pri no.
+ His no decore nemore graecis.
+ In eos meis nominavi, liber soluta vim cu.
+ Sea commune suavitate interpretaris eu, vix eu libris efficiantur.
+\end_layout
+
+\begin_layout Section
+Usability
+\end_layout
+
+\end_body
+\end_document
