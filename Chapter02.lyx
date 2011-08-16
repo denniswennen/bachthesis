@@ -115,13 +115,42 @@ Origin of the problem
 Where did the problem come from? Other methods to try to solve the problem
 \end_layout
 
-\begin_layout Section
-Description of the (previous) work
+\begin_layout Standard
+There are a lot of visualisation libraries available in JavaScript.
+ But it seems that there is not that much effort spended in supporting easy
+ access to data.
+ Mostly it is necessary to add the data manually or hard coded.
+ When there is better support, it is not always abstract or generaly usable.
+ For example the Google Chart API supports Google Docs as data source.
+ This is a great improvement, altough the data can only be used by the Google
+ visualisation library.
+ 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Section
+Description of the previous work
+\end_layout
+
+\begin_layout Itemize
+Since the origin of the research assignment in 2009, there was a serious
+ lack in support for external data.
+ Everything needed to be done by hand.
+ By now already some libraries have involved, like Google Chart.
+ Also the libarry 'd3.js' is the succesor of another library; Protovis.
+ It has now better functionality and it going to a more web 2.0 support.
+\end_layout
+
+\begin_layout Itemize
 Something can be said about JSON, what the technology has change in the
  field of data communication.
+ A general data format, which is language independent.
+\end_layout
+
+\begin_layout Itemize
+The use and the evolvement of Yahoo Pipes, which gave more widespread access
+ to data.
+ It transformed the web by making in fact every element on the web accessable
+ to use as data.
 \end_layout
 
 \begin_layout Standard
@@ -133,10 +162,11 @@ Maybe here should be titled work that was not mine, but in the same domain.
 \end_layout
 
 \begin_layout Section
-Review of previous work
-\end_layout
+Review of the previous work 
+\begin_inset Note Note
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Some sort of conclusion, what I think about the previous work done.
  How relevant do they have to be before you include them? Well, that is
  a matter of judgement.
@@ -145,8 +175,34 @@ Some sort of conclusion, what I think about the previous work done.
  demonstrate this.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Why do I have included some previous work or not.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In the meantime, troughout the years there have been some improvements.
+ But there is still some work to do.
+ In general, the libraries themself have evolved to create more beautiful
+ visualisation.
+ But still in the core essence; the availibility of the data so it can be
+ used easily, is still far away.
+ There is better support, thanks to JSON which gets supported more and more
+ by libraries.
+ But the problem is not yet abstract enough.
+ Yahoo Pipes creates a good abstraction layer by making the data available
+ in a uniform format; JSON.
+ But it has to be taken one step further.
+ A better integration into JavaScript is necessary, a more general data
+ format which can be used by not just one visualisation library.
+ When the data is handled in a general way, as a javascript object, it can
+ be integrated more easily into other visualisation libraries.
+ This way the choice of the visualisation libary is free and data can be
+ handled easily 
 \end_layout
 
 \end_body

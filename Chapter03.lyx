@@ -246,8 +246,43 @@ Description of problems and open questions, How do I tackle this problem
  and how to define it.
  Also in this view, Where I can bring the most value? What are the difficult
  parts? Which ones are already investigated or need some more attention?
- It seems that there is already done a lot of investigation about cross
- domain exchange of data.
+ 
+\end_layout
+
+\begin_layout Section
+Philosophy of approach/ plan of attack
+\end_layout
+
+\begin_layout Subsection*
+A gain in knowledge
+\end_layout
+
+\begin_layout Standard
+Information about the skills and knowledge I needed to attain to develop
+ the following research.
+\end_layout
+
+\begin_layout Subsubsection*
+General JavaScript
+\end_layout
+
+\begin_layout Standard
+Refreshing my skills about the JavaScript language.
+ I had a course about it in the curriculum about 2 years ago.
+ It was a basic course.
+ Now and than I used some Javascript for the design of a few personal webpages.
+\end_layout
+
+\begin_layout Standard
+I also followed a lot of tutorials online.
+ I did a few at NetTuts about more advanced topics.
+ Also some general subjects to improve my view.
+ 
+\end_layout
+
+\begin_layout Standard
+It seems that there is already done a lot of investigation about cross domain
+ exchange of data.
  On the web JavaScript is a commonly used scripting language.
  My vision of the technology was not the right one it seems.
  And also for a lot of people Javascript is equal to annoying popups, malicious
@@ -258,8 +293,24 @@ Description of problems and open questions, How do I tackle this problem
  These provide an extra layer above the scripting language.
 \end_layout
 
+\begin_layout Subsubsection*
+JQuery additions
+\end_layout
+
+\begin_layout Standard
+Something about libraries, JQuery?
+\end_layout
+
 \begin_layout Subsection*
-MASHUP
+Incremental and constantly adjusting
+\end_layout
+
+\begin_layout Section
+About data
+\end_layout
+
+\begin_layout Subsection*
+Mashing up
 \end_layout
 
 \begin_layout Standard
@@ -275,7 +326,11 @@ In Web development, a mashup is a Web page or application that uses and
  and professional use.
  To be able to permanently access the data of other services, mashups are
  generally client applications or hosted online.
- Since 2010, two major mashup vendors have added support for hosted deployment
+ 
+\end_layout
+
+\begin_layout Standard
+Since 2010, two major mashup vendors have added support for hosted deployment
  based on Cloud computing solutions; that are Internet-based computing,
  whereby shared resources, software, and information are provided to computers
  and other devices on demand, like the electricity grid.
@@ -289,7 +344,15 @@ In Web development, a mashup is a Web page or application that uses and
  wiring of GUI widgets, services and components together.
  Therefore, these tools contribute to a new vision of the Web, where users
  are able to contribute.
- Yahoo Pipes is a fairly easy application for aggreating data, with a visual
+ 
+\end_layout
+
+\begin_layout Subsection*
+Yahoo Pipes
+\end_layout
+
+\begin_layout Standard
+Yahoo Pipes is a fairly easy application for aggreating data, with a visual
  User Interface.
  Users can easily via drag and drop create the pipe they want.
  Documentation with examples are provided, so the use is learned easily.
@@ -304,8 +367,8 @@ In Web development, a mashup is a Web page or application that uses and
  Different pieces from the web can be used to create the content you need
  or like.
  In my library, this line of simplicity is continued.
- The library provides additionaly functionality by going on step further:
- making the data more easily accessable for visualisation.
+ It provides additionaly functionality by going on step further: making
+ the data more accessable for visualisation.
  In JavaScript, there are written a lot of libraries to visualise data in
  all kinds of ways.
  But there is one mayor drawback and that is the access to the data itself.
@@ -313,7 +376,11 @@ In Web development, a mashup is a Web page or application that uses and
  in terms of data access.
  For example in Google Chart, data can be inserted via a spreadsheet.
  This spreadsheet must be accessed by Google Docs.
- The JSON data format in visualisation libraries.
+ 
+\end_layout
+
+\begin_layout Standard
+The JSON data format in visualisation libraries.
  One of the most important functions in visualisation libraries is the access
  to the data.
  For small projects the libraries have functionality to manually add the
@@ -323,7 +390,7 @@ In Web development, a mashup is a Web page or application that uses and
  and a long work.
  That's why another method of data provision is supported: the JSON format.
  As explained previously, it is a very simple open format to exchange data.
- This way a lot more data can be easily queries and a lot more easilier.
+ This way a lot more data can be easily queried and a lot more easilier.
  No more manual adding.
  The data is provided in a structured way.
  But here it is where there arises another problem: which format does the
@@ -340,56 +407,69 @@ In Web development, a mashup is a Web page or application that uses and
  The provided data can have any structure, properties or different types
  of data like strings, numbers for example.
  There is no easy use of the data.
- And that's when the functionality of my library comes in.
- It provides an abstraction layer between Yahoo Pipes and JavaScript visualisati
-on libraries.
- It's even more than that, it provides easy handling of JSON data.
- For Yahoo Pipes, the most commonly and best practice of the data is by
- exporting it by JSON.
- You can use other formats but it will only get more complicated.
- JSON does the job well.
- Valve loads in the JSON data et voila.
- Ready to go.
- From here on you can get a clear view on the data itself, in JSON format.
- JSON is in fact just a text string that is not realy human readable.
- So it would be good to have something that makes it more readable without
- losing the overal view over the data.
- A decent JSON viewer can come in handy to have a good view on the used
- input data.
- This way characteristics of the data, types, faults, stats can be easily
- viewed without any hassle.
- Then it's up to part 2: visualising the data.
- Here it get's tricky.
- How does the user want to see it's input data and what does he wants to
- do with it? At this moment visualisation libraries provided endless possibiliti
-es and beautiful examples of what you can do with data.
- The visualisations are appealing.
- One and the most important use is to get a better view what's happening.
- By visualising, the data can be analysed and investigated to gain new insights.
- Another advantage is to have the data compared with an other version of
- the data.
- This way differences or similarities in time can be spotted.
- Another topic is filtering.
- It's possible that the user has collected the data from different sources,
- and that the data contains a lot of overhead which is not necessary.
- This way it should be possible for the library to provide filtering.
- There are 2 possibilities: The first one is filtering the view of the data.
- By that I mean that the original data is used and not modified, but when
- for example only certain parts or attributes of the data want to be used.
- If the original data has a lot of attributes and only a few are necessary,
- these are visualised and the other attributes are filtered out.
- Another possibilty is that the user wants a subset of the data; like say
- the first 300 items instead of everything.
- Or only the items that belongs to a specific category.
- An interesting fact is that the data can be filtered by using the data
- itself.
- For example defining maximums and miminums, using the bounds of the provided
- data or division into categories using an attribute of the original data.
- Sorting of the data is another function: sorting by data, category or time.
+ 
 \end_layout
 
 \begin_layout Subsection*
-SAME ORIGIN POLICY
+Data flow
+\end_layout
+
+\begin_layout Standard
+About cross domain scripting.
+ JavaScript locally or get information from remote server.
+ Passing trough JSON or KML format; explained in the following section.
+\end_layout
+
+\begin_layout Section
+JavaScript integration
+\end_layout
+
+\begin_layout Subsubsection*
+JSON
+\end_layout
+
+\begin_layout Standard
+JSON (JavaScript Object Notation) is a lightweight data-interchange format.
+ It is easy for humans to read and write.
+ It is easy for machines to parse and generate.
+ It is based on a subset of the JavaScript Programming Language, Standard
+ ECMA-262 3rd Edition - December 1999.
+ JSON is a text format that is completely language independent but uses
+ conventions that are familiar to programmers of the C-family of languages,
+ including C, C++, C#, Java, JavaScript, Perl, Python, and many others.
+ These properties make JSON an ideal data-interchange language.
+ 
+\begin_inset CommandInset citation
+LatexCommand citeyear
+key "web_json"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+JSON is built on two structures:
+\end_layout
+
+\begin_layout Enumerate
+A collection of name/value pairs.
+ In various languages, this is realized as an object, record, struct, dictionary
+, hash table, keyed list, or associative array.
+ An ordered list of values.
+ In most languages, this is realized as an array, vector, list, or sequence.
+\end_layout
+
+\begin_layout Enumerate
+These are universal data structures.
+ Virtually all modern programming languages support them in one form or
+ another.
+ It makes sense that a data format that is interchangeable with programming
+ languages also be based on these structures.
+\end_layout
+
+\begin_layout Subsubsection*
+Same origin policy
 \end_layout
 
 \begin_layout Standard
@@ -438,106 +518,10 @@ What can you do with it? Why use it? Advantages/disadvantages? - Run locally,
 \end_layout
 
 \begin_layout Section
-Philosophy of approach
-\end_layout
-
-\begin_layout Section
-Plan of attack
-\end_layout
-
-\begin_layout Section
-Data handling & JavaScript integration
-\end_layout
-
-\begin_layout Standard
-Information about the skills and knowledge I needed to attain to develop
- the following research.
-\end_layout
-
-\begin_layout Subsection*
-General JavaScript
-\end_layout
-
-\begin_layout Standard
-Refreshing my skills about the JavaScript language.
- I had a course about it in the curriculum about 2 years ago.
- It was a basic course.
- Now and than I used some Javascript for the design of a few personal webpages.
-\end_layout
-
-\begin_layout Standard
-I also followed a lot of tutorials online.
- I did a few at NetTuts about more advanced topics.
- Also some general subjects to improve my view.
- 
-\end_layout
-
-\begin_layout Subsection*
-JSON
-\end_layout
-
-\begin_layout Standard
-JSON (JavaScript Object Notation) is a lightweight data-interchange format.
- It is easy for humans to read and write.
- It is easy for machines to parse and generate.
- It is based on a subset of the JavaScript Programming Language, Standard
- ECMA-262 3rd Edition - December 1999.
- JSON is a text format that is completely language independent but uses
- conventions that are familiar to programmers of the C-family of languages,
- including C, C++, C#, Java, JavaScript, Perl, Python, and many others.
- These properties make JSON an ideal data-interchange language.
- 
-\begin_inset CommandInset citation
-LatexCommand citeyear
-key "web_json"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-JSON is built on two structures:
-\end_layout
-
-\begin_layout Enumerate
-A collection of name/value pairs.
- In various languages, this is realized as an object, record, struct, dictionary
-, hash table, keyed list, or associative array.
- An ordered list of values.
- In most languages, this is realized as an array, vector, list, or sequence.
-\end_layout
-
-\begin_layout Enumerate
-These are universal data structures.
- Virtually all modern programming languages support them in one form or
- another.
- It makes sense that a data format that is interchangeable with programming
- languages also be based on these structures.
-\end_layout
-
-\begin_layout Subsection*
-JQuery
-\end_layout
-
-\begin_layout Subsection*
-Yahoo Pipes
-\end_layout
-
-\begin_layout Subsection*
-Data flow
-\end_layout
-
-\begin_layout Standard
-About cross domain scripting.
- JavaScript locally or get information from remote server.
-\end_layout
-
-\begin_layout Section
 Visualization
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 General visualisation techniques
 \end_layout
 
@@ -551,8 +535,63 @@ ians develop and communicate concepts using a single symbol to process informati
 on.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsection*
 Javascript Visualization libraries
+\end_layout
+
+\begin_layout Standard
+It seems that there is not much support for JSON or input of data for visualisat
+ion libraries.
+ Google has a good way for inserting data in their charts, trough Google
+ Docs, wich works fine with Google Chart.
+ But like we are used to, it protects it's market by recommending their
+ own apps.
+ So the possibilities for example are to use a Google document, to which
+ a chart can be coupled, so the spreadsheet is used as database.
+ Another option is to load a JSON object.
+ This is more complicated.
+ In fact it a more simple thing because the a json object can be very handy
+ and easily managed.
+ It has many advantages, which I explain in an other section about JSON
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+reffer to other section/ write more in detail about json
+\end_layout
+
+\end_inset
+
+On one hand it seems to be easy to insert the JSON data for using with Google
+ chart.
+ But that's the trick; the data needs to be in a specific format to be supported.
+ Otherwise it won't work.
+ So eventually you allready have to know the exact data structure from the
+ beginning to use it.
+ But can your source work with it or is a conversion necessary.
+ Here my library forms a coupling between the data.
+ The original data can be any JSON object and the library will convert it
+ into the right JSON object which can be used for the visualisation.
+ 
+\end_layout
+
+\begin_layout Standard
+Sometimes users want just more than visualising their data.
+ Or not all the data inserted is necessary or comparision of data is wanted.
+ The user wants for example select a subset of the data or compare different
+ 'versions' of data.
+ In the library this functionality is forseen; it is possible to select
+ the source data, make subsets of data and compare different data with each
+ other.
+ By this I mean for example data from two different times, which then can
+ be compared to highlight differences or similarities.
+\end_layout
+
+\begin_layout Standard
+The access to data in Javascript.Visualisations need a lot of data.
+ But how can we transfer this data in an easy way into Javascript without
+ doing it manually.
 \end_layout
 
 \begin_layout Subsection*
@@ -564,6 +603,22 @@ d3.js
 \end_layout
 
 \begin_layout Standard
+D3.js is a small, free JavaScript library for manipulating documents based
+ on data.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+citation to the official website
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Exploration of mainly Google Chart API and D3.js library.
  In fact D3 it is the succession of the formerly Protovis library.
  As the author suggest, the development of Protovis is not active any more.
@@ -571,8 +626,42 @@ Exploration of mainly Google Chart API and D3.js library.
  
 \end_layout
 
+\begin_layout Standard
+D3 allows you to bind arbitrary data to a Document Object Model (DOM), and
+ then apply data-driven transformations to the document.
+ As a trivial example, you can use D3 to generate a basic HTML table from
+ an array of numbers.
+ Or, use the same data to create an interactive SVG bar chart with smooth
+ transitions and interaction.
+\end_layout
+
+\begin_layout Standard
+D3 is not a traditional visualization framework.
+ Rather than provide a monolithic system with all the features anyone may
+ ever need, D3 solves only the crux of the problem: efficient manipulation
+ of documents based on data.
+ This gives D3 extraordinary flexibility, exposing the full capabilities
+ of underlying technologies such as CSS3, HTML5 and SVG.
+ It avoids learning a new intermediate proprietary representation.
+ With minimal overhead, D3 is extremely fast, supporting large datasets
+ and dynamic behaviors for interaction and animation.
+ And, for those common needs, D3’s functional style allows code reuse through
+ a diverse collection of optional modules.
+\end_layout
+
 \begin_layout Subsection*
 Processing
+\end_layout
+
+\begin_layout Standard
+Processing.js is the sister project of the popular Processing visual programming
+ language, designed for the web.
+ Processing.js makes your data visualizations, digital art, interactive animation
+s, educational graphs, video games, etc.
+ work using web standards and without any plug-ins.
+ You write code using the Processing language, include it in your web page,
+ and Processing.js does the rest.
+ It's not magic, but almost.
 \end_layout
 
 \begin_layout Subsection*
@@ -580,11 +669,20 @@ Other
 \end_layout
 
 \begin_layout Section
-Security
+Security of data
+\end_layout
+
+\begin_layout Itemize
+Gettting the data secure
+\end_layout
+
+\begin_layout Itemize
+Javascript is doing all the scripting local, so no data transfer to any
+ server is needed
 \end_layout
 
 \begin_layout Section
-Storage of Data
+(Storage of Data)
 \end_layout
 
 \begin_layout Section
@@ -594,6 +692,7 @@ Making decisions
 \begin_layout Standard
 About the functionality.
  Where can I bring the most value.
+ Graphic interface is less, processing of data gets more attention.
 \end_layout
 
 \begin_layout Standard
@@ -611,6 +710,17 @@ Ei choro aeterno antiopam mea, labitur bonorum pri no.
 
 \begin_layout Section
 Usability
+\end_layout
+
+\begin_layout Standard
+What is the usability of my solution? Integration into other projects: fork
+ it.
+ Plus as a starting reference for further research.
+\end_layout
+
+\begin_layout Standard
+Improvements in my own implementation by going from hard code to a web user
+ interface; See for more information 
 \end_layout
 
 \end_body

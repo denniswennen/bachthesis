@@ -265,6 +265,10 @@ filename "Chapter01.lyx"
 
 \end_layout
 
+\begin_layout Part Introduction (ClassicThesis)
+<Introduction to the research part>
+\end_layout
+
 \begin_layout Part
 The Research
 \end_layout
@@ -287,6 +291,10 @@ filename "Chapter03.lyx"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Part Introduction (ClassicThesis)
+<Introduction to the toughts part>
 \end_layout
 
 \begin_layout Part

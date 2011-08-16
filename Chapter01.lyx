@@ -128,63 +128,90 @@ as simple and clear as possible: understanded by the audience, problems,
 
 \end_layout
 
-\begin_layout Subsubsection
-Javascript in Visualisation libraries
-\end_layout
-
 \begin_layout Standard
-It seems that there is not much support for JSON or input of data for visualisat
-ion libraries.
- Google has a good way for inserting data in their charts, trough Google
- Docs, wich works fine with Google Chart.
- But like we are used to, it protects it's market by recommending their
- own apps.
- So the possibilities for example are to use a Google document, to which
- a chart can be coupled, so the spreadsheet is used as database.
- Another option is to load a JSON object.
- This is more complicated.
- In fact it a more simple thing because the a json object can be very handy
- and easily managed.
- It has many advantages, which I explain in an other section about JSON
- 
+There are a lot of good API's, written in Javascript for visualising complex
+ data in an attractive way.
+ Javascript is a scripting language to make web content more interactive
+ and attractive by adding dynamic elements.
+ Visualisations give a more clear view on the meaning of the source data.
+ By visualising web content, a new look onto the data gives more information
+ and can possible highlight information that was otherwise hard to find
+ or nearly visible.
+ Here are some examples of visualisations:
 \begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-reffer to other section/ write more in detail about json
+insert example visualisations
 \end_layout
 
 \end_inset
 
-On one hand it seems to be easy to insert the JSON data for using with Google
- chart.
- But that's the trick; the data needs to be in a specific format to be supported.
- Otherwise it won't work.
- So eventually you allready have to know the exact data structure from the
- beginning to use it.
- But can your source work with it or is a conversion necessary.
- Here my library forms a coupling between the data.
- The original data can be any JSON object and the library will convert it
- into the right JSON object which can be used for the visualisation.
- 
+
 \end_layout
 
 \begin_layout Standard
-Sometimes users want just more than visualising their data.
- Or not all the data inserted is necessary or comparision of data is wanted.
- The user wants for example select a subset of the data or compare different
- 'versions' of data.
- In the library this functionality is forseen; it is possible to select
- the source data, make subsets of data and compare different data with each
- other.
- By this I mean for example data from two different times, which then can
- be compared to highlight differences or similarities.
+The making of visualisation with this API's is quite easy and in most cases
+ well documented.
+ The situation gets more complex when data is coupled to this visualisations.
+ Often it is necessary to create complex multi-dimensional datastructures
+ in Javascript, as illustrated in 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+
+fig:JSdatastructure
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The access to data in Javascript.Visualisations need a lot of data.
- But how can we transfer this data in an easy way into Javascript without
- doing it manually.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename gfx/js_protoviz.png
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:JSdatastructure"
+
+\end_inset
+
+Javascript datastructure example
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ The goal of this work was to write a JavaScript library that allows to
+ load in the data that has to be visualised, trough Yahoo Pipes.
+ This is an online editor to collect and filter data coming from websites,
+ data sources and RSS feeds.
+ Like this the user can easily collect the data, filter the content and
+ visualise it.
+ In other words, the making of complex datastructures becomes unneccessary
+ as they are handled by the library.
+ In the following sections I will explain in more details why this research
+ is important and how it fits into the general domain of computer science.
 \end_layout
 
 \begin_layout Section
@@ -193,12 +220,56 @@ Why is it important
 status collapsed
 
 \begin_layout Plain Layout
-area of study
+area of study, write something on each of the topics
 \end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+more easy access to data
+\end_layout
+
+\begin_layout Itemize
+technology gets more interesting for the 'noobs'
+\end_layout
+
+\begin_layout Itemize
+A lot of visualisation libraries expect programming skills; not really necessary
+ here
+\end_layout
+
+\begin_layout Itemize
+more easy access to visualisation libraries; usability
+\end_layout
+
+\begin_layout Itemize
+javascript is a widely used scripting language, a very poweful one
+\end_layout
+
+\begin_layout Itemize
+there was not much support for complex data handling in Javascript
+\end_layout
+
+\begin_layout Itemize
+moderate JSON support; but library dependent, no abstract layer
+\end_layout
+
+\begin_layout Itemize
+too much information on the web; people want to filter out information;
+ hacking & mashing to choose the content you like; importance of filtering
+ data
+\end_layout
+
+\begin_layout Itemize
+access to a great source of information; almost any information available
+ can be inserted; freedom of choise
+\end_layout
+
+\begin_layout Itemize
+gain more easy access to open-source and free visualisation
 \end_layout
 
 \begin_layout Standard
@@ -301,8 +372,90 @@ So here's step two.
  by manipulating.
 \end_layout
 
+\begin_layout Section
+Fit into the broader world of computer science
+\end_layout
+
+\begin_layout Itemize
+conversion from text (json) to rich data (js object)
+\end_layout
+
+\begin_layout Itemize
+visualisation of data; gain more insights into the data itself; new things
+ can become visible; to create more attractive ways of representing data;
+ telling a story trough charts, geomaps, etc..
+\end_layout
+
+\begin_layout Itemize
+the web becomes more and more interactive
+\end_layout
+
+\begin_layout Section
+Organization
+\end_layout
+
+\begin_layout Enumerate
+brainstorming about the project
+\end_layout
+
+\begin_layout Enumerate
+brushing up javascript skills
+\end_layout
+
+\begin_layout Enumerate
+which visualisation libraries are available and what can I do with them
+\end_layout
+
+\begin_layout Enumerate
+research on the topic itself, what did already exists
+\end_layout
+
+\begin_layout Enumerate
+defining exactly the library itself, what will be the functionality
+\end_layout
+
+\begin_layout Enumerate
+implementation of the libary's functionality
+\end_layout
+
+\begin_layout Enumerate
+finetuning and starting over, adapting my way of working constantly
+\end_layout
+
+\begin_layout Enumerate
+improving and adding functionality
+\end_layout
+
+\begin_layout Enumerate
+reporting and writing about the research
+\end_layout
+
+\begin_layout Section
+Structure
+\end_layout
+
+\begin_layout Standard
+Implementation to show the various aspects from the research, accompanied
+ by this thesistext to guide the reader trough the whole research project.
+ Every sections adds some more information; starting with an introduction,
+ continue onto the previous work, followed by my own research and the explanatio
+n of the implemenation and ending with the results and the dicussion of
+ it, including a view into possible future work.
+\end_layout
+
+\begin_layout Section
+Issues
+\end_layout
+
+\begin_layout Standard
+Writing text is not easy.
+ Handling with several problems about implementation.
+ Making choises.
+ Generalization/details.
+\end_layout
+
 \begin_layout Subsection*
-Freewriting on introduction
+Some toughts
 \end_layout
 
 \begin_layout Standard
@@ -376,11 +529,10 @@ Until recently, which is about 2 months ago when I came to the realisation
 \end_layout
 
 \begin_layout Standard
-So I got to work, more work than ever.
+So I got to work, more than ever beore.
  I have the general habit of thinking a lot and by that I mean really a
  lot.
- Sometimes just too much.
- Than my thinking starts to work against me.
+ Then my thoughts starts to work against me.
  But I'm working on it to keep things right and in control.
 \end_layout
 
@@ -402,53 +554,11 @@ Hacking and Mashing with Yahoo Pipes: Onto a new way of visualizing data.
 \end_layout
 
 \begin_layout Section
-Fit into the broader world of computer science
-\end_layout
-
-\begin_layout Section
-Organization
-\end_layout
-
-\begin_layout Standard
-A lot of reading and research.
- As a story troughout the text.
- From previous work untill the conclusion.
-\end_layout
-
-\begin_layout Section
-Structure
-\end_layout
-
-\begin_layout Standard
-Based on an thesis template.
- And also looked to other thesisses and bachelortests.
-\end_layout
-
-\begin_layout Section
-Customization
-\end_layout
-
-\begin_layout Section
-Issues
-\end_layout
-
-\begin_layout Standard
-Writing text is not easy.
- Handling with several problems about implementation.
- Making choises.
- Generalization/details.
-\end_layout
-
-\begin_layout Section
 Future Work
 \end_layout
 
 \begin_layout Standard
 Adding more functionality to the library.
-\end_layout
-
-\begin_layout Section
-Beyond a thesis
 \end_layout
 
 \begin_layout Section

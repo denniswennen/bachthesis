@@ -131,7 +131,119 @@ It going to be a short quick fast improving good road!
 \end_layout
 
 \begin_layout Section
-Time
+Theoretical Research
+\end_layout
+
+\begin_layout Section
+Library implementation
+\end_layout
+
+\begin_layout Standard
+It provides an abstraction layer between Yahoo Pipes and JavaScript visualisatio
+n libraries.
+ It's even more than that, it provides easy handling of JSON data.
+ For Yahoo Pipes, the most commonly and best practice of the data is by
+ exporting it by JSON or KML for geomaps.
+ You can use other formats but it will only get more complicated.
+ JSON does the job well.
+ The valve library loads in the JSON data et voila.
+ Ready to go.
+ From here on you can get a clear view on the data itself, in JSON format.
+ JSON is in fact just a text string that is not realy human readable.
+ So it would be good to have something that makes it more readable without
+ losing the overal view over the data.
+ A decent JSON viewer can come in handy to have a good view on the used
+ input data.
+ This way characteristics of the data, types, faults, stats can be easily
+ viewed without any hassle.
+ Then it's up to part 2: visualising the data.
+ Here it get's tricky.
+ How does the user want to see it's input data and what does he wants to
+ do with it? At this moment visualisation libraries provided endless possibiliti
+es and beautiful examples of what you can do with data.
+ The visualisations are appealing.
+ One and the most important use is to get a better view what's happening.
+ By visualising, the data can be analysed and investigated to gain new insights.
+ Another advantage is to have the data compared with an other version of
+ the data.
+ This way differences or similarities in time can be spotted.
+ Another topic is filtering.
+ It's possible that the user has collected the data from different sources,
+ and that the data contains a lot of overhead which is not necessary.
+ This way it should be possible for the library to provide filtering.
+ There are 2 possibilities: The first one is filtering the view of the data.
+ By that I mean that the original data is used and not modified, but when
+ for example only certain parts or attributes of the data want to be used.
+ If the original data has a lot of attributes and only a few are necessary,
+ these are visualised and the other attributes are filtered out.
+ Another possibilty is that the user wants a subset of the data; like say
+ the first 300 items instead of everything.
+ Or only the items that belongs to a specific category.
+ An interesting fact is that the data can be filtered by using the data
+ itself.
+ For example defining maximums and miminums, using the bounds of the provided
+ data or division into categories using an attribute of the original data.
+ Sorting of the data is another function: sorting by data, category or time.
+\end_layout
+
+\begin_layout Subsection
+Functionality
+\end_layout
+
+\begin_layout Standard
+90% off course > steering
+\end_layout
+
+\begin_layout Standard
+Focus on the handling of data.
+ Less on the user interface.
+ Why? It seems more important to have a good data handling, this brings
+ on the greatest value.
+ Afterwards it is something good to fine tune the user interface.
+ This way the library will become more accessibly for less skilled programmers
+ who wish to use the visualise data.
+\end_layout
+
+\begin_layout Subsection
+Testing
+\end_layout
+
+\begin_layout Itemize
+debugging; getting the import of data right
+\end_layout
+
+\begin_layout Itemize
+compared the different approaches
+\end_layout
+
+\begin_layout Subsection
+Performance
+\end_layout
+
+\begin_layout Itemize
+Javascript is a powerful language, if the code is written well
+\end_layout
+
+\begin_layout Itemize
+I took into consideration to write as clear code as possible, paying attention
+ to details, implemented speed optimizations, object oriented javascript
+\end_layout
+
+\begin_layout Subsection
+!! Usability
+\end_layout
+
+\begin_layout Itemize
+posibility to use the code in your own website; portability
+\end_layout
+
+\begin_layout Itemize
+User interface for a great overview: viewing data and visualisation + control
+ dashboard
+\end_layout
+
+\begin_layout Itemize
+Clear documentation: for noobs as for more experienced developers
 \end_layout
 
 \begin_layout Section
@@ -143,6 +255,15 @@ Some time has passed between the assignment and the actual implementation.
  A lot of time.
  Also the technologies have evolved, already some things are forseen as
  implementation.
+\end_layout
+
+\begin_layout Itemize
+difficult to get a good grip on the data; not a good constistency, what
+ is data? it can be everything
+\end_layout
+
+\begin_layout Itemize
+support for adding data easily
 \end_layout
 
 \begin_layout Standard
@@ -170,6 +291,13 @@ Future work
 
 \begin_layout Standard
 What still has to be implemented, what could be improved, achieved..
+\end_layout
+
+\begin_layout Itemize
+improvement of usability by expanding the User Interface: views on the data,
+ adding functionality for the control dashboard, adding support for more
+ visualisation libraries, performance updates in handling large amounts
+ of data
 \end_layout
 
 \end_body
