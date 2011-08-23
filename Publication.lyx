@@ -84,27 +84,5 @@ Publications
 Some ideas and figures have appeared previously in the following publications:
 \end_layout
 
-\begin_layout Standard
-\begin_inset VSpace bigskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-Put your publications from the thesis here.
- The packages 
-\family typewriter
-multibib
-\family default
- or 
-\family typewriter
-bibtopic
-\family default
- etc.
- can be used to handle multiple different bibliographies in your document.
-\end_layout
-
 \end_body
 \end_document

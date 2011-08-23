@@ -129,31 +129,25 @@ as simple and clear as possible: understanded by the audience, problems,
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:problemstatement"
+
+\end_inset
+
 There are a lot of good API's, written in Javascript for visualising complex
  data in an attractive way.
  Javascript is a scripting language to make web content more interactive
  and attractive by adding dynamic elements.
- Visualisations give a more clear view on the meaning of the source data.
+ Visualisations can give a more clear view on the meaning of the source
+ data.
  By visualising web content, a new look onto the data gives more information
  and can possible highlight information that was otherwise hard to find
  or nearly visible.
- Here are some examples of visualisations:
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-insert example visualisations
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-The making of visualisation with this API's is quite easy and in most cases
- well documented.
- The situation gets more complex when data is coupled to this visualisations.
+ A lot of libraries are provided for creating visualisation in JavaScript.
+ An advantage is that in most cases these API's are well documented.
+ The situation gets more complex when data needs to be coupled to this visualisa
+tions.
  Often it is necessary to create complex multi-dimensional datastructures
  in Javascript, as illustrated in 
 \begin_inset Flex CT - auto cross-reference
@@ -166,7 +160,23 @@ fig:JSdatastructure
 
 \end_inset
 
-
+ For small data sets, this can be done manually, but for large data sets
+ the task can get tricky or be a lot of work.
+ The goal of this thesis is to create a webservice in JavaScript that served
+ as an abstraction layer between data providers on one side and visualisation
+ libraries on the other side.
+ This kind of service allows to load in even large datastructures in a more
+ simple way.
+ Yahoo Pipes is a mashup web service which can be a data providor.
+ It's an online editor to collect and filter data coming from websites,
+ data sources and RSS feeds.
+ It provides an easy way for data collection, filtering.
+ Also the possibilities to utilise or view the data, are broad.
+ In other words, the making of complex datastructures gets handled by these
+ services and via an intermediating web service fetched and passed on to
+ the visualisation libraries.
+ In the following sections I will explain in more details why this research
+ is important and how it fits into the general domain of computer science.
 \end_layout
 
 \begin_layout Standard
@@ -202,16 +212,21 @@ Javascript datastructure example
 
 \end_inset
 
- The goal of this work was to write a JavaScript library that allows to
- load in the data that has to be visualised, trough Yahoo Pipes.
- This is an online editor to collect and filter data coming from websites,
- data sources and RSS feeds.
- Like this the user can easily collect the data, filter the content and
- visualise it.
- In other words, the making of complex datastructures becomes unneccessary
- as they are handled by the library.
- In the following sections I will explain in more details why this research
- is important and how it fits into the general domain of computer science.
+
+\end_layout
+
+\begin_layout Standard
+Here are some examples of visualisations:
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+insert example visualisations
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -229,7 +244,70 @@ area of study, write something on each of the topics
 \end_layout
 
 \begin_layout Itemize
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+In sommige delen van de thesis staat een lijst van items; deze worden nog
+ verder uitgeschreven, maar geven reeds de intentie en/of structuur aan.
+\end_layout
+
+\end_inset
+
+test as stated in 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+
+sec:problemstatement
+\end_layout
+
+\end_inset
+
+ or in 
+\end_layout
+
+\begin_layout Itemize
 more easy access to data
+\end_layout
+
+\begin_layout Itemize
+It also shows that the needs for integrating these rich data and service
+ sources are rapidly increasing.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+To understand why some automatic support is needed to create Mashups, we
+ give the following example.
+ Suppose that a user wants to implement a News Mashup that lets her select
+ news on a news service like CNN International and display both the list
+ of the news and a map that highlights the locations associated with the
+ news; she typically needs to do a lot of programming which involves fetching
+ and integrating heterogeneous data.
+ In fact, the user needs to know not only how to write the code, but also
+ (i) to understand the available API services in order to invoke them and
+ fetch the data output; (ii) to implement screen scraping techniques for
+ the services that do not provide APIs, and (iii) to know the data structure
+ of the input and output of each service in order to implement a data mediation
+ solution.
+ The Mashup tools provide facilities to help the user solve some of the
+ above mentioned problems.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -273,6 +351,16 @@ gain more easy access to open-source and free visualisation
 \end_layout
 
 \begin_layout Standard
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+Deze tekst moet nog verfijnd worden.
+ Sommige stukken kunnen ook nog een andere plaats krijgen.
+\end_layout
+
+\end_inset
+
 This is about data and the flow of data.
  It's also about usability.
  Some kind of layer in between to technologies.
@@ -288,14 +376,13 @@ s.
  I shall explain it some more in detail.
  Mostly it is used when users have some kind of data that they want to represent
  in a different way.
- An important thing in developing applications is that data and visualisation
- should be two different things and also be handled with seperatly.
- It's not a good solution to bind a certain type of visualisation to the
- data.
- If you then want to have another view, another font or color for example,
- it's hard to change it.
- When you seperate things, the display of the information can be modified
- and choosen freely.
+ An important concept in developing applications is that data and visualisation
+ should be two different things and also be handled seperatly.
+ It's not a good solution to bind a certain type of visualisation hardcoded
+ to the data.
+ If you then want to have another view on the data, another font or color
+ for example, it's hard to change it.
+ When you seperate things, the view can be modified and choosen freely.
 \end_layout
 
 \begin_layout Standard
@@ -373,11 +460,17 @@ So here's step two.
 \end_layout
 
 \begin_layout Section
-Fit into the broader world of computer science
+Scope
 \end_layout
 
 \begin_layout Itemize
-conversion from text (json) to rich data (js object)
+Web API's: These services can be a data service, such as news, or a process/oper
+ation service such as placing an order to Amazon.
+ com.
+\end_layout
+
+\begin_layout Itemize
+data handling and conversion: from text (json) to rich data (js object)
 \end_layout
 
 \begin_layout Itemize
@@ -395,6 +488,15 @@ Organization
 \end_layout
 
 \begin_layout Enumerate
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+Hoe ik mijn onderzoek georganiseerd heb
+\end_layout
+
+\end_inset
+
 brainstorming about the project
 \end_layout
 
@@ -435,12 +537,12 @@ Structure
 \end_layout
 
 \begin_layout Standard
-Implementation to show the various aspects from the research, accompanied
- by this thesistext to guide the reader trough the whole research project.
- Every sections adds some more information; starting with an introduction,
- continue onto the previous work, followed by my own research and the explanatio
-n of the implemenation and ending with the results and the dicussion of
- it, including a view into possible future work.
+Implementation to show various aspects from the research, accompanied by
+ this thesis text to guide the reader trough the whole research project.
+ Every sections in the thesis text adds some more information; starting
+ with an introduction and the previous work, followed by my own research,
+ the explanation of the implemenation and ending with the results and the
+ dicussion of it, including a view into possible future work.
 \end_layout
 
 \begin_layout Section
@@ -448,17 +550,42 @@ Issues
 \end_layout
 
 \begin_layout Standard
-Writing text is not easy.
- Handling with several problems about implementation.
- Making choises.
- Generalization/details.
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+Moeilijkheden die ik ben tegengekomen
 \end_layout
+
+\end_inset
+
+The Mashup approach opens new and broad opportunities for data/services
+ consumers.
+ However, the development investment is still considerable.
+ In fact, a Mashup user needs to know, in addition to how to write code
+ using programming languages (e.g., Java Script, XML/HTML), how to use the
+ different Web APIs4.
+ In order to solve this problem, there is an increasing effort put into
+ developing tools which are designed to support users with little programming
+ knowledge in Mashup applications development.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Subsection*
 Some toughts
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Here I want to talk about my project.
  I can call it my project, in the meaning that it has become part of myself.
  I procrastinated on it for a long time.
@@ -474,83 +601,93 @@ Here I want to talk about my project.
  On this moment in time it was the greatest challenge that ever came across
  my path.
  Why it took me so long? I don't know.
- The most lessons are learned the hard way.
- During the time this work had a large mental weight on myself.
+ The most lessons are learned the hard way, they say.
+ During the time this work had a large mental weight on me.
  Was I not good enough to complete it, would I ever complete it? My self-esteem
- and capabilities were very low I said myself for a long time.
- Until recently i noticed that change was necessary.
+ and capabilities were low, I told myself for a long time.
+ Until recently I noticed that change was necessary.
  I had to complete this work.
  Maybe it's some test of life for me, to see if I am capable of completing
- things.
- Things that in the first place I thought were easy and would work out quite
- easy.
+ things or to prepare me for the life to come.
+ Things that in the first place I thought were easy and would work out eventuall
+y.
  But it was different, a lot different.
  Things that are worth having, don't come easy.
- And I wanted my bachelor degree, so I needed to complete this final task.
- And that's how this thesis came to life.
+ And I want my bachelor degree, so I needed to complete this final task.
+ And that's how this thesis slowly came to life.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 First I had an other subject for my thesis: RFID, which means 'Radio Frequency
  Identification Protocol'.
  I did some research on the topic.
- I searched the internet and the University library for information, a lot
- of information.
- A lot of articles I found on the topic.
+ I spend a lot of time searching the internet and the University library
+ for information.
+ I found a lot of articles on the topic.
  I did some reading and searching for solutions, but never came very far.
- After that I got the message that my supportor for this thesis quit working
- at EDM, the research center.
- So I was a little left behind, also my fault.
- What I'm talking about now dates from the year after the initial assignment.
+ After that I got the message that my supportor for this thesis didn't work
+ anymore at EDM
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Expertise Center for Digital Media
+\end_layout
+
+\end_inset
+
+.
+ So I was a little left behind, also my own fault because I wasn't making
+ any progress.
+ What I'm talking about now dates from the year after the initial assignment
+ back in 2009.
  I made a lot of excuses and procrastinated a lot, in the end leading to
  no result.
- And a lot of mental pain.
+ And a lot of complicated psychological situations.
  It was heavy, everytime I realised the thesis was waiting for me to get
  my hands on.
  But the time never came.
  Or I neglected the work, or I said it would all be fine in the end, or
  I did some little work and gave up, or I didn't do anything and said to
- myself that I was not capable, finally there were no results.
+ myself that I was not capable.
+ Final result: none.
 \end_layout
 
-\begin_layout Standard
-Until recently, which is about 2 months ago when I came to the realisation
- that I was wasting all the work I did before to get here.
- I am in my tirth year of study and more than 5 years of higher education,
- depending on one assignment.
+\begin_layout Plain Layout
+Until recently, which is about a couple of months ago when I came to the
+ realisation that I was wasting all the work I did before to get here.
+ I am in my tirth year and more than 5 years of higher education, depending
+ on one assignment.
  I have to complete this.
- A degree is so important in life.
- They say sometimes it's not everything, sometimes that it is everything.
+ This degree is important for my life.
+ They say sometimes a degree is not necessary, sometimes that it is a must
+ nowadays.
  I not really have figured that out yet, what it means for me.
  I think time will tell what the impact is.
- But for now it matters that I get these things done and close a chapter
+ But for now it matters that I get these things done and close this chapter
  of my life.
- A chapter that has been way to long and now is necessary to finish.
-\end_layout
-
-\begin_layout Standard
-So I got to work, more than ever beore.
+ A chapter that has been way to long and now have to be closed.
+ So I got to work, more than ever before.
  I have the general habit of thinking a lot and by that I mean really a
  lot.
- Then my thoughts starts to work against me.
- But I'm working on it to keep things right and in control.
+ My thoughts keep working against me.
+ But I'm working on it to keep myself in control and focused on a positive
+ outcome.
 \end_layout
 
-\begin_layout Standard
-That brings my in the present, where I tackeled the problem.
+\begin_layout Plain Layout
+That brings me in the present, where I tackeled the problem.
  I rather like the word 'challenge', looked at the circumstances and also
  my state of mind.
- Problems are negative.
+ Problems have a negative connotation.
  Challenges sound possible and achieveable.
- And that's were the assignement came in: 
-\begin_inset Quotes eld
+ And that's were the assignement came in: 'Hacking and Mashing with Yahoo
+ Pipes: Towards a new way of visualizing data.'
+\end_layout
+
 \end_inset
 
-Hacking and Mashing with Yahoo Pipes: Onto a new way of visualizing data.
-\begin_inset Quotes erd
-\end_inset
 
- And so my first draft is a written fact.
 \end_layout
 
 \begin_layout Section
@@ -558,7 +695,7 @@ Future Work
 \end_layout
 
 \begin_layout Standard
-Adding more functionality to the library.
+Improvement of the current features
 \end_layout
 
 \begin_layout Section

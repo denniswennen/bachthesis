@@ -163,8 +163,10 @@ myName}
 \begin_layout Standard
 \align center
 \begin_inset Graphics
-	filename gfx/TFZsuperellipse_bw.pdf
-	width 6cm
+	filename gfx/valve_logo.pdf
+	lyxscale 25
+	width 8cm
+	draft
 
 \end_inset
 

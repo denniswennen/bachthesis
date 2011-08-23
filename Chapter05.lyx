@@ -74,23 +74,32 @@ Description
 \end_layout
 
 \begin_layout Section
-Descussion
+Discussion
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
 reached/unreached goals
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 interpretation/valuation
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 not much speculation
 \end_layout
 
-\begin_layout Standard
+\begin_layout Itemize
 avoid announcements
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -104,26 +113,7 @@ Some time has passed between the assignment and the actual implementation.
  implementation.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Marginal
-status collapsed
-
-\begin_layout Plain Layout
-Take a look at this 
-\family typewriter
-.lyx
-\family default
- file in LyX for coding examples.
- Make use of contextual menus (right click) and the properties dialogs for
- the insets.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Chapter
+\begin_layout Section
 Conclusions
 \end_layout
 

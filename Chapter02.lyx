@@ -111,24 +111,71 @@ A political point: make sure that you do not omit relevant papers by researchers
 Origin of the problem
 \end_layout
 
+\begin_layout Subsection
+Richness and weakness of web service mashups.
+\end_layout
+
+\begin_layout Standard
+Thus, we identify the behaviors and characteristics of general Mashup applicatio
+ns and analyze the tools with respect to the data integration aspect.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Standard
 Where did the problem come from? Other methods to try to solve the problem
 \end_layout
 
 \begin_layout Standard
 There are a lot of visualisation libraries available in JavaScript.
- But it seems that there is not that much effort spended in supporting easy
- access to data.
+ But it seems that there is not that much support for complex data.
  Mostly it is necessary to add the data manually or hard coded.
- When there is better support, it is not always abstract or generaly usable.
+ Some libraries have improved support, like Google Chart.
+ But it is not always abstract or generaly usable.
  For example the Google Chart API supports Google Docs as data source.
- This is a great improvement, altough the data can only be used by the Google
- visualisation library.
+ This is a good improvement, altough the data format can only be used by
+ the Google visualisation library.
  
+\end_layout
+
+\begin_layout Standard
+One of the goals of Web 2.0 is to make it easy to create, use, describe,
+ share, and reuse resources on the Web.
+ To achieve that, technologies have flourished around this concept (e.g.,
+ blogs, social networks).
+ The capabilities of Web 2.0 are further enhanced by many service providers
+ who expose their applications in two ways: one is to expose application
+ functionalities via Web APIs such as Google Map1, Amazon.com, or Youtube2,
+ the other is to expose data feeds such as RSS and ATOM.
+ This opened up new and exciting possibilities for service consumers and
+ providers as it enabled the notion of using these services3 as “ingredients”
+ that can be mixed-and-matched to create new applications.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "sigmod:2009"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Description of the previous work
+\end_layout
+
+\begin_layout Itemize
+the dimensions of analysis, and describes different Mashup tools according
+ to the considered dimensions
 \end_layout
 
 \begin_layout Itemize
@@ -137,7 +184,7 @@ Since the origin of the research assignment in 2009, there was a serious
  Everything needed to be done by hand.
  By now already some libraries have involved, like Google Chart.
  Also the libarry 'd3.js' is the succesor of another library; Protovis.
- It has now better functionality and it going to a more web 2.0 support.
+ It has now better functionality.
 \end_layout
 
 \begin_layout Itemize
@@ -147,18 +194,20 @@ Something can be said about JSON, what the technology has change in the
 \end_layout
 
 \begin_layout Itemize
-The use and the evolvement of Yahoo Pipes, which gave more widespread access
- to data.
+The use and the evolvement of data mash-ups like Yahoo Pipes, which gave
+ more widespread access to data and changed the experience of the web totally.
  It transformed the web by making in fact every element on the web accessable
- to use as data.
+ to use as data element.
 \end_layout
 
-\begin_layout Standard
-Maybe here should be titled work that was not mine, but in the same domain.
- Work from other people who were facing the same problem or similar things
+\begin_layout Itemize
+Work from other people who were facing the same problem or similar things
  to tackle.
- It could be the rise for the work.
- What things that have been investigated in the past.
+ 
+\end_layout
+
+\begin_layout Itemize
+Things that have been investigated in the past.
 \end_layout
 
 \begin_layout Section

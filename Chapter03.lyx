@@ -61,10 +61,14 @@
 \begin_body
 
 \begin_layout Chapter
-My Research - Description of problems and open questions, How do I tackle
- this problem 
+My Research - The Mashup analysis 
 \begin_inset Note Note
 status collapsed
+
+\begin_layout Subsection*
+Description of problems and open questions, How do I tackle this problem
+ 
+\end_layout
 
 \begin_layout Plain Layout
 Middle chapters
@@ -219,7 +223,216 @@ Try to distance yourself from your usual perspective and look at your work.
 
 \end_layout
 
+\begin_layout Section
+Mashing up
+\end_layout
+
 \begin_layout Standard
+Mashup is a new application development approach that allows users to aggregate
+ multiple services to create a service for a new purpose.
+ Even if the Mashup approach opens new and broader opportunities for data/servic
+e consumers, the development process still requires the users to know not
+ only how to write code using programming languages, but also how to use
+ the different Web APIs from different services.
+ In order to solve this problem, there is increasing effort put into developing
+ tools which are designed to support users with little programming knowledge
+ in Mashup applications development.
+ The objective of this study is to analyze the richnesses and weaknesses
+ of the Mashup tools with respect to the data integration aspect.
+ Unlike Web services composition where the focus is on the composition of
+ business (process) services only, the Mashup framework goes further in
+ that it allows more functionalities and can compose heterogeneous resources
+ such as data services, UI services, etc.
+ Applications built using the Mashup technique are referred to as Mashups
+ or Mashup applications.
+ 
+\end_layout
+
+\begin_layout Standard
+We will be asking questions such as: How the tools handle data? What kind
+ of processing is performed on the data? What is the output of Mashups?
+ Which operators are provided for data transformation and for creating the
+ data flow? What are the types of data supported by the available operators?
+ etc.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Mashup tools
+\end_layout
+
+\begin_layout Standard
+Currently a number of Mashup tools exist.
+ We have selected only the following tools for three main reasons: (i) these
+ tools were the most popular ones when this analysis was performed (judging
+ from discussions on forums, blogs, etc.), (ii) some other tools have not
+ been reported because of their unavailability at certain stages of the
+ study preventing us to experiment and report results according to our analysis.
+ Finally, (iii) this limitation is motivated by the fact that our objective
+ is not to analyze all the tools but to give a view on the current state
+ of these tools and understand their general approach to data integration.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Yahoo Pipes
+\end_layout
+
+\begin_layout Standard
+Yahoo Pipes
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://pipes.yahoo.com
+\end_layout
+
+\end_inset
+
+ is a web application from Yahoo! that provides a graphical user interface
+ for building data mashups that aggregate web feeds, web pages, and other
+ services, creating Web-based apps from various sources, and publishing
+ those apps.
+ The application works by enabling users to "pipe" information from different
+ sources and then set up rules for how that content should be modified (for
+ example, filtering).
+ A typical example is New York Times through Flickr
+\begin_inset CommandInset citation
+LatexCommand citep
+key "pipes:NYTtruFlickr"
+
+\end_inset
+
+, a pipe which takes The New York Times RSS feed and adds a photo from Flickr
+ based on the keywords of each item.
+ An API documentation with examples are provided.
+ There is also a community with a forum to post questions and pipes created
+ by other can be browsed and forked onto your own creations.
+ That way work done by others don't have to be done again.
+ Pipes can be cloned and adapted to differents needs for each user.
+ The possibilities are endless, which enables a lot of creativity in collecting
+ and creating content.
+ It is a fairly easy application for aggreating data, with a visual User
+ Interface.
+ Users can create the pipe they want easily, via drag and drop.
+ The complete experience of the service can be used by less skilled programmers,
+ there is a lot of power in Yahoo Pipes.
+ Users select their web content, load it into the editor, filters the content
+ and exports the data.
+ My library provides additional functionality by going on step further:
+ making the data more accessable for visualisation.
+ In JavaScript, there are written a lot of libraries to visualise data in
+ all kinds of ways.
+ But there is one mayor drawback and that is the access to the data.
+ The libraries that make use of JavaScript, have limited or library-specific
+ functionality in terms of data access.
+ 
+\end_layout
+
+\begin_layout Standard
+Yahoo pipes8 is a web-based tool provided by Yahoo.
+ The users can build mashup applications by aggregating and manipulating
+ data from web feeds, web pages, and other services.
+ A pipe is composed of one or more modules, each one performing a single
+ task like retrieving feeds from a web source, filter, sort or merge feeds.
+ The output from pipes can be either accessed by a client via a unique URL
+ as RSS or JSON, or visualised on the Yahoo Map.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Popfly
+\end_layout
+
+\begin_layout Standard
+Popfly is a web-based Mashup application by Microsoft.
+ It allows the users to create a Mashup combining data and media sources.
+ The Mashup is built by connecting blocks.
+ Each block is associated to a service like “Flicker”10 and exposes one
+ or more functionalities.
+ Popfly is much more about data visualization than data manipulation as
+ we will see later, so the “mashed” data can be only visualized using the
+ provided visualization tool.
+ On July 16, 2009, the Popfly team announced that the Popfly service would
+ be discontinued on August 24, 2009.
+ All sites, references and resources of popfly were taken down, and this
+ product is considered defunct.
+\end_layout
+
+\begin_layout Subsubsection
+Google Mashup Editor (Deprecated, since January 14, 2009)
+\end_layout
+
+\begin_layout Subsubsection
+MashMaker
+\end_layout
+
+\begin_layout Standard
+is a web-based tool by Intel for editing, querying and manipulating web
+ data.
+ MashMaker is different from the other tools in that it works directly on
+ web pages.
+ In fact, MashMaker allows users to create a mashup by browsing and combining
+ different web pages.
+ The final goal of this tool is to suggest to the user some enhancements
+ (mashups or widgets), if available, for the visited web pages.
+\end_layout
+
+\begin_layout Subsubsection
+Firefox Ubiquity
+\end_layout
+
+\begin_layout Standard
+Ubiquity, an add-on for Mozilla Firefox, is a collection of quick and easy
+ natural-language-derived commands that act as mashups of web services,
+ thus allowing users to get information and relate it to current and other
+ webpages.
+ It also allows Web users to create new commands without requiring much
+ technical background.
+\end_layout
+
+\begin_layout Subsubsection
+WSO2
+\end_layout
+
+\begin_layout Standard
+The WSO2 Mashup Server is an open source mashup platform that hosts JavaScript
+ based mashups.
+ It is based on Apache Axis2 and other open source projects, and provides
+ JavaScript authors the ability to consume, compose and emit web services,
+ feeds, scraped web pages, email, and instant messages.
+ The source code is freely available under the open source Apache License.
+ It provides a runtime platform for developing and deploying mashups.
+ It can be downloaded and deployed locally or within an organization.
+\end_layout
+
+\begin_layout Subsection
+Mashup levels
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 A lot of searching and analysing the problem.
  I spend a lot of time trying to figure out what exactly the problem is
  and how to define it.
@@ -227,20 +440,27 @@ A lot of searching and analysing the problem.
  What are the difficult parts, which ones are already investigated or need
  some more attention.
  It's not just one item to research, but a complex situation.
- This can have several views and approached, each aimed at specific targets.
+ This can have several views and approaches, each aimed at specific targets.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 Here in this section I provide more detail on my approach.
- There is a difference between the theory and the implementation.
+ There is a difference between the literature study and the implementation.
  The first is a general synthesis, an idea or a problem which requires some
  thinking work to come up with a solution.
  The second part is, as it were, a more lined selection of the problem which
  than can be tackeld.
-\end_layout
+ D
+\begin_inset Note Note
+status collapsed
 
-\begin_layout Standard
-Description of problems and open questions, How do I tackle this problem
+\begin_layout Plain Layout
+escription of problems and open questions, How do I tackle this problem
  Middle chapters A lot of searching and analysing the problem.
  I spend a lot of time trying to figure out what exactly the problem is
  and how to define it.
@@ -249,8 +469,184 @@ Description of problems and open questions, How do I tackle this problem
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Philosophy of approach/ plan of attack
+\end_layout
+
+\begin_layout Standard
+A Mashup application includes all the three components of the MVC pattern.
+ According to Maximilien et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "springerlink:10.1007/978-3-540-74974-5_2"
+
+\end_inset
+
+, the three major components of a Mashup application are (1) data level,
+ (2) process level, and (3) presentation level.
+\end_layout
+
+\begin_layout Section
+MVC
+\end_layout
+
+\begin_layout Standard
+In the MVC pattern, the model represents the data on which the application
+ operates and the business rules used to manipulate the data.
+ The model is independent of the view and the controller.
+ It passively supplies its services and data to the other layers of the
+ application.
+ The view represents the output of the application.
+ It specifies how the data, accessed through the model, is presented to
+ the user.
+ Also, it has to maintain its presentation when the model changes.
+ Finally, the controller represents the interface between the model and
+ the view.
+ It translates interactions with the view into actions to be performed on
+ the model.
+\end_layout
+
+\begin_layout Subsection
+Data
+\end_layout
+
+\begin_layout Standard
+This level mainly concerns data mediation and integration.
+ Challenges at this level involve accessing and integrating data residing
+ in multiple and heterogeneous sources such as web data and statistical
+ or enterprise data.
+ Regarding the data mediation, the complexity comes from structural and
+ semantics diversities of the schema to be merged.
+ As any source of data can be possible, there cannot be a single defined
+ structure or semantics.
+ In some cases, data sources can be either structured for which a well defined
+ data model is available (e.g., XML
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Extensible Markup Language
+\end_layout
+
+\end_inset
+
+, RSS
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+RSS (originally RDF Site Summary, often dubbed Really Simple Syndication)
+ is a family of web feed formats used to publish frequently updated works—such
+ as blog entries, news headlines, audio, and video—in a standardized format
+\begin_inset CommandInset citation
+LatexCommand citep
+key "libby:rss_spec"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and ATOM
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The name Atom applies to a pair of related standards.
+ The Atom Syndication Format is an XML language used for web feeds, while
+ the Atom Publishing Protocol (AtomPub or APP) is a simple HTTP-based protocol
+ for creating and updating web resources.
+\end_layout
+
+\end_inset
+
+), or unstructured (e.g., audio, email text, office documents).
+ In the latter case, the unstructured data needs to be pre-processed in
+ order to extract their meaning and create structured data.
+ So, this level consists of all possible data manipulations (conversion,
+ filtering, format transformation, combination, etc.) needed to integrate
+ different data sources.
+ Each manipulation could be done by analyzing both syntax and semantics
+ requirements.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Halevy:2005:WYD:1103822.1103836"
+
+\end_inset
+
+In a certain way, Yahoo Pipes provides a mechanism to narrow the data definition
+s.
+ 
+\end_layout
+
+\begin_layout Subsection
+Process
+\end_layout
+
+\begin_layout Standard
+T he integration at the process level has been studied specially in the
+ workflow and service oriented composition areas.
+ At the process level, the choreography between the involved applications
+ is defined.
+ The integration is done at the application layer and the composed process
+ is developed by combining activities, generally exposed through APIs.
+ In the Mashups context, those languages are not enough for modeling application
+s since, for instance, they do not provide the connection to different remote
+ resources, e.g., REST resources, and do not handle the interaction with the
+ client browsers.
+ These limitations make it difficult to directly use these technologies
+ for Mashups.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+View
+\end_layout
+
+\begin_layout Standard
+every application needs an interface to interact with the users, and a Mashup
+ application is not an exception.
+ Presentation Level (or User Interface) in Mashup applications is used to
+ elicit user information as well as to display intermittent and final process
+ information to the user.
+ The technologies used to display the result to the user can be as simple
+ as an HTML page, or a more complex web page developed with Ajax, Java Script,
+ etc.
+ In a server-side Mashup, the integration of data and services is made on
+ the server.
+ The server acts as a proxy between the Mashup application and other services
+ involved in the application.
+ On the other hand, a client-side Mashup integrates data and services on
+ the client.
+ For example, in a client-side Mashup, an Ajax application will do the required
+ composition and parse it into a client’s web browser.
+ Currently, the integration at the presentation level in Mashups is done
+ manually.
+ That is, a developer needs to combine the user interface of the wished
+ components using either server-side or client-side technologies.The languages
+ for integrating UI components and visualising the frontends can be server-side
+ or client-side.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+ Here we focus on the client-side with the use of JavaScript
 \end_layout
 
 \begin_layout Subsection*
@@ -298,19 +694,68 @@ JQuery additions
 \end_layout
 
 \begin_layout Standard
-Something about libraries, JQuery?
+Something about other libraries, JQuery?
 \end_layout
 
 \begin_layout Subsection*
 Incremental and constantly adjusting
 \end_layout
 
-\begin_layout Section
-About data
+\begin_layout Standard
+Troughout the work there was a constant flow of making choices and redesigned.
+ I went a lot of times off course in finding a right solution or the best
+ way to tackle the problem or specific details on certain topics.
+ Hereby I needed to regain a lot of focus on what really mattered and which
+ idea's could be best used.
+ Also a lot of the times I came up with a solution and afterwards it seemed
+ there was a better one, so the approach had to be changed or the design
+ had to be implemented in another way.
 \end_layout
 
-\begin_layout Subsection*
-Mashing up
+\begin_layout Section
+Data handling
+\end_layout
+
+\begin_layout Subsection
+Format and access
+\end_layout
+
+\begin_layout Subsection
+Internal data model
+\end_layout
+
+\begin_layout Subsection
+Data mapping
+\end_layout
+
+\begin_layout Subsection
+Data Flow Operators
+\end_layout
+
+\begin_layout Subsection
+Data Refresh
+\end_layout
+
+\begin_layout Subsection
+Mashup Output
+\end_layout
+
+\begin_layout Subsection
+Extensibility
+\end_layout
+
+\begin_layout Subsection
+Sharing
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citep
+key "sigmod:2009"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -345,43 +790,78 @@ Since 2010, two major mashup vendors have added support for hosted deployment
  Therefore, these tools contribute to a new vision of the Web, where users
  are able to contribute.
  
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Wikipedia:mashup"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection*
-Yahoo Pipes
+Data flow
 \end_layout
 
 \begin_layout Standard
-Yahoo Pipes is a fairly easy application for aggreating data, with a visual
- User Interface.
- Users can easily via drag and drop create the pipe they want.
- Documentation with examples are provided, so the use is learned easily.
- There is also a community with a forum to post questions and pipes created
- by other can be browsed and forked onto your own creations.
- That way work done by others don't have to be done again.
- The knowledge can be used to create even more complex and utilary pipes.
- The possibilities are endless.
- The complete experience of the service can be used easily by the end users,
- which enables a lot of creativity in collecting and creating content.
- There is a lot of power in Yahoo Pipes.
- Different pieces from the web can be used to create the content you need
- or like.
- In my library, this line of simplicity is continued.
- It provides additionaly functionality by going on step further: making
- the data more accessable for visualisation.
- In JavaScript, there are written a lot of libraries to visualise data in
- all kinds of ways.
- But there is one mayor drawback and that is the access to the data itself.
- The libraries that make use of JavaScript, have limited or lined functionality
- in terms of data access.
- For example in Google Chart, data can be inserted via a spreadsheet.
- This spreadsheet must be accessed by Google Docs.
+About cross domain scripting.
+ JavaScript locally or get information from remote server.
+ Passing trough JSON or KML format; explained in the following section.
+ One of the most important characteristics of the Web is certainly its heterogen
+eity.
+ This heterogeneity can be seen on data, processes, and even user interfaces.
+\end_layout
+
+\begin_layout Section
+JavaScript integration
+\end_layout
+
+\begin_layout Subsubsection*
+JSON
+\end_layout
+
+\begin_layout Standard
+JSON (JavaScript Object Notation) is a lightweight data-interchange format.
+ It is easy for humans to read and write.
+ It is easy for machines to parse and generate.
+ It is based on a subset of the JavaScript Programming Language, Standard
+ ECMA-262 3rd Edition - December 1999.
+ JSON is a text format that is completely language independent but uses
+ conventions that are familiar to programmers of the C-family of languages,
+ including C, C++, C#, Java, JavaScript, Perl, Python, and many others.
+ These properties make JSON an ideal data-interchange language.
  
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Douglas:json"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-The JSON data format in visualisation libraries.
- One of the most important functions in visualisation libraries is the access
+JSON is built on two structures:
+\end_layout
+
+\begin_layout Enumerate
+A collection of name/value pairs.
+ In various languages, this is realized as an object, record, struct, dictionary
+, hash table, keyed list, or associative array.
+ An ordered list of values.
+ In most languages, this is realized as an array, vector, list, or sequence.
+\end_layout
+
+\begin_layout Enumerate
+These are universal data structures.
+ Virtually all modern programming languages support them in one form or
+ another.
+ It makes sense that a data format that is interchangeable with programming
+ languages also be based on these structures.
+\end_layout
+
+\begin_layout Standard
+One of the most important functions in visualisation libraries is the access
  to the data.
  For small projects the libraries have functionality to manually add the
  data.
@@ -410,64 +890,6 @@ The JSON data format in visualisation libraries.
  
 \end_layout
 
-\begin_layout Subsection*
-Data flow
-\end_layout
-
-\begin_layout Standard
-About cross domain scripting.
- JavaScript locally or get information from remote server.
- Passing trough JSON or KML format; explained in the following section.
-\end_layout
-
-\begin_layout Section
-JavaScript integration
-\end_layout
-
-\begin_layout Subsubsection*
-JSON
-\end_layout
-
-\begin_layout Standard
-JSON (JavaScript Object Notation) is a lightweight data-interchange format.
- It is easy for humans to read and write.
- It is easy for machines to parse and generate.
- It is based on a subset of the JavaScript Programming Language, Standard
- ECMA-262 3rd Edition - December 1999.
- JSON is a text format that is completely language independent but uses
- conventions that are familiar to programmers of the C-family of languages,
- including C, C++, C#, Java, JavaScript, Perl, Python, and many others.
- These properties make JSON an ideal data-interchange language.
- 
-\begin_inset CommandInset citation
-LatexCommand citeyear
-key "web_json"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-JSON is built on two structures:
-\end_layout
-
-\begin_layout Enumerate
-A collection of name/value pairs.
- In various languages, this is realized as an object, record, struct, dictionary
-, hash table, keyed list, or associative array.
- An ordered list of values.
- In most languages, this is realized as an array, vector, list, or sequence.
-\end_layout
-
-\begin_layout Enumerate
-These are universal data structures.
- Virtually all modern programming languages support them in one form or
- another.
- It makes sense that a data format that is interchangeable with programming
- languages also be based on these structures.
-\end_layout
-
 \begin_layout Subsubsection*
 Same origin policy
 \end_layout
@@ -478,43 +900,7 @@ In computing, the same origin policy is an important security concept for
  The policy permits scripts running on pages originating from the same site
  to access each other's methods and properties with no specific restrictions,
  but prevents access to most methods and properties across pages on different
- sites.(Wikipedia) YAHOO PIPES is a web application from Yahoo! that provides
- a graphical user interface for building data mashups that aggregate web
- feeds, web pages, and other services, creating Web-based apps from various
- sources, and publishing those apps.
- The application works by enabling users to "pipe" information from different
- sources and then set up rules for how that content should be modified (for
- example, filtering).
- A typical example is New York Times through Flickr,[1] a pipe which takes
- The New York Times RSS feed and adds a photo from Flickr based on the keywords
- of each item.
- Other than the pipe edition page, the website has a documentation page
- and a discussion page.
- Documentation page contains information about pipes, a user guide on pipe
- edition and a troubleshooting guide.
- The discussion page enables users to discuss the pipes with other users.
- The site is currently in beta.
- JSON IN PIPES: Previously in the first versions of Yahoo Pipes, there was
- only some limited support for data output and JSON was not available.
- The adding of this feature was mainly the push for making this thesis.
- In addition that there are more possibilities in the future.
- Not only Yahoo Pipes celebrates the adding of JSON, but other applications
- will soon follow.
- It is what is called mashing up the web: What is a scripting language and
- in particular Javascript? ..add here some information about javascript
-\end_layout
-
-\begin_layout Standard
-What can you do with it? Why use it? Advantages/disadvantages? - Run locally,
- so server included - Adds functionality and also better user interaction.
- It's not just one item to research, but a complex situation.
- This can have several views and approached, each aimed at specific targets.
- Here in this section I provide more detail on my approach.
- There is a difference between the theory and the implementation.
- The first is a general synthesis, an idea or a problem which requires some
- thinking work to come up with a solution.
- The second part is, as it were, a more lined selection of the problem which
- than can be tackeld.
+ sites.
 \end_layout
 
 \begin_layout Section
@@ -686,7 +1072,7 @@ Javascript is doing all the scripting local, so no data transfer to any
 \end_layout
 
 \begin_layout Section
-Making decisions
+Design decisions & issues
 \end_layout
 
 \begin_layout Standard

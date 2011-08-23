@@ -127,18 +127,45 @@ Appendices If there is material that should be in the thesis but which would
 \end_layout
 
 \begin_layout Standard
-It going to be a short quick fast improving good road!
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Previously in the first versions of Yahoo Pipes, there was only some limited
+ support for data output and JSON was not available.
+ Not only Yahoo Pipes celebrates the adding of JSON, but other applications
+ will soon follow.
+ It is what is called mashing up the web: What is a scripting language and
+ in particular Javascript? ..add here some information about javascript
+\end_layout
+
+\begin_layout Plain Layout
+What can you do with it? Why use it? Advantages/disadvantages? - Run locally,
+ so server included - Adds functionality and also better user interaction.
+ It's not just one item to research, but a complex situation.
+ This can have several views and approached, each aimed at specific targets.
+ 
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-Theoretical Research
-\end_layout
-
-\begin_layout Section
-Library implementation
+Theoretical Framework
 \end_layout
 
 \begin_layout Standard
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+tekst moet nog verbeterd worden
+\end_layout
+
+\end_inset
+
 It provides an abstraction layer between Yahoo Pipes and JavaScript visualisatio
 n libraries.
  It's even more than that, it provides easy handling of JSON data.
@@ -186,6 +213,14 @@ es and beautiful examples of what you can do with data.
  Sorting of the data is another function: sorting by data, category or time.
 \end_layout
 
+\begin_layout Section
+Library implementation
+\end_layout
+
+\begin_layout Standard
+According to the model view controller model
+\end_layout
+
 \begin_layout Subsection
 Functionality
 \end_layout
@@ -202,6 +237,22 @@ Focus on the handling of data.
  Afterwards it is something good to fine tune the user interface.
  This way the library will become more accessibly for less skilled programmers
  who wish to use the visualise data.
+\end_layout
+
+\begin_layout Subsubsection
+Pipe loading
+\end_layout
+
+\begin_layout Subsubsection
+Data storage and viewing
+\end_layout
+
+\begin_layout Subsubsection
+User interaction
+\end_layout
+
+\begin_layout Subsubsection
+Visualisation
 \end_layout
 
 \begin_layout Subsection
@@ -264,25 +315,6 @@ difficult to get a good grip on the data; not a good constistency, what
 
 \begin_layout Itemize
 support for adding data easily
-\end_layout
-
-\begin_layout Standard
-\begin_inset Marginal
-status collapsed
-
-\begin_layout Plain Layout
-Take a look at this 
-\family typewriter
-.lyx
-\family default
- file in LyX for coding examples.
- Make use of contextual menus (right click) and the properties dialogs for
- the insets.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Section

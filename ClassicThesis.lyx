@@ -100,16 +100,6 @@ pagestyle{plain}
 \begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
-filename "DirtyTitlepage.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
 filename "Titlepage.lyx"
 
 \end_inset
@@ -155,23 +145,6 @@ filename "Dedication.lyx"
 \begin_inset CommandInset include
 LatexCommand include
 filename "Abstract.lyx"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "Publication.lyx"
 
 \end_inset
 
@@ -251,6 +224,13 @@ pagenumbering{arabic}
 
 \end_layout
 
+\begin_layout Part Introduction (ClassicThesis)
+This part contains the problem statement, the importance of the research
+ and were it fits into the broad domain of computer science.
+ Also the organisation and structure of the research, including some issues
+ can be found in this part.
+\end_layout
+
 \begin_layout Part
 Introduction
 \end_layout
@@ -266,7 +246,14 @@ filename "Chapter01.lyx"
 \end_layout
 
 \begin_layout Part Introduction (ClassicThesis)
-<Introduction to the research part>
+This part contains two chapters.
+ In the first chapter the description and analysis of previous work done
+ can be found.
+ It cites work in the more broader domain related to my research.
+ It also handles a theoretical approach, and discusses some other related
+ webservices.
+ The second chapter contains the general approach to the problem, including
+ technologies used in relation to the research domain.
 \end_layout
 
 \begin_layout Part
@@ -294,7 +281,13 @@ filename "Chapter03.lyx"
 \end_layout
 
 \begin_layout Part Introduction (ClassicThesis)
-<Introduction to the toughts part>
+This part contains more details on the approach and possible solutions for
+ the problem statement.
+ It explains the process of the analysis of the requirements for the problem
+ statement and the design to meet these requirements.
+ It explains the JavaScript implementation of the webservice in detail.
+ This part ends with the chapter that contains the discussion of the results,
+ any solutions found and the general conclusion for this thesis.
 \end_layout
 
 \begin_layout Part
@@ -328,8 +321,13 @@ filename "Chapter05.lyx"
 
 \end_layout
 
-\begin_layout Part
+\begin_layout Part Introduction (ClassicThesis)
 \start_of_appendix
+This part contains information that is important to, but is not the main
+ idea of, the main text.
+\end_layout
+
+\begin_layout Part
 Appendix
 \end_layout
 
