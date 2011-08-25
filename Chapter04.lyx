@@ -61,7 +61,7 @@
 \begin_body
 
 \begin_layout Chapter
-Methods & solutions
+Methods & solutions of the web service implementation
 \begin_inset Note Note
 status collapsed
 
@@ -152,11 +152,140 @@ What can you do with it? Why use it? Advantages/disadvantages? - Run locally,
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Bespreken welke keuzes gemaakt in mijn ontwerp en waarom die keuzes (achtergrond
+studie)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Theoretical Framework
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+This is about data and the flow of data.
+ It's also about usability.
+ Some kind of layer in between to technologies.
+ I need to connect the dots.
+ In Javascripting you can write libraries.
+ What can you do with JavaScript? It a language for scripting and developing
+ web applications.
+ So users can write code and perform tasks more easily or have tasks automated.
+ One type of libraries are visualisation libraries, by which the user can
+ create charts, plots, geomaps and all others kinds of interesting visualisation
+s.
+ Visualisation is a widely and quite vage description.
+ I shall explain it some more in detail.
+ Mostly it is used when users have some kind of data that they want to represent
+ in a different way.
+ An important concept in developing applications is that data and visualisation
+ should be two different things and also be handled seperatly.
+ It's not a good solution to bind a certain type of visualisation hardcoded
+ to the data.
+ If you then want to have another view on the data, another font or color
+ for example, it's hard to change it.
+ When you seperate things, the view can be modified and choosen freely.
+\end_layout
+
+\begin_layout Plain Layout
+So in the first part you have the data, which can contain any type of data:
+ text, numbers, relationships, etc..
+ The size of the data also matters for the processing quality and speed.
+ Large amounts of data are more difficult to handle and take more time,
+ which can decrease a good user experience, for example if one has to wait
+ to long for results.
+ If the visualisation is added up with that, the time increases even more.
+ That's a part why performance is important, the performance of the code.
+ This means performance of several parts: querying data, updating data,
+ creating new data structures and data views.
+ This last part is in general what a visualisation library in Javascript
+ is doing; it takes a set of data and creates a 'view' on this data in the
+ form of a table, a chart or something else.
+\end_layout
+
+\begin_layout Plain Layout
+Let me now explain where the difficult part comes in this problem: where
+ do we get the data? Mostly data is stored in databases of all sorts, online
+ or offline.
+ The data can be already provided in some sort of form or it can be necessary
+ that the data still needs to be accquired.
+ So you have two parts in the origin of the data: one, the creation of data
+ and two, the handling/usage of the data.
+\end_layout
+
+\begin_layout Plain Layout
+The source for your data can be retrieved for example from the internet.
+ That's were Yahoo Pipes comes in.
+ It's a very handy tool to get data from the internet in all forms; web
+ content, rss feed items, geolocations, csv-files.
+ It is clear that the possibilities are endless, all kinds of data can be
+ retrieved from the web.
+ In first instance, Yahoo Pipes seems to be used for aggregating or manipulating
+ RSS feeds.
+ One could think of mainly text and news feeds, but it can reach further
+ than that.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Write some more here about RSS, what it is used for.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+CSV files with financial data, a lot of numbers etc..or even XML files containing
+ a structured way of data with several caracteristics, maplocations, gps-coordin
+ates..There are no limits on the data you can provide.
+ This is a very interesting thing, but which makes everything also a lot
+ more complex.
+ So the input should be handled with care and parsed correctly.
+ Yahoo Pipes provides a lot of good things for this.
+ It has some nice functionality to handle the data correctly.
+ The user than can design it's own mashup or output what they want to do
+ with it.
+ For example different views, filters etc can be applied on the data.
+ It a little like a database where the user can query things etc..Yahoo Pipes
+ is a data processor for the web.
+\end_layout
+
+\begin_layout Plain Layout
+So here's step two.
+ Now that we have collected the data, what can we do with it? Like a already
+ previously mentioned, Yahoo Pipes can manipulate and filter the data, even
+ based on user inputs.
+ So you can either just collect data in a central place of go a step further
+ by manipulating.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Methods-&-solutions"
+
+\end_inset
+
+
 \begin_inset Marginal
 status collapsed
 
@@ -213,8 +342,1002 @@ es and beautiful examples of what you can do with data.
  Sorting of the data is another function: sorting by data, category or time.
 \end_layout
 
+\begin_layout Standard
+Similar to the development environments, a mashup’s execution can depend
+ on the availability of additional browser plug-ins or extensions.
+ Finally, we look at the environment’s scalability.
+ We can consider scalability from three perspectives: the number of data
+ sources, the number of models (compositions), or the number of users
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yu:2008:UMD:1439188.1439257"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Library implementation
+Design decisions & issues
+\end_layout
+
+\begin_layout Subsection
+Philosophy of approach
+\end_layout
+
+\begin_layout Standard
+A Mashup application includes all the three components of the MVC pattern.
+ According to Maximilien et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "springerlink:10.1007/978-3-540-74974-5_2"
+
+\end_inset
+
+, the three major components of a Mashup application are (1) data level,
+ (2) process level, and (3) presentation level.
+\end_layout
+
+\begin_layout Subsection
+The MVC Model
+\end_layout
+
+\begin_layout Standard
+In the MVC pattern, the model represents the data on which the application
+ operates and the business rules used to manipulate the data.
+ The model is independent of the view and the controller.
+ It passively supplies its services and data to the other layers of the
+ application.
+ The view represents the output of the application.
+ It specifies how the data, accessed through the model, is presented to
+ the user.
+ Also, it has to maintain its presentation when the model changes.
+ Finally, the controller represents the interface between the model and
+ the view.
+ It translates interactions with the view into actions to be performed on
+ the model.
+\end_layout
+
+\begin_layout Standard
+Mashups are about simplicity, usability, and ease of access.
+ This simplicity has the upper hand over feature completeness or full extensibil
+ity.
+ Some tools are strictly for developers, whereas others are more oriented
+ toward end users.
+ Several properties characterize mashup development environments
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yu:2008:UMD:1439188.1439257"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Yahoo Pipes is probably the best representative of DA output (pipes are
+ RSS feeds).
+ Its graphical modeling language is flow-based; accordingly, data is also
+ passed via data flows.
+ Pipes is instance-based; it doesn’t provide exception handling or support
+ transactions.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yu:2008:UMD:1439188.1439257"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Here are some other reasons for using the client-side mashup style:
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+goede ontwerpbeslissingen, verantwoording van de keuzes!!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+It can be easy to implement.
+ If the site you want to mash up with provides a JavaScript library to facilitat
+e the use of its service, you simply reference the JavaScript library and
+ include it in your web page.
+ You then provide the appropriate code in the web page to use the functions
+ in the library.
+ Some mashup sites offer sample code that illustrates how to use the functions
+ in their library.
+ If sample code is available, you can copy and tailor it as necessary.
+ 
+\end_layout
+
+\begin_layout Itemize
+You don't need to provide a server-side component.
+ In a client-side mashup, the mashup site provides the server-side component.
+ By comparison, in a server-side mashup, you need to provide a server-side
+ proxy such as a servlet or a Java class to act as an intermediary between
+ the client and a service.
+ 
+\end_layout
+
+\begin_layout Itemize
+It can perform better than a server-side mashup.
+ In a server-side mashup, a service request is passed over the network from
+ the browser to the server-side proxy first and then from the server-side
+ proxy to the mashup server.
+ The response needs to make the same two network hops in reverse order before
+ arriving at the client.
+ This can result in a significant delay in receiving the response.
+ In some cases, you can mitigate the delay in a server-side mashup by caching
+ the response from the mashup server on your server.
+ However, in a client-side mashup, a service request and response are passed
+ directly between the client and the mashup server, so receiving a response
+ typically takes less time.
+ 
+\end_layout
+
+\begin_layout Itemize
+It reduces load on the server.
+ Because a service request and response is passed directly between the client
+ and the mashup server, and not through a server-side proxy, it reduces
+ the processing load on the server.
+ 
+\end_layout
+
+\begin_layout Itemize
+You don't need a custom plug-in to implement the approach.
+ Most modern browsers support the techniques typically used in client-side
+ mashups, including dynamic scripting and JSONP.
+\end_layout
+
+\begin_layout Subsection
+Other stuff
+\end_layout
+
+\begin_layout Standard
+Something on the use of CORS; better security than using 
+\begin_inset Quotes eld
+\end_inset
+
+eval()
+\begin_inset Quotes erd
+\end_inset
+
+ or something.
+\end_layout
+
+\begin_layout Standard
+The client-side mashup style works well in some cases, such as in the Google
+ Maps mashup in Pet Store or in the hypothetical mashup with the Pet Store
+ Catalog service, but it can also expose some issues that you must address
+ in your design.
+ When you assess these issues you may find that another approach such as
+ a server-side mashup works better.
+ Here are some of the issues you must address in doing a client-side mashup:
+\end_layout
+
+\begin_layout Itemize
+Security.
+ Can the client directly access the service and content for the mashup?
+ Some basic security protections for Ajax interactions limit the ability
+ to use JavaScript code to get data from other sites.
+ Is your code exposing confidential business information to another site?
+ Beware of making your site and data visible to an unintended audience.
+ 
+\end_layout
+
+\begin_layout Itemize
+Performance.
+ Does the other web site in a mashup respond adequately? Delays from another
+ site can frustrate the user and degrade the user experience.
+ 
+\end_layout
+
+\begin_layout Itemize
+Stability.
+ In a client-side mashup, can you trust the service's functions to work
+ the same way as you expect? For example, in a mashup with the Google Maps
+ service, will its convenience functions display map markers in the future
+ as they do today? Consider what you can do to insulate your code from unanticip
+ated changes in a service.
+ 
+\end_layout
+
+\begin_layout Itemize
+Amount of client-side code.
+ Does the code for the mashup put too much application logic on the client
+ side of the application? 
+\end_layout
+
+\begin_layout Itemize
+Caching.
+ Can the data that service returns be of use to multiple clients? If so,
+ the server-side mashup style might be a better approach.
+ In the server-side approach, you can cache data.
+ The cached data can then be accessible to various clients without the need
+ for separate service requests.
+ Caching data can also reduce the number of calls a client makes to the
+ mashup site.
+ This is important because a service might limit or monitor the number of
+ times you access its site.
+ 
+\end_layout
+
+\begin_layout Itemize
+Protocols and interfaces.
+ Can the client satisfy the protocols and interfaces required by the site
+ with which it mashes up? The protocols or interfaces required to access
+ services and content in another site might be difficult to use with JavaScript
+ code.
+ 
+\end_layout
+
+\begin_layout Itemize
+Format of the returned data.
+ Is the format of the data returned by the mashup site easy for the browser
+ to handle? A mashup site can return a response in many different formats
+ including XML, JSON, JSONP, HTML, plain text, RSS/ATOM, and GData.
+ Data in JSON or JSONP format can be easier for the browser to parse than
+ a format such as XML.
+ If a site does not provide a data type that's easy for the browser to handle,
+ for example, if its service is available in SOAP only, it might be better
+ to use the server-side mashup style.
+ Parsing SOAP with various types of browsers can be difficult -- it can
+ be easier to handle SOAP with server-side code.
+\end_layout
+
+\begin_layout Subsubsection
+RSS
+\end_layout
+
+\begin_layout Standard
+RSS is a family of XML-based syndication formats.
+ In this context, syndication implies that a Web site that wants to distribute
+ content creates an RSS document and registers the document with an RSS
+ publisher.
+ An RSS-enabled client can then check the publisher's feed for new content
+ and react to it in an appropriate manner.
+ RSS has been adopted to syndicate a wide variety of content, ranging from
+ news articles and headlines, changelogs for CVS checkins or wiki pages,
+ project updates, and even audiovisual data such as radio programs.
+ Version 1.0 is RDF-based, but the most recent, version 2.0, is not.
+\end_layout
+
+\begin_layout Standard
+Atom is a newer, but similar, syndication protocol.
+ It is a proposed standard at the Internet Engineering Task Force (IETF)
+ and seeks to maintain better metadata than RSS, provide better and more
+ rigorous documentation, and incorporates the notion of constructs for common
+ data representation.
+\end_layout
+
+\begin_layout Standard
+These syndication technologies are great for mashups that aggregate event-based
+ or update-driven content, such as news and weblog aggregators.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ibm:thenewbreed"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Data component
+\end_layout
+
+\begin_layout Standard
+This level mainly concerns data mediation and integration.
+ Challenges at this level involve accessing and integrating data residing
+ in multiple and heterogeneous sources such as web data and statistical
+ or enterprise data.
+ Regarding the data mediation, the complexity comes from structural and
+ semantics diversities of the schema to be merged.
+ As any source of data can be possible, there cannot be a single defined
+ structure or semantics.
+ In some cases, data sources can be either structured for which a well defined
+ data model is available (e.g., XML
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Extensible Markup Language
+\end_layout
+
+\end_inset
+
+, RSS
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+RSS (originally RDF Site Summary, often dubbed Really Simple Syndication)
+ is a family of web feed formats used to publish frequently updated works—such
+ as blog entries, news headlines, audio, and video—in a standardized format
+\begin_inset CommandInset citation
+LatexCommand citep
+key "libby:rss_spec"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ and ATOM
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+The name Atom applies to a pair of related standards.
+ The Atom Syndication Format is an XML language used for web feeds, while
+ the Atom Publishing Protocol (AtomPub or APP) is a simple HTTP-based protocol
+ for creating and updating web resources.
+\end_layout
+
+\end_inset
+
+), or unstructured (e.g., audio, email text, office documents).
+ In the latter case, the unstructured data needs to be pre-processed in
+ order to extract their meaning and create structured data.
+ So, this level consists of all possible data manipulations (conversion,
+ filtering, format transformation, combination, etc.) needed to integrate
+ different data sources.
+ Each manipulation could be done by analyzing both syntax and semantics
+ requirements.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Halevy:2005:WYD:1103822.1103836"
+
+\end_inset
+
+In a certain way, Yahoo Pipes provides a mechanism to narrow the data definition
+s.
+ 
+\end_layout
+
+\begin_layout Subsection
+Loading the pipe
+\end_layout
+
+\begin_layout Subsubsection
+Parameters
+\end_layout
+
+\begin_layout Standard
+It is possible to provide user inputs when loading a pipe in Yahoo.
+ For example the url of the website to search, the number of items to be
+ displayed or a location on the map.
+ Their website for browsing and running pipes, provides a form section where
+ users can see the parameters and enter the values.
+ However none of this information in provided when exporting in JSON or
+ RSS.
+ This is a drawback in functionality as users need to guess or even not
+ beware of any input parameters when using the pipe.
+ In the implementation a workaround is provided to tackle this problem.
+ It's even a practice of the mashup concept itself.
+\end_layout
+
+\begin_layout Standard
+Mashups can extract content from web sites by a technique known as screen
+ scraping.
+ In this context, screen scraping denotes the process by which a tool attempts
+ to extract information from the content provider by attempting to parse
+ the provider's Web pages, which were originally intended for human consumption;
+ the pipe information page in this case.
+ (e.g.
+ 
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://pipes.yahoo.com/pipes/pipe.info?_id=avkEShi32xG_EF6KZVUMqA
+\end_layout
+
+\end_inset
+
+) This way semantic data structures representative of the necessary information
+ that can be extracted, used and manipulated programmatically.
+ Yahoo! Query Language
+\begin_inset CommandInset citation
+LatexCommand citep
+key "YQL"
+
+\end_inset
+
+ is used here in this case.
+ It's an expressive SQL-like language that lets you query, filter, and join
+ data across Web services.
+ With YQL, apps run faster with fewer lines of code and a smaller network
+ footprint.
+ Yahoo! and other websites across the Internet make much of their structured
+ data available to developers, primarily through Web services.
+ With YQL, developers can access and shape data across the Internet through
+ one simple language, eliminating the need to learn how to call different
+ APIs and when there is no API available at all.
+ To call the YQL Web Service, an application would call an HTTP GET method
+ on this parametrised URL.
+ The result data can be in XML or JSON format, the latter is used to get
+ that information from the pipe info site into the webservice.
+\end_layout
+
+\begin_layout Standard
+Screen scraping has two primary drawbacks.
+ The first is that, unlike APIs with interfaces, scraping has no specific
+ programmatic contract between content-provider and content-consumer.
+ The second issue is the lack of sophisticated, re-usable screen-scraping
+ toolkit software, colloquially known as scrAPIs.
+ The lack of such APIs and toolkits is largely due to the application-specific
+ needs of each individual scraping tool.
+ This leads to large development overheads as designers are forced to reverse-en
+gineer content, develop data models, parse, and aggregate raw data from
+ the provider's site.
+ Screen scraping tools are considered as not really an elegant solution,
+ altough YQL provides a decent framework and does the job well.
+\end_layout
+
+\begin_layout Subsection
+The data
+\end_layout
+
+\begin_layout Subsubsection
+Technical challenges
+\end_layout
+
+\begin_layout Standard
+Like any other data integration domain, mashup development is replete with
+ technical challenges that need to be addressed, especially as mashup applicatio
+ns become more feature- and functionality-rich.
+ This section touches on a handful of these challenges, some of which you
+ can address and mitigate, while others are open issues.
+\end_layout
+
+\begin_layout Standard
+For example, translation systems between data models must be designed.
+ When converting data into common forms, reasonable assumptions often have
+ to be made when the mapping is not a complete one (for example, one data
+ source might have a model in which an address-type contains a country-field,
+ whereas another does not).
+ Already challenging, this is exacerbated by the fact that the mashup developers
+ might not be domain experts on the source data models because the models
+ are third-party to them, and these reasonable assumptions might not be
+ intuitive or clear.
+ the data they wish to integrate is not suitable for machine automation;
+ that it needs cleansing.
+\end_layout
+
+\begin_layout Subsubsection
+Data handling
+\end_layout
+
+\begin_layout Standard
+Data mapping can be manual or semi-automatic.
+ In my project parts of the data are handled in a semi-automatic way.The
+ JSON object notation doesn't provide any mapping to types.
+ Also JavaScript doesn't have strong typing.
+ All the data is parsed by the 'parseJSON' method.
+ This method can has an argument 'reviver'.
+ A function that filters and transforms the results.
+ The deserialized object is traversed recursively, and the reviver function
+ is called for each member of the object in post-order (every object is
+ revived after all its members have been revived).
+ For each member, the following occurs: 
+\end_layout
+
+\begin_layout Itemize
+If reviver returns a valid value, the member value is replaced with the
+ value returned by reviver.
+\end_layout
+
+\begin_layout Itemize
+If reviver returns what it received, the structure is not modified.
+\end_layout
+
+\begin_layout Itemize
+If reviver returns null or undefined, the object member is deleted.
+\end_layout
+
+\begin_layout Standard
+If a function, prescribes how the value originally produced by parsing is
+ transformed, before being returned.
+\end_layout
+
+\begin_layout Section
+Application logic
+\end_layout
+
+\begin_layout Subsection
+JavaScript
+\end_layout
+
+\begin_layout Subsubsection*
+General JavaScript
+\end_layout
+
+\begin_layout Standard
+Refreshing my skills about the JavaScript language.
+ I had a course about it in the curriculum about 2 years ago.
+ It was a basic course.
+ Now and than I used some Javascript for the design of a few personal webpages.
+\end_layout
+
+\begin_layout Standard
+I also followed a lot of tutorials online.
+ I did a few at NetTuts about more advanced topics.
+ Also some general subjects to improve my view.
+ 
+\end_layout
+
+\begin_layout Standard
+It seems that there is already done a lot of investigation about cross domain
+ exchange of data.
+ On the web JavaScript is a commonly used scripting language.
+ My vision of the technology was not the right one it seems.
+ And also for a lot of people Javascript is equal to annoying popups, malicious
+ script and some fancy stuff that is not quite necessary.
+ But it's more than that.
+ There is a wide variety of libraries available for the language, of which
+ the most popular are JQuery, Dojo and Prototype.
+ These provide an extra layer above the scripting language.
+\end_layout
+
+\begin_layout Standard
+A more fundamental requirement is that Ajax requires that JavaScript be
+ enabled within the user's browser.
+ This might be a reasonable assumption for the majority of the population,
+ but there are certainly users who use browsers or automated tools that
+ either do not support JavaScript or do not have it enabled.
+ One such set of tools are the robots, spiders, and Web crawlers that aggregate
+ information for Internet and intranet search engines.
+ Without graceful degradation, Ajax-based mashup applications might find
+ themselves missing out on both a minority user base as well as search engine
+ visibility.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ibm:thenewbreed"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+JQuery additions
+\end_layout
+
+\begin_layout Standard
+Something about other libraries, JQuery?
+\end_layout
+
+\begin_layout Subsection
+JSON
+\end_layout
+
+\begin_layout Subsubsection*
+JSON
+\end_layout
+
+\begin_layout Standard
+JSON (JavaScript Object Notation) is a lightweight data-interchange format.
+ It is easy for humans to read and write.
+ It is easy for machines to parse and generate.
+ It is based on a subset of the JavaScript Programming Language, Standard
+ ECMA-262 3rd Edition - December 1999.
+ JSON is a text format that is completely language independent but uses
+ conventions that are familiar to programmers of the C-family of languages,
+ including C, C++, C#, Java, JavaScript, Perl, Python, and many others.
+ These properties make JSON an ideal data-interchange language.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Douglas:json"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+JSON is built on two structures:
+\end_layout
+
+\begin_layout Enumerate
+A collection of name/value pairs.
+ In various languages, this is realized as an object, record, struct, dictionary
+, hash table, keyed list, or associative array.
+ An ordered list of values.
+ In most languages, this is realized as an array, vector, list, or sequence.
+\end_layout
+
+\begin_layout Enumerate
+These are universal data structures.
+ Virtually all modern programming languages support them in one form or
+ another.
+ It makes sense that a data format that is interchangeable with programming
+ languages also be based on these structures.
+\end_layout
+
+\begin_layout Standard
+One of the most important functions in visualisation libraries is the access
+ to the data.
+ For small projects the libraries have functionality to manually add the
+ data.
+ For that you have to know a (minimum) of knowledge in programming languages.
+ When the amount of data gets larger, this way of working becomes inefficiënt
+ and a long work.
+ That's why another method of data provision is supported: the JSON format.
+ As explained previously, it is a very simple open format to exchange data.
+ This way a lot more data can be easily queried and a lot more easilier.
+ No more manual adding.
+ The data is provided in a structured way.
+ But here it is where there arises another problem: which format does the
+ data has to be? It seems that this is not such a simple question.
+ Altough many libraries provide JSON support, it has to be in the right
+ format.
+ Otherwise the library can't handle the data.
+ Also different libraries have different standard or ways of working with
+ the data input.
+ There is no general abstraction of using the JSON structured data.
+ It seems to be the good choice on one hand, it's not really possible to
+ define a standard, that will do no right to the easy use of JSON.
+ On the other hand, it makes the implementation more difficult.
+ The provided data can have any structure, properties or different types
+ of data like strings, numbers for example.
+ There is no easy use of the data.
+ 
+\end_layout
+
+\begin_layout Standard
+JSONP format is an extension to JavaScript Object Notation (JSON), a lightweight
+ data interchange format that is relatively easy to parse and evaluate by
+ a JavaScript function.
+ This makes data in JSON format relatively easy for a client to handle.
+ JSONP appends the name of a local callback function to a JSON object.
+ If the specified format is JSONP, a callback function is usually specified
+ as a parameter in the request.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "sunclientsidemashups:2007"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+Process
+\end_layout
+
+\begin_layout Standard
+T he integration at the process level has been studied specially in the
+ workflow and service oriented composition areas.
+ At the process level, the choreography between the involved applications
+ is defined.
+ The integration is done at the application layer and the composed process
+ is developed by combining activities, generally exposed through APIs.
+ In the Mashups context, those languages are not enough for modeling application
+s since, for instance, they do not provide the connection to different remote
+ resources, e.g., REST resources, and do not handle the interaction with the
+ client browsers.
+ These limitations make it difficult to directly use these technologies
+ for Mashups.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+User Interface
+\end_layout
+
+\begin_layout Standard
+Regardless, Ajax is a Web application model rather than a specific technology.
+ It comprises several technologies focused around the asynchronous loading
+ and presentation of content:
+\end_layout
+
+\begin_layout Standard
+XHTML and CSS for style presentation The Document Object Model (DOM) API
+ exposed by the browser for dynamic display and interaction Asynchronous
+ data exchange, typically of XML data Browser-side scripting, primarily
+ JavaScript When used together, the goal of these technologies is to create
+ a smooth, cohesive Web experience for the user by exchanging small amounts
+ of data with the content servers rather than reload and re-render the entire
+ page after some user action.
+ You can construct Ajax engines for mashups from various Ajax toolkits and
+ libraries (such as Sajax or Zimbra), usually implemented in JavaScript.
+ The Google Maps API includes a proprietary Ajax engine, and the effect
+ it has on the user experience is powerful: it behaves like a truly local
+ application in that there are no scrollbars to manipulate or translation
+ arrows that force page reloads.
+ The Ajax model of Web development can provide a much richer and more seamless
+ user experience than the traditional full-page-refresh, but it poses some
+ difficulties as well.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ibm:thenewbreed"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Visualisation
+\end_layout
+
+\begin_layout Standard
+The component model determines the nature of components and influences how
+ they can be glued together — that is, how they can be composed.
+ A well-defined component interface, for instance, facilitates reusability,
+ whereas a flexible component interface ensures extensibility.
+ We characterize a component model using three properties: type, interface,
+ extensibility.
+ The first property is type.
+ A component can be a data, application logic, or user interface type, depending
+ on whether it acts as a pure data source, a component providing access
+ to application logic, or a component that also provides a GUI to users.
+ Second, we look at the model’s interface.
+ A component might expose a create-read- update- delete interface, APIs
+ in specific programming languages or in IDL/WSDL, XML/ HTML markup, or
+ it might only expose GUI elements to the end users.
+ A component might also expose a combination of these elements.
+ Finally, the extensibility property explains whether the user can create
+ new components or extend the component model to accommodate specific applicatio
+n requirements, such as new operations.
+\end_layout
+
+\begin_layout Subsubsection*
+View
+\end_layout
+
+\begin_layout Standard
+every application needs an interface to interact with the users, and a Mashup
+ application is not an exception.
+ Presentation Level (or User Interface) in Mashup applications is used to
+ elicit user information as well as to display intermittent and final process
+ information to the user.
+ The technologies used to display the result to the user can be as simple
+ as an HTML page, or a more complex web page developed with Ajax, Java Script,
+ etc.
+ In a server-side Mashup, the integration of data and services is made on
+ the server.
+ The server acts as a proxy between the Mashup application and other services
+ involved in the application.
+ On the other hand, a client-side Mashup integrates data and services on
+ the client.
+ For example, in a client-side Mashup, an Ajax application will do the required
+ composition and parse it into a client’s web browser.
+ Currently, the integration at the presentation level in Mashups is done
+ manually.
+ That is, a developer needs to combine the user interface of the wished
+ components using either server-side or client-side technologies.The languages
+ for integrating UI components and visualising the frontends can be server-side
+ or client-side.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+ Here we focus on the client-side with the use of JavaScript
+\end_layout
+
+\begin_layout Subsection
+General visualisation techniques
+\end_layout
+
+\begin_layout Standard
+Information graphics or infographics are graphic visual representations
+ of information, data or knowledge.
+ These graphics present complex information quickly and clearly, such as
+ in signs, maps, journalism, technical writing, and education.
+ With an information graphic, computer scientists, mathematicians, and statistic
+ians develop and communicate concepts using a single symbol to process informati
+on.
+\end_layout
+
+\begin_layout Subsection
+Visualization libraries
+\end_layout
+
+\begin_layout Standard
+It seems that there is not much support for JSON or input of data for visualisat
+ion libraries.
+ Google has a good way for inserting data in their charts, trough Google
+ Docs, wich works fine with Google Chart.
+ But like we are used to, it protects it's market by recommending their
+ own apps.
+ So the possibilities for example are to use a Google document, to which
+ a chart can be coupled, so the spreadsheet is used as database.
+ Another option is to load a JSON object.
+ This is more complicated.
+ In fact it a more simple thing because the a json object can be very handy
+ and easily managed.
+ It has many advantages, which I explain in an other section about JSON
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+reffer to other section/ write more in detail about json
+\end_layout
+
+\end_inset
+
+On one hand it seems to be easy to insert the JSON data for using with Google
+ chart.
+ But that's the trick; the data needs to be in a specific format to be supported.
+ Otherwise it won't work.
+ So eventually you allready have to know the exact data structure from the
+ beginning to use it.
+ But can your source work with it or is a conversion necessary.
+ Here my library forms a coupling between the data.
+ The original data can be any JSON object and the library will convert it
+ into the right JSON object which can be used for the visualisation.
+ 
+\end_layout
+
+\begin_layout Standard
+Sometimes users want just more than visualising their data.
+ Or not all the data inserted is necessary or comparision of data is wanted.
+ The user wants for example select a subset of the data or compare different
+ 'versions' of data.
+ In the library this functionality is forseen; it is possible to select
+ the source data, make subsets of data and compare different data with each
+ other.
+ By this I mean for example data from two different times, which then can
+ be compared to highlight differences or similarities.
+\end_layout
+
+\begin_layout Standard
+The access to data in Javascript.Visualisations need a lot of data.
+ But how can we transfer this data in an easy way into Javascript without
+ doing it manually.
+\end_layout
+
+\begin_layout Subsubsection*
+Google Chart
+\end_layout
+
+\begin_layout Subsubsection*
+d3.js
+\end_layout
+
+\begin_layout Standard
+D3.js is a small, free JavaScript library for manipulating documents based
+ on data.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+citation to the official website
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Exploration of mainly Google Chart API and D3.js library.
+ In fact D3 it is the succession of the formerly Protovis library.
+ As the author suggest, the development of Protovis is not active any more.
+ It's true, D3 as the successor has a lot of improvements compared to Protovis.
+ 
+\end_layout
+
+\begin_layout Standard
+D3 allows you to bind arbitrary data to a Document Object Model (DOM), and
+ then apply data-driven transformations to the document.
+ As a trivial example, you can use D3 to generate a basic HTML table from
+ an array of numbers.
+ Or, use the same data to create an interactive SVG bar chart with smooth
+ transitions and interaction.
+\end_layout
+
+\begin_layout Standard
+D3 is not a traditional visualization framework.
+ Rather than provide a monolithic system with all the features anyone may
+ ever need, D3 solves only the crux of the problem: efficient manipulation
+ of documents based on data.
+ This gives D3 extraordinary flexibility, exposing the full capabilities
+ of underlying technologies such as CSS3, HTML5 and SVG.
+ It avoids learning a new intermediate proprietary representation.
+ With minimal overhead, D3 is extremely fast, supporting large datasets
+ and dynamic behaviors for interaction and animation.
+ And, for those common needs, D3’s functional style allows code reuse through
+ a diverse collection of optional modules.
+\end_layout
+
+\begin_layout Subsubsection
+Processing
+\end_layout
+
+\begin_layout Standard
+Processing.js is the sister project of the popular Processing visual programming
+ language, designed for the web.
+ Processing.js makes your data visualizations, digital art, interactive animation
+s, educational graphs, video games, etc.
+ work using web standards and without any plug-ins.
+ You write code using the Processing language, include it in your web page,
+ and Processing.js does the rest.
+ It's not magic, but almost.
+\end_layout
+
+\begin_layout Section
+Composition of the components
+\end_layout
+
+\begin_layout Standard
+Assuming you have no specific development tools, what’s involved in manually
+ developing an application like HousingMaps? First, you must become familiar
+ with the two source applications (Craigslist and Google Maps) and identify
+ how you will reuse or extract data from the two sites.
+ Whereas Google Maps offers a publicly available JavaScript API that you
+ can leverage, Craigslist provides its listings via RSS.
+ Therefore, to extract property and address data, you must parse and interpret
+ the RSS feed from Craigslist.
+ To configure the clickable markers that will display the property information
+ in a popup cloud window upon a click, you must interact with the Google
+ Maps JavaScript API.
+ Enabling the automatic popup of this cloud requires a specific JavaScript
+ function that listens for the property selection and reacts by invoking
+ the Google Maps API to select the respective marker.
+ Although Google Maps has its own user interface, letting users select propertie
+s wrapped from Craigslist requires that you fill and appropriately format
+ a suitable table.
+ Finally, you must lay out the two components properly to form the composite
+ application’s user interface.
+ Such intricate and time-consuming tasks prevent average users from programming
+ their own mashups.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yu:2008:UMD:1439188.1439257"
+
+\end_inset
+
+ First, we distinguish the model’s output type.
+ As with components in input, composition output can be of type DA, AL,
+ or UI, depending on whether the composition provides data, programmable
+ APIs, or applications with a user interface.
+ The second characteristic is orchestration style.
+ Orchestrating components implies specifying how you’ll define and synchronize
+ the components’ execution.
+ Three main approaches exist: Flow-based styles define orchestration as
+ sequencing or partial order among tasks or components and are expressed
+ through flow chart-like formalisms.
+ Event-based approaches use publish– subscribe models.
+ They’re particularly powerful for maintaining synchronized behavior among
+ components.
+ In the layout-based style, components (with or without user interfaces)
+ are arranged in the composite application’s common layout.
+ Each component’s behavior is specified individually by accounting for the
+ other components’ reactions to user interactions.Third, we look at the model’s
+ data-passing style.
+ We define two data-passing approaches: a dataflow approach, in which data
+ flows from component to component; and a blackboard approach, in which
+ data is written to variables, which serve as the source and target of operation
+ invocation on components, much like in programming languages.
+\end_layout
+
+\begin_layout Section
+Implementation details
 \end_layout
 
 \begin_layout Standard
@@ -280,8 +1403,40 @@ I took into consideration to write as clear code as possible, paying attention
  to details, implemented speed optimizations, object oriented javascript
 \end_layout
 
+\begin_layout Standard
+In general, client-side approaches don’t suffer from scalability problems.
+ The mashup is executed on the client, so no bottleneck exists (except from
+ the overload on the data sources themselves, but this is outside the mashup’s
+ control).
+ Here, the scalability problems relate to the number of instances and, hence,
+ the number of users and the mashup’s complexity (which is related to the
+ number of sources and the related data processing).
+ In all cases, client-side approaches use the same scalability techniques
+ as do traditional integration or Web applications, relying on workflow
+ scalability techniques for engine-based runtimes and on Web application
+ scalability for Web-application-based runtimes.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yu:2008:UMD:1439188.1439257"
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
-!! Usability
+Usability
+\end_layout
+
+\begin_layout Standard
+What is the usability of my solution? Integration into other projects: fork
+ it.
+ Plus as a starting reference for further research.
+\end_layout
+
+\begin_layout Standard
+Improvements in my own implementation by going from hard code to a web user
+ interface; See for more information 
 \end_layout
 
 \begin_layout Itemize
@@ -295,6 +1450,24 @@ User interface for a great overview: viewing data and visualisation + control
 
 \begin_layout Itemize
 Clear documentation: for noobs as for more experienced developers
+\end_layout
+
+\begin_layout Standard
+The first property is the environment’s interface paradigm and target users.
+ Mashup tools can support design via different interface/ modeling paradigms,
+ such as visual drag-anddrop features, textual editors, or a combination
+ of the two.
+ The interface can target average Web users, advanced (tech-savvy) users,
+ or programmers.
+ The interface’s ease of use is the key factor in bringing mashup capability
+ to average and advanced Internet users.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yu:2008:UMD:1439188.1439257"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -330,6 +1503,53 @@ improvement of usability by expanding the User Interface: views on the data,
  adding functionality for the control dashboard, adding support for more
  visualisation libraries, performance updates in handling large amounts
  of data
+\end_layout
+
+\begin_layout Standard
+What You Provide Here's what you need to provide to expose your service
+ for client-side mashups:
+\end_layout
+
+\begin_layout Itemize
+JavaScript library.
+ Provide a JavaScript library of functions that facilitate the use of your
+ service.
+ Clients can then include the JavaScript library by referencing it in a
+ web page on their site.
+ Pertinent functions in the JavaScript library should dynamically create
+ <script> tags and make JSONP requests.
+ As mentioned earlier, dynamically created <script> tags can communicate
+ with any domain, so requests for your service from these <script> tags
+ avoid the constraints of the browser security sandbox.
+ In response, your service returns data in JSONP format.
+ When the client receives the response, it calls the callback function specified
+ in the JSONP request, passing it a JSON object.
+ 
+\end_layout
+
+\begin_layout Itemize
+Cascading Style Sheet (CSS) file.
+ Clients can include this file by referencing it in a web page.
+ The CSS file enables the client to customize the look and feel of components
+ in the web page that display content from your service and to do it without
+ changing the code in the page.
+ 
+\end_layout
+
+\begin_layout Itemize
+API documentation and examples.
+ Document the interface to your service, that is, its API, and provide coding
+ examples that demonstrate the use of the API.
+ Developers can then use your service by copying a pertinent example into
+ their code and modifying it as necessary.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "sunclientsidemashups:2007"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

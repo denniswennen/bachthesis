@@ -65,6 +65,12 @@ Results
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:Results"
+
+\end_inset
+
 Good results, beyond expectations.
  Got a more clear view on data and what the possibilities are.
 \end_layout
@@ -73,8 +79,79 @@ Good results, beyond expectations.
 Description
 \end_layout
 
+\begin_layout Standard
+By extension, service mashups aim to design and develop novel and modern
+ Web applications based on easy-to-accomplish end-user service compositions.
+\end_layout
+
 \begin_layout Section
 Discussion
+\end_layout
+
+\begin_layout Standard
+Mashup tools are mainly designed to handle Web data.
+ This can be seen as an advantage, but an inconvenience at the same time.
+ In fact, it is an advantage since it offers access and management of some
+ data available only on the Web, e.g., RSS feeds.
+ To access these Web data, the tools support the two most used protocols
+ for exposing APIs, i.e., REST and SOAP protocol.
+ This is a consequence of the success, utility and the popularity of these
+ protocols.
+ A disadvantage is that data available on desktops can not be accessed and
+ used the same way.
+ This is a considerable disadvantage since users bring a lot of data onto
+ their desktops for cleaning, manipulation, etc.
+ There is a lot of work done to help the user put and manage data on the
+ web [16], but since this is not completely adopted, supporting local data
+ on a user’s desktop should be considered.
+ One of the main goals ofWeb 2.0 technologies is the creation, the reuse,
+ the annotation and the sharing of web resources in an easy way.
+ Based on these ideas, Mashup tools are all extensible in the sense that
+ new operators, and in some cases data schemas, can be developed and invoked
+ or/and plugged inside the tools.
+ However, at this stage, the majority of tools do not support the reuse
+ of the created Mashups.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+Mashups are evolving toward components that are a mix of user interface
+ aspects and traditional application logic.
+ The challenge here is identifying component and composition models that
+ can cater to the needs of both kinds of integration.
+ One is more event-driven and useroriented, the other is more orchestrational
+ and enterprise-oriented.
+ Without these elements, mashup development will largely be an ad hoc effort
+ requiring programming skills that typical Web users don’t possess, or it
+ will be restricted to specific technologies or domains.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yu:2008:UMD:1439188.1439257"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In addition to the technical challenges described in the previous section,
+ social issues have (or will) surface as mashups become more popular.
+ One of the biggest social issues facing mashup developers is the tradeoff
+ between the protection of intellectual property and consumer privacy versus
+ fair-use and the free flow of information.
+ Unwitting content providers (targets of screen scraping), and even content
+ providers who expose APIs to facilitate data retrieval might determine
+ that their content is being used in a manner that they do not approve of.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ibm:thenewbreed"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -103,22 +180,115 @@ avoid announcements
 \end_layout
 
 \begin_layout Section
-Time
-\end_layout
-
-\begin_layout Standard
-Some time has passed between the assignment and the actual implementation.
- A lot of time.
- Also the technologies have evolved, already some things are forseen as
- implementation.
-\end_layout
-
-\begin_layout Section
 Conclusions
 \end_layout
 
 \begin_layout Standard
-The end is not near, it's here.
+Maybe some beter data handling, so that in JavaScript, their would be an
+ intermediate channel or storage that handles the data.
+ This way, data can be stored locally.
+ But mostly the data is volatile and changing due to the many updated (e.g.
+ news updates on a specific news channel).
+ The question is wether the visualisation should be dynamic and change in
+ consistency with the provided data to create a flow of information or if
+ the user wants a snapshot at a specific time and thereby the data and visualisa
+tion represent a moment in time.
+\end_layout
+
+\begin_layout Standard
+Although many have already adopted the (service) mashup concept and recognized
+ its value, realizing the concept is still challenging, and much work remains
+ before we’ll see mashup applications in a mature stage.
+ Let’s briefly discuss some key issues we must consider in the future to
+ improve sharing (registration and publication), finding (search and discovery),
+ reusing (invocation), and integrating (mediation and composition) services.
+ The first key challenge is that of semantic heterogeneity.
+ Compared to data, services can present a broader form of heterogeneity.
+ Correspondingly, the Web services research community has identified a broader
+ form of semantics — data (I/O), functional (behavioral), nonfunctional
+ (quality of service, policy), and execution (runtime, infrastructure, exception
+s).
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "servicesmashups/MIC.2008.110"
+
+\end_inset
+
+For complex applications to meet enterprise needs, we must also develop
+ advanced capabilities leading to dynamic configuration and composition.
+ Service mashups are becoming very important as Web applications and Web
+ data grow.
+ Efforts are still needed before we’ll be able to easily semantically connect
+ existing Web applications, and we must take into account the.
+\end_layout
+
+\begin_layout Standard
+Mashups have only now become possible because the physics is right.
+ Client CPUs are now powerful enough to run a significant amount of JavaScript
+ inside browsers.
+ The networks have now become fast enough to deliver both the software and
+ large amounts of data to the client.
+\end_layout
+
+\begin_layout Standard
+In addition, intelligent source components largely assist the integration
+ of contents, application logic, and user interfaces.
+ Nevertheless, manual mashup development is still a prerogative of skilled
+ developers.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yu:2008:UMD:1439188.1439257"
+
+\end_inset
+
+Many of the differences between mashups and traditional forms of integration
+ descend from the basic observation that mashups focus mainly on opportunistic
+ integration occurring on the Web for an end user’s personal use and for
+ nonbusiness- critical applications.
+ Enterprise processes also have a wide set of nonfunctional requirements,
+ such as security and reliability, that few mashups share and that make
+ languages, tools, and the overall development fairly complex.
+ Also, unlike conventional Web applications, many of today’s mashups still
+ have a limited audience (such as individuals or small user groups) so scalabili
+ty isn’t a big issue.
+ This might become a problem if and when a “killer mashup” appears.
+ In general, mashups are about simplicity, usability, and ease of access.
+ This simplicity has the upper hand over feature completeness or full extensibil
+ity (as in SOA or BPEL).
+ With improved tool support (such as a better user interface) and the abundance
+ of components or modules, end users will be able to compose their own mashups.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Yu:2008:UMD:1439188.1439257"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The community as a whole will have to work together to assemble open standards
+ and reusable toolkits in order to facilitate mature software development
+ processes.
+ Before mashups can make the transition from cool toys to sophisticated
+ applications, much work will have to go into distilling robust standards,
+ protocols, models, and toolkits.
+ For this to happen, major software development industry leaders, content
+ providers, and entrepreneurs will have to find value in mashups, which
+ means viable business models.
+ API providers will need to determine whether or not to charge for their
+ content, and if so, how (for example, by subscription or by per-use).
+ Perhaps they will provide varying levels of quality-of-service.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "ibm:thenewbreed"
+
+\end_inset
+
+
 \end_layout
 
 \end_body

@@ -135,21 +135,30 @@ name "sec:problemstatement"
 
 \end_inset
 
-There are a lot of good API's, written in Javascript for visualising complex
- data in an attractive way.
- Javascript is a scripting language to make web content more interactive
- and attractive by adding dynamic elements.
- Visualisations can give a more clear view on the meaning of the source
- data.
- By visualising web content, a new look onto the data gives more information
- and can possible highlight information that was otherwise hard to find
- or nearly visible.
- A lot of libraries are provided for creating visualisation in JavaScript.
+The Internet and related technologies have created an new world in which
+ we can exchange information easily, process tasks in collaboration, and
+ form communities among users with similar interests to achieve efficiency
+ and improve performance.
+ On the Web, Web services are emerging as a major technology for deploying
+ automated interactions between distributed and heterogeneous applications,
+ and for connecting business processes, which might span companies’ boundaries.
+ It simply indicates a way to create new Web experiences by combining existing
+ Web resources, utilizing data and Web APIs.
+ Mashups are about information sharing and aggregation to support content
+ publishing for a new generation of Web usage.
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "servicesmashups/MIC.2008.110"
+
+\end_inset
+
+ A lot of libraries are provided for creating visualization in JavaScript.
  An advantage is that in most cases these API's are well documented.
- The situation gets more complex when data needs to be coupled to this visualisa
+ The situation gets more complex when data needs to be coupled to this visualiza
 tions.
- Often it is necessary to create complex multi-dimensional datastructures
- in Javascript, as illustrated in 
+ Often it is necessary to create complex multidimensional data structures
+ in JavaScript, as illustrated in 
 \begin_inset Flex CT - auto cross-reference
 status collapsed
 
@@ -162,19 +171,23 @@ fig:JSdatastructure
 
  For small data sets, this can be done manually, but for large data sets
  the task can get tricky or be a lot of work.
- The goal of this thesis is to create a webservice in JavaScript that served
- as an abstraction layer between data providers on one side and visualisation
- libraries on the other side.
- This kind of service allows to load in even large datastructures in a more
- simple way.
- Yahoo Pipes is a mashup web service which can be a data providor.
- It's an online editor to collect and filter data coming from websites,
- data sources and RSS feeds.
- It provides an easy way for data collection, filtering.
- Also the possibilities to utilise or view the data, are broad.
- In other words, the making of complex datastructures gets handled by these
- services and via an intermediating web service fetched and passed on to
- the visualisation libraries.
+ The goal of this thesis in the first place is to give an overview of the
+ current 
+\lang british
+mashups
+\lang american
+ on the Web, how the concept is evolving, the issues that need to be tackled
+ and it's impact on using the Web we know it today.
+ The theory is than translated into practice by implementation of a Web
+ service in JavaScript.
+ During the implementation, aspects like data integration, the composition
+ of mashup components and usability will be handled.
+ More specific, the implementation will be a Yahoo Pipes Visualizer: a case
+ of a Web mashup which serves as an abstraction layer between the Yahoo
+ Pipes as data source and JavaScript visualization libraries.
+ This kind of service has the goal to simplify the collection, filtering
+ and using data in user friendly way, without the need to create complex
+ data structures manually.
  In the following sections I will explain in more details why this research
  is important and how it fits into the general domain of computer science.
 \end_layout
@@ -202,7 +215,7 @@ name "fig:JSdatastructure"
 
 \end_inset
 
-Javascript datastructure example
+JavaScript datastructure example
 \end_layout
 
 \end_inset
@@ -230,7 +243,105 @@ insert example visualisations
 \end_layout
 
 \begin_layout Section
-Why is it important
+Integration in the broader domain of computer science
+\end_layout
+
+\begin_layout Standard
+The first browser ran on a computer that almost no one outside of a university
+ or research lab used.
+ The Web itself consisted of a some small exchange of information.
+ First, Internet connectivity remained largely restricted to universities,
+ research institutes, and corporations.
+ Consumers enjoyed online communities, but generally did so via prepackaged
+ obsolete services.
+ Connectivity was achieved through slow “dial-up” connections over telephone
+ lines.
+ Access to content was typically billed at an hourly rate.
+ By 1994, the first independent Internet service providers arised and the
+ Web was becoming more popular and seen as a necessity rather than a luxury.
+ It provided a new way of pushing information to the consumer.
+ The Web was viewed as a new media channel that offered endless opportunities
+ for commercial success.
+ There was a lot of speculation and business plans involved so a worldwide
+ expansion of the Web’s underlying infrastructure took place.
+ Meanwhile, the browser jumped from home computers to cell phones and mobile
+ devices for the first time.
+ High-speed cable and DSL “broadband” connectivity options became available
+ at every home.
+ Information and services on the web kept expanding.
+ New marketplaces evolved as sites like eBay linked buyers and sellers from
+ around the globe.
+ Communities arised in support to the marketplaces and helped pioneer the
+ concepts behind new social networking sites like MySpace and Facebook we
+ know nowadays.
+ 
+\end_layout
+
+\begin_layout Standard
+The World Wide Web is growing at phenomenal rates, as witnessed by every
+ recent estimation.
+ This explosion both of hosts and of users on the Web, has made it even
+ more important of managing such enormous amount of data.
+ People are not interested in every bit of information available on the
+ Web, but instead want to find the information they want to find.
+ This may be more easily said than done.
+ The Web is constantly evolving with the growing popularity and use of Web
+ 2.0, which is associated with web applications that facilitate information
+ sharing, interoperability, user-centered design and collaboration between
+ users.
+ Also Cloud computing, a service rather than a product, whereby shared resources
+, software and information are provided to computers and other devices as
+ a utility over a network.
+ A simpler definition is that Web 2.0 can be seen as a shift from transaction-bas
+ed Web pages to interaction-based ones.
+ This is where the power of the user comes in and is mashed, mixed, and
+ multiplied to create new value.
+ Mashup tools are a great way to collect, filter and create data on the
+ web in new ways and to give them the opportunity to manage and share this
+ information.
+\end_layout
+
+\begin_layout Standard
+Social-networking sites, wikis, blogs, and mashups are just some of the
+ components that make this possible.
+ The success of services from Google, Facebook, Wikipedia and Flickr has
+ demonstrated that democratization of content creation and manipulation
+ is powering the latest wave of Internet growth.
+ The future is a Web of services, as more and more of the Web is becoming
+ remixable, the entire system is turning into both a platform and the database.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+Web API's: These services can be a data service, such as news, or a process/oper
+ation service such as placing an order to Amazon.
+ com.
+\end_layout
+
+\begin_layout Itemize
+data handling and conversion: from text (json) to rich data (js object)
+\end_layout
+
+\begin_layout Itemize
+visualisation of data; gain more insights into the data itself; new things
+ can become visible; to create more attractive ways of representing data;
+ telling a story trough charts, geomaps, etc..
+\end_layout
+
+\begin_layout Itemize
+the web becomes more and more interactive
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Importance
 \begin_inset Note Note
 status collapsed
 
@@ -243,37 +354,10 @@ area of study, write something on each of the topics
 
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Marginal
-status collapsed
-
-\begin_layout Plain Layout
-In sommige delen van de thesis staat een lijst van items; deze worden nog
- verder uitgeschreven, maar geven reeds de intentie en/of structuur aan.
-\end_layout
-
-\end_inset
-
-test as stated in 
-\begin_inset Flex CT - auto cross-reference
-status collapsed
-
-\begin_layout Plain Layout
-
-sec:problemstatement
-\end_layout
-
-\end_inset
-
- or in 
-\end_layout
-
-\begin_layout Itemize
-more easy access to data
-\end_layout
-
-\begin_layout Itemize
-It also shows that the needs for integrating these rich data and service
+\begin_layout Standard
+Recently, in the context of the Web, the mashup concept has emerged, and
+ researchers have developed a huge number of Web 2.0 applications.
+ It also shows that the needs for integrating these rich data and service
  sources are rapidly increasing.
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -281,33 +365,73 @@ key "DiLorenzo:2009:DIM:1558334.1558343"
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Itemize
-To understand why some automatic support is needed to create Mashups, we
- give the following example.
- Suppose that a user wants to implement a News Mashup that lets her select
- news on a news service like CNN International and display both the list
- of the news and a map that highlights the locations associated with the
- news; she typically needs to do a lot of programming which involves fetching
- and integrating heterogeneous data.
- In fact, the user needs to know not only how to write the code, but also
- (i) to understand the available API services in order to invoke them and
- fetch the data output; (ii) to implement screen scraping techniques for
- the services that do not provide APIs, and (iii) to know the data structure
- of the input and output of each service in order to implement a data mediation
- solution.
- The Mashup tools provide facilities to help the user solve some of the
- above mentioned problems.
- 
+ Service mashups aim to design and develop novel and modern Web applications
+ based on easy-to-accomplish end-user service compositions.
+ By combining existing Web service technologies with fresh content, collaborativ
+e approaches can create new content.
+ When building a new generation of Web-based applications, Web data management
+ and semantic technologies seems to be an exciting challenge in for both
+ academic and industrial researchers.
+ In this context, there is also see a need for end-user-oriented integration
+ structures for allowing easy and simple exploration, organization, search,
+ and integration of mashups.
+ This will help move mashup development from manual and time-consuming scripting
+ to a set of easy-to-find and extensible parameterized patterns that characteriz
+e most of the heterogeneities among mashup services.
 \begin_inset CommandInset citation
 LatexCommand citep
-key "DiLorenzo:2009:DIM:1558334.1558343"
+key "Yu:2008:UMD:1439188.1439257"
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+To understand why some automatic support is needed to create Mashups, we
+ give the following example.
+ Suppose that a user wants to implement a Mashup of news feeds by selecting
+ news on a news service or website and display both the list of the news
+ and a geographic map that highlights the locations associated with the
+ news.
+ Typically a lot of programming is involved; from fetching the heterogeneous
+ data and integrating it into the map service.
+ In fact, the user needs to know not only how to write the code, but also
+ to understand the available API services and how they work in order to
+ use them and get the data output.
+ To implement screen scraping techniques for the services that do not provide
+ APIs, and to know the data structure and semantics of the input and output
+ of each service in order to implement a data mediation solution.
+ Here the Mashup tools can provide facilities to help the user solve some
+ of the above mentioned problems.
+\end_layout
+
+\begin_layout Standard
+All the tools are supposed to target “non-expert” users, but a programming
+ knowledge is usually required.
+ Some tools require considerable programming effort since the whole process
+ needs to be implemented manually using instructions expressed in programming
+ language such as Java Script.
+ Others necessitate medium programming effort given that only some functionaliti
+es need to be coded in an explicit way using a programming language; a graphical
+ interface is offered to the user to express most of operations.
+ Mashup nowadays are cool toys that provide mostly a limited functionality
+ to a specific problem, there as integration and robust application models
+ are missing.
+ At this time, there is no tool that requires low or no programming effort
+ by the user to build a Mashup, which is necessary to claim that the tools
+ are targeted for end-users.
+ Before they make it into sophisticated applications that are easy to use,
+ much work will have to go into distilling robust standards, protocols,
+ models, and toolkits.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+more easy access to data
 \end_layout
 
 \begin_layout Itemize
@@ -328,7 +452,7 @@ javascript is a widely used scripting language, a very poweful one
 \end_layout
 
 \begin_layout Itemize
-there was not much support for complex data handling in Javascript
+there was not much support for complex data handling in JavaScript
 \end_layout
 
 \begin_layout Itemize
@@ -350,6 +474,11 @@ access to a great source of information; almost any information available
 gain more easy access to open-source and free visualisation
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Marginal
 status collapsed
@@ -361,127 +490,9 @@ Deze tekst moet nog verfijnd worden.
 
 \end_inset
 
-This is about data and the flow of data.
- It's also about usability.
- Some kind of layer in between to technologies.
- I need to connect the dots.
- In Javascripting you can write libraries.
- What can you do with JavaScript? It a language for scripting and developing
- web applications.
- So users can write code and perform tasks more easily or have tasks automated.
- One type of libraries are visualisation libraries, by which the user can
- create charts, plots, geomaps and all others kinds of interesting visualisation
-s.
- Visualisation is a widely and quite vage description.
- I shall explain it some more in detail.
- Mostly it is used when users have some kind of data that they want to represent
- in a different way.
- An important concept in developing applications is that data and visualisation
- should be two different things and also be handled seperatly.
- It's not a good solution to bind a certain type of visualisation hardcoded
- to the data.
- If you then want to have another view on the data, another font or color
- for example, it's hard to change it.
- When you seperate things, the view can be modified and choosen freely.
-\end_layout
 
-\begin_layout Standard
-So in the first part you have the data, which can contain any type of data:
- text, numbers, relationships, etc..
- The size of the data also matters for the processing quality and speed.
- Large amounts of data are more difficult to handle and take more time,
- which can decrease a good user experience, for example if one has to wait
- to long for results.
- If the visualisation is added up with that, the time increases even more.
- That's a part why performance is important, the performance of the code.
- This means performance of several parts: querying data, updating data,
- creating new data structures and data views.
- This last part is in general what a visualisation library in Javascript
- is doing; it takes a set of data and creates a 'view' on this data in the
- form of a table, a chart or something else.
-\end_layout
-
-\begin_layout Standard
-Let me now explain where the difficult part comes in this problem: where
- do we get the data? Mostly data is stored in databases of all sorts, online
- or offline.
- The data can be already provided in some sort of form or it can be necessary
- that the data still needs to be accquired.
- So you have two parts in the origin of the data: one, the creation of data
- and two, the handling/usage of the data.
-\end_layout
-
-\begin_layout Standard
-The source for your data can be retrieved for example from the internet.
- That's were Yahoo Pipes comes in.
- It's a very handy tool to get data from the internet in all forms; web
- content, rss feed items, geolocations, csv-files.
- It is clear that the possibilities are endless, all kinds of data can be
- retrieved from the web.
- In first instance, Yahoo Pipes seems to be used for aggregating or manipulating
- RSS feeds.
- One could think of mainly text and news feeds, but it can reach further
- than that.
 \begin_inset Note Note
 status collapsed
-
-\begin_layout Plain Layout
-Write some more here about RSS, what it is used for.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-CSV files with financial data, a lot of numbers etc..or even XML files containing
- a structured way of data with several caracteristics, maplocations, gps-coordin
-ates..There are no limits on the data you can provide.
- This is a very interesting thing, but which makes everything also a lot
- more complex.
- So the input should be handled with care and parsed correctly.
- Yahoo Pipes provides a lot of good things for this.
- It has some nice functionality to handle the data correctly.
- The user than can design it's own mashup or output what they want to do
- with it.
- For example different views, filters etc can be applied on the data.
- It a little like a database where the user can query things etc..Yahoo Pipes
- is a data processor for the web.
-\end_layout
-
-\begin_layout Standard
-So here's step two.
- Now that we have collected the data, what can we do with it? Like a already
- previously mentioned, Yahoo Pipes can manipulate and filter the data, even
- based on user inputs.
- So you can either just collect data in a central place of go a step further
- by manipulating.
-\end_layout
-
-\begin_layout Section
-Scope
-\end_layout
-
-\begin_layout Itemize
-Web API's: These services can be a data service, such as news, or a process/oper
-ation service such as placing an order to Amazon.
- com.
-\end_layout
-
-\begin_layout Itemize
-data handling and conversion: from text (json) to rich data (js object)
-\end_layout
-
-\begin_layout Itemize
-visualisation of data; gain more insights into the data itself; new things
- can become visible; to create more attractive ways of representing data;
- telling a story trough charts, geomaps, etc..
-\end_layout
-
-\begin_layout Itemize
-the web becomes more and more interactive
-\end_layout
 
 \begin_layout Section
 Organization
@@ -532,17 +543,55 @@ improving and adding functionality
 reporting and writing about the research
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Structure
+Structure of the work
 \end_layout
 
 \begin_layout Standard
-Implementation to show various aspects from the research, accompanied by
- this thesis text to guide the reader trough the whole research project.
- Every sections in the thesis text adds some more information; starting
- with an introduction and the previous work, followed by my own research,
- the explanation of the implemenation and ending with the results and the
- dicussion of it, including a view into possible future work.
+This research was conducted in a two part study with the first part the
+ theoretical approach, where the topic was placed and analysed in a more
+ widespread context and secondly the implementation of a client-side Web
+ service in JavaScript to create an abstraction layer between data sources
+ and visualisations.
+ The Web service implementation was made to show various aspects from the
+ research and to test and evaluate the concepts of mashup applications,
+ accompanied by this thesis text to guide the reader trough the whole research
+ project.
+ Every sections in the thesis text adds some more information; the text
+ started with an introduction on the general problem statement and will
+ continue with the analysis of previous research work, followed by my own
+ research, the explanation of the implementation and ending with the results
+ and the discussion of it, including a view into possible future work.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Yahoo Pipes is a mashup web service which can be a data provider and will
+ be used.
+ It's an online editor to collect and filter data coming from websites,
+ data sources and RSS feeds.
+ A lot of API's are available, also in particular written in JavaScript
+ for visualising complex data in an attractive way.
+ JavaScript is a scripting language to make web content more interactive
+ and attractive by adding dynamic elements.
+ Visualisations can give a more clear view on the meaning of the source
+ data.
+ By visualising web content, a new look onto the data gives more information
+ and can possible highlight information that was otherwise hard to find
+ or nearly visible.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -564,7 +613,7 @@ The Mashup approach opens new and broad opportunities for data/services
  However, the development investment is still considerable.
  In fact, a Mashup user needs to know, in addition to how to write code
  using programming languages (e.g., Java Script, XML/HTML), how to use the
- different Web APIs4.
+ different Web API's.
  In order to solve this problem, there is an increasing effort put into
  developing tools which are designed to support users with little programming
  knowledge in Mashup applications development.
