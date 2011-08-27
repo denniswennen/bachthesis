@@ -269,6 +269,25 @@ key "Yu:2008:UMD:1439188.1439257"
 \end_layout
 
 \begin_layout Standard
+Mashups are certainly an exciting new genre of Web applications.
+ The combination of data modeling technologies stemming from the Semantic
+ Web domain and the maturation of loosely-coupled, service-oriented, platform-ag
+nostic communication protocols is finally providing the infrastructure needed
+ to start developing applications that can leverage and integrate the massive
+ amount of information that is available on the Web.
+ As mashup applications gain higher visibility, it will be interesting to
+ see how the genre impacts social issues such as fair-use and intellectual
+ property as well as other application domains that integrate data across
+ organizational boundaries, such as grid computing and business-to-business
+ workflow management.
+ For a deeper-dive into mashup development, stay tuned for the launching
+ of a new series of tutorials on developerWorks that will teach you how
+ to construct your own mashups.
+ In fact, the series will even teach you how to use Semantic Web technology
+ and ontologies to enable others to create their own mashups.
+\end_layout
+
+\begin_layout Standard
 The community as a whole will have to work together to assemble open standards
  and reusable toolkits in order to facilitate mature software development
  processes.

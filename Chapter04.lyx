@@ -154,7 +154,7 @@ What can you do with it? Why use it? Advantages/disadvantages? - Run locally,
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Bespreken welke keuzes gemaakt in mijn ontwerp en waarom die keuzes (achtergrond
@@ -164,10 +164,6 @@ studie)
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Theoretical Framework
 \end_layout
 
 \begin_layout Standard
@@ -278,29 +274,24 @@ So here's step two.
 
 \end_layout
 
+\begin_layout Section
+Design decisions & issues
+\end_layout
+
 \begin_layout Standard
-\begin_inset CommandInset label
-LatexCommand label
-name "chap:Methods-&-solutions"
+The implemented Web service provides an abstraction layer between Yahoo
+ Pipes and JavaScript visualisation libraries.
+ 
+\end_layout
 
-\end_inset
-
-
-\begin_inset Marginal
+\begin_layout Standard
+\begin_inset Note Note
 status collapsed
 
 \begin_layout Plain Layout
-tekst moet nog verbeterd worden
-\end_layout
-
-\end_inset
-
-It provides an abstraction layer between Yahoo Pipes and JavaScript visualisatio
-n libraries.
- It's even more than that, it provides easy handling of JSON data.
- For Yahoo Pipes, the most commonly and best practice of the data is by
- exporting it by JSON or KML for geomaps.
- You can use other formats but it will only get more complicated.
+It provides easy handling of JSON data.
+ For Yahoo Pipes, the best practice to gather the data is exporting by JSON,
+ to further You can use other formats but it will only get more complicated.
  JSON does the job well.
  The valve library loads in the JSON data et voila.
  Ready to go.
@@ -324,7 +315,11 @@ es and beautiful examples of what you can do with data.
  the data.
  This way differences or similarities in time can be spotted.
  Another topic is filtering.
- It's possible that the user has collected the data from different sources,
+ 
+\end_layout
+
+\begin_layout Plain Layout
+It's possible that the user has collected the data from different sources,
  and that the data contains a lot of overhead which is not necessary.
  This way it should be possible for the library to provide filtering.
  There are 2 possibilities: The first one is filtering the view of the data.
@@ -342,6 +337,11 @@ es and beautiful examples of what you can do with data.
  Sorting of the data is another function: sorting by data, category or time.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 Similar to the development environments, a mashup’s execution can depend
  on the availability of additional browser plug-ins or extensions.
@@ -357,62 +357,14 @@ key "Yu:2008:UMD:1439188.1439257"
 
 \end_layout
 
-\begin_layout Section
-Design decisions & issues
-\end_layout
-
-\begin_layout Subsection
-Philosophy of approach
-\end_layout
-
-\begin_layout Standard
-A Mashup application includes all the three components of the MVC pattern.
- According to Maximilien et al.
- 
-\begin_inset CommandInset citation
-LatexCommand citep
-key "springerlink:10.1007/978-3-540-74974-5_2"
-
-\end_inset
-
-, the three major components of a Mashup application are (1) data level,
- (2) process level, and (3) presentation level.
-\end_layout
-
-\begin_layout Subsection
-The MVC Model
-\end_layout
-
-\begin_layout Standard
-In the MVC pattern, the model represents the data on which the application
- operates and the business rules used to manipulate the data.
- The model is independent of the view and the controller.
- It passively supplies its services and data to the other layers of the
- application.
- The view represents the output of the application.
- It specifies how the data, accessed through the model, is presented to
- the user.
- Also, it has to maintain its presentation when the model changes.
- Finally, the controller represents the interface between the model and
- the view.
- It translates interactions with the view into actions to be performed on
- the model.
-\end_layout
-
 \begin_layout Standard
 Mashups are about simplicity, usability, and ease of access.
  This simplicity has the upper hand over feature completeness or full extensibil
 ity.
  Some tools are strictly for developers, whereas others are more oriented
  toward end users.
- Several properties characterize mashup development environments
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Yu:2008:UMD:1439188.1439257"
-
-\end_inset
-
-
+ Several properties characterize mashup development environments[Yu:2008:UMD:143
+9188.1439257]
 \end_layout
 
 \begin_layout Standard
@@ -421,106 +373,11 @@ Yahoo Pipes is probably the best representative of DA output (pipes are
  Its graphical modeling language is flow-based; accordingly, data is also
  passed via data flows.
  Pipes is instance-based; it doesn’t provide exception handling or support
- transactions.
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Yu:2008:UMD:1439188.1439257"
-
-\end_inset
-
-
+ transactions.[Yu:2008:UMD:1439188.1439257]
 \end_layout
 
-\begin_layout Standard
-Here are some other reasons for using the client-side mashup style:
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-goede ontwerpbeslissingen, verantwoording van de keuzes!!
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-It can be easy to implement.
- If the site you want to mash up with provides a JavaScript library to facilitat
-e the use of its service, you simply reference the JavaScript library and
- include it in your web page.
- You then provide the appropriate code in the web page to use the functions
- in the library.
- Some mashup sites offer sample code that illustrates how to use the functions
- in their library.
- If sample code is available, you can copy and tailor it as necessary.
- 
-\end_layout
-
-\begin_layout Itemize
-You don't need to provide a server-side component.
- In a client-side mashup, the mashup site provides the server-side component.
- By comparison, in a server-side mashup, you need to provide a server-side
- proxy such as a servlet or a Java class to act as an intermediary between
- the client and a service.
- 
-\end_layout
-
-\begin_layout Itemize
-It can perform better than a server-side mashup.
- In a server-side mashup, a service request is passed over the network from
- the browser to the server-side proxy first and then from the server-side
- proxy to the mashup server.
- The response needs to make the same two network hops in reverse order before
- arriving at the client.
- This can result in a significant delay in receiving the response.
- In some cases, you can mitigate the delay in a server-side mashup by caching
- the response from the mashup server on your server.
- However, in a client-side mashup, a service request and response are passed
- directly between the client and the mashup server, so receiving a response
- typically takes less time.
- 
-\end_layout
-
-\begin_layout Itemize
-It reduces load on the server.
- Because a service request and response is passed directly between the client
- and the mashup server, and not through a server-side proxy, it reduces
- the processing load on the server.
- 
-\end_layout
-
-\begin_layout Itemize
-You don't need a custom plug-in to implement the approach.
- Most modern browsers support the techniques typically used in client-side
- mashups, including dynamic scripting and JSONP.
-\end_layout
-
-\begin_layout Subsection
-Other stuff
-\end_layout
-
-\begin_layout Standard
-Something on the use of CORS; better security than using 
-\begin_inset Quotes eld
-\end_inset
-
-eval()
-\begin_inset Quotes erd
-\end_inset
-
- or something.
-\end_layout
-
-\begin_layout Standard
-The client-side mashup style works well in some cases, such as in the Google
- Maps mashup in Pet Store or in the hypothetical mashup with the Pet Store
- Catalog service, but it can also expose some issues that you must address
- in your design.
- When you assess these issues you may find that another approach such as
- a server-side mashup works better.
- Here are some of the issues you must address in doing a client-side mashup:
+\begin_layout Subsubsection
+Issues
 \end_layout
 
 \begin_layout Itemize
@@ -593,37 +450,125 @@ Format of the returned data.
  be easier to handle SOAP with server-side code.
 \end_layout
 
-\begin_layout Subsubsection
-RSS
+\begin_layout Subsection
+Philosophy of approach
 \end_layout
 
 \begin_layout Standard
-RSS is a family of XML-based syndication formats.
- In this context, syndication implies that a Web site that wants to distribute
- content creates an RSS document and registers the document with an RSS
- publisher.
- An RSS-enabled client can then check the publisher's feed for new content
- and react to it in an appropriate manner.
- RSS has been adopted to syndicate a wide variety of content, ranging from
- news articles and headlines, changelogs for CVS checkins or wiki pages,
- project updates, and even audiovisual data such as radio programs.
- Version 1.0 is RDF-based, but the most recent, version 2.0, is not.
-\end_layout
-
-\begin_layout Standard
-Atom is a newer, but similar, syndication protocol.
- It is a proposed standard at the Internet Engineering Task Force (IETF)
- and seeks to maintain better metadata than RSS, provide better and more
- rigorous documentation, and incorporates the notion of constructs for common
- data representation.
-\end_layout
-
-\begin_layout Standard
-These syndication technologies are great for mashups that aggregate event-based
- or update-driven content, such as news and weblog aggregators.
+A Mashup application includes all the three components of the MVC pattern.
+ According to Maximilien et al.
+ 
 \begin_inset CommandInset citation
 LatexCommand citep
-key "ibm:thenewbreed"
+key "springerlink:10.1007/978-3-540-74974-5_2"
+
+\end_inset
+
+, the three major components of a Mashup application are (1) data level,
+ (2) process level, and (3) presentation level.
+\end_layout
+
+\begin_layout Subsection
+The MVC Model
+\end_layout
+
+\begin_layout Standard
+In the MVC pattern, the model represents the data on which the application
+ operates and the business rules used to manipulate the data.
+ The model is independent of the view and the controller.
+ It passively supplies its services and data to the other layers of the
+ application.
+ The view represents the output of the application.
+ It specifies how the data, accessed through the model, is presented to
+ the user.
+ Also, it has to maintain its presentation when the model changes.
+ Finally, the controller represents the interface between the model and
+ the view.
+ It translates interactions with the view into actions to be performed on
+ the model.
+ In this subsection, some reasons for using the client-side mashup style
+ are listed:
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+goede ontwerpbeslissingen, verantwoording van de keuzes!!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+The service is more easily to implement that a server-side mashup.
+ The mashup is made, using several other mashup services which provide their
+ functionality trough an API.
+ These are implemented in JavaScript and facilitate the use of its service,
+ by simply referencing to the script URL.
+ Then the necessary code is implemented into the Web Service by calling
+ the API functions.
+ Some mashup sites offer sample code or usefull tutorials that illustrates
+ how to use the functions of the API.
+ These tutorials provide a basic step for further integration of API functions
+ into the own webservice.
+\end_layout
+
+\begin_layout Itemize
+In a server-side mashup, a service request is passed over the network from
+ the browser to the server-side proxy first and then from the server-side
+ proxy to the mashup server.
+ The response needs to make the same two network hops in reverse order before
+ arriving at the client.
+ This can result in a significant delay in receiving the response.
+ In some cases, the delay can be reduced in a server-side mashup by caching
+ the response from the mashup server on the own server.
+ However, in a client-side mashup, a service request and response are passed
+ directly between the client and the mashup server, so receiving a response
+ typically takes less time.
+ Because a service request and response is passed directly between the client
+ and the mashup server, and not through a server-side proxy, it reduces
+ the processing load on the server.
+ The performance of a client-side mashup is better due to the reduced time
+ of waiting for server responses.
+\end_layout
+
+\begin_layout Itemize
+A custom plug-in is not needed to implement the Web service application.
+ Most modern browsers support the techniques typically used in client-side
+ mashups, including dynamic scripting and JSONP.
+ JSON and more specific JSONP will be explained lower in 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+
+sub:JSON
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Other stuff
+\end_layout
+
+\begin_layout Plain Layout
+Something on the use of CORS; better security than using “eval()” or something.
+\end_layout
+
+\begin_layout Plain Layout
+The client-side mashup style works well in some cases, such as in the Google
+ Maps mashup in Pet Store or in the hypothetical mashup with the Pet Store
+ Catalog service, but it can also expose some issues that you must address
+ in your design.
+ When you assess these issues you may find that another approach such as
+ a server-side mashup works better.
+ 
+\end_layout
 
 \end_inset
 
@@ -702,11 +647,36 @@ key "Halevy:2005:WYD:1103822.1103836"
 
 In a certain way, Yahoo Pipes provides a mechanism to narrow the data definition
 s.
- 
+ The most common ouput is formatted back into the RSS format, whereby the
+ items are structured in an a structered RSS file according to the specification.
+ Every items has the required title (the title of the item), link (the URL
+ of the item) and the desciption (the item synopsis).
 \end_layout
 
 \begin_layout Subsection
 Loading the pipe
+\end_layout
+
+\begin_layout Standard
+\begin_inset Marginal
+status collapsed
+
+\begin_layout Plain Layout
+some more text on loading the pipe
+\end_layout
+
+\end_inset
+
+Cross-Origin Resource Sharing (CORS) is a browser technology specification,
+ which defines ways for a web service to provide interfaces for sandboxed
+ scripts coming from a different domain under same origin policy.
+ CORS is a modern alternative to the JSONP pattern.
+ While JSONP supports only the GET request method, CORS also supports other
+ types of HTTP requests.
+ Using CORS enables a web programmer to use regular XMLHttpRequest which
+ supports better error handling than JSONP.
+ On the other hand, JSONP works on legacy browsers which preclude CORS support.
+ CORS is supported by most modern web browsers.
 \end_layout
 
 \begin_layout Subsubsection
@@ -763,7 +733,7 @@ key "YQL"
  data available to developers, primarily through Web services.
  With YQL, developers can access and shape data across the Internet through
  one simple language, eliminating the need to learn how to call different
- APIs and when there is no API available at all.
+ API's or when there is no API available at all.
  To call the YQL Web Service, an application would call an HTTP GET method
  on this parametrised URL.
  The result data can be in XML or JSON format, the latter is used to get
@@ -771,18 +741,26 @@ key "YQL"
 \end_layout
 
 \begin_layout Standard
-Screen scraping has two primary drawbacks.
+Screen scraping has two primary drawbacks, as also cited in 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+
+sub:Screen-scraping
+\end_layout
+
+\end_inset
+
  The first is that, unlike APIs with interfaces, scraping has no specific
  programmatic contract between content-provider and content-consumer.
  The second issue is the lack of sophisticated, re-usable screen-scraping
- toolkit software, colloquially known as scrAPIs.
- The lack of such APIs and toolkits is largely due to the application-specific
- needs of each individual scraping tool.
- This leads to large development overheads as designers are forced to reverse-en
-gineer content, develop data models, parse, and aggregate raw data from
- the provider's site.
- Screen scraping tools are considered as not really an elegant solution,
- altough YQL provides a decent framework and does the job well.
+ toolkit software.
+ The lack of API function to get the Yahoo Pipes parameters via YQL which
+ serves as the screen scraping tool.
+ The result can be considered as not really an elegant solution, altough
+ YQL provides a decent framework and does the job well and delivers a feasible
+ solution.
 \end_layout
 
 \begin_layout Subsection
@@ -797,22 +775,27 @@ Technical challenges
 Like any other data integration domain, mashup development is replete with
  technical challenges that need to be addressed, especially as mashup applicatio
 ns become more feature- and functionality-rich.
- This section touches on a handful of these challenges, some of which you
- can address and mitigate, while others are open issues.
-\end_layout
-
-\begin_layout Standard
-For example, translation systems between data models must be designed.
+ In the Web service, translation systems between data models must be designed.
  When converting data into common forms, reasonable assumptions often have
  to be made when the mapping is not a complete one (for example, one data
- source might have a model in which an address-type contains a country-field,
- whereas another does not).
- Already challenging, this is exacerbated by the fact that the mashup developers
+ source has a model in which an address-type contains a country-field, whereas
+ another does not).
+ Or when types of data do not match and need to be converted.
+ Already challenging, this is worsen by the fact that the mashup developers
  might not be domain experts on the source data models because the models
  are third-party to them, and these reasonable assumptions might not be
  intuitive or clear.
- the data they wish to integrate is not suitable for machine automation;
- that it needs cleansing.
+ 
+\end_layout
+
+\begin_layout Standard
+The data to integrate was not suitable for further use as it was not representat
+ive and in the same domain as the original data.
+ Some choices, considering data type conversion and parsing of common data
+ elements had to be solved.
+ In the mashup the JSON object is used as output from Yahoo Pipes into the
+ Web service application.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -919,6 +902,12 @@ Something about other libraries, JQuery?
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:JSON"
+
+\end_inset
+
 JSON
 \end_layout
 
@@ -1018,8 +1007,8 @@ Process
 \end_layout
 
 \begin_layout Standard
-T he integration at the process level has been studied specially in the
- workflow and service oriented composition areas.
+The integration at the process level has been studied specially in the workflow
+ and service oriented composition areas.
  At the process level, the choreography between the involved applications
  is defined.
  The integration is done at the application layer and the composed process

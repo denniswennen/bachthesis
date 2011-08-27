@@ -295,6 +295,10 @@ Thoughts and findings
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "Chapter04.lyx"
@@ -304,10 +308,15 @@ filename "Chapter04.lyx"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "Chapter05.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

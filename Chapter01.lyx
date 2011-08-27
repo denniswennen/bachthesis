@@ -169,6 +169,7 @@ fig:JSdatastructure
 
 \end_inset
 
+.
  For small data sets, this can be done manually, but for large data sets
  the task can get tricky or be a lot of work.
  The goal of this thesis in the first place is to give an overview of the
@@ -384,7 +385,19 @@ key "Yu:2008:UMD:1439188.1439257"
 
 \end_inset
 
+The common interest and use of Web Mashups is large, as stated on Programmable
+ Web
+\begin_inset Foot
+status collapsed
 
+\begin_layout Plain Layout
+http://www.programmableweb.com/mashups
+\end_layout
+
+\end_inset
+
+ there are already more than 6000 mashups on this day with an average of
+ 2.8 mashups added to the directory each day.
 \end_layout
 
 \begin_layout Standard
