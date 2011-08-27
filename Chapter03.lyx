@@ -331,6 +331,12 @@ key "ibm:thenewbreed"
 \end_layout
 
 \begin_layout Subsubsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:YahooPipes"
+
+\end_inset
+
 YahooPipes
 \end_layout
 
@@ -813,7 +819,7 @@ This section gives an overview of the common technologies that are used
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection*
 Ajax 
 \end_layout
 
@@ -842,7 +848,7 @@ There is some dispute over whether the term Ajax is an acronym or not (some
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection*
 Web protocols: SOAP and REST 
 \end_layout
 
@@ -922,7 +928,7 @@ REST is a technique of Web-based communication using just HTTP and XML.
  pairs.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection*
 \begin_inset CommandInset label
 LatexCommand label
 name "sub:Screen-scraping"
@@ -966,7 +972,7 @@ gineer content, develop data models, parse, and aggregate raw data from
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection*
 Semantic Web and RDF 
 \end_layout
 
@@ -1030,7 +1036,7 @@ key "ibm:thenewbreed"
  
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection*
 RSS and ATOM 
 \end_layout
 
@@ -1075,7 +1081,7 @@ There are a number of challenges to address when integrating data from different
  identifiers and schema mismatch, abstraction level mismatch, data accuracy.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection*
 Text/Data Mismatch 
 \end_layout
 
@@ -1103,7 +1109,7 @@ Object Identity and Separate Schema Structured data is available in a lot
  
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection*
 Abstraction Levels 
 \end_layout
 
@@ -1127,7 +1133,7 @@ Another problem is the fact that much more of the data we need to manage
  are often uncertain or ambiguous.
 \end_layout
 
-\begin_layout Subsubsection*
+\begin_layout Subsection*
 Data Quality 
 \end_layout
 

@@ -229,20 +229,6 @@ JavaScript datastructure example
 
 \end_layout
 
-\begin_layout Standard
-Here are some examples of visualisations:
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-insert example visualisations
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
 Integration in the broader domain of computer science
 \end_layout
@@ -281,8 +267,8 @@ The first browser ran on a computer that almost no one outside of a university
 \begin_layout Standard
 The World Wide Web is growing at phenomenal rates, as witnessed by every
  recent estimation.
- This explosion both of hosts and of users on the Web, has made it even
- more important of managing such enormous amount of data.
+ The explosion both of hosts and of users on the Web, has made it even more
+ important of managing such enormous amount of data.
  People are not interested in every bit of information available on the
  Web, but instead want to find the information they want to find.
  This may be more easily said than done.
@@ -356,8 +342,8 @@ area of study, write something on each of the topics
 \end_layout
 
 \begin_layout Standard
-Recently, in the context of the Web, the mashup concept has emerged, and
- researchers have developed a huge number of Web 2.0 applications.
+In the context of the Web, the mashup concept has emerged, and researchers
+ have developed a huge number of Web 2.0 applications.
  It also shows that the needs for integrating these rich data and service
  sources are rapidly increasing.
 \begin_inset CommandInset citation
@@ -373,7 +359,7 @@ e approaches can create new content.
  When building a new generation of Web-based applications, Web data management
  and semantic technologies seems to be an exciting challenge in for both
  academic and industrial researchers.
- In this context, there is also see a need for end-user-oriented integration
+ In this context, there is also a need for end-user-oriented integration
  structures for allowing easy and simple exploration, organization, search,
  and integration of mashups.
  This will help move mashup development from manual and time-consuming scripting
@@ -385,8 +371,9 @@ key "Yu:2008:UMD:1439188.1439257"
 
 \end_inset
 
-The common interest and use of Web Mashups is large, as stated on Programmable
- Web
+The common interest and use of Web mashups is widespread.
+ As stated on Programmable Web there are already more than 6000 mashups
+ on this day with an average of 2.8 mashups added to the directory each day
 \begin_inset Foot
 status collapsed
 
@@ -396,14 +383,13 @@ http://www.programmableweb.com/mashups
 
 \end_inset
 
- there are already more than 6000 mashups on this day with an average of
- 2.8 mashups added to the directory each day.
+ .
 \end_layout
 
 \begin_layout Standard
-To understand why some automatic support is needed to create Mashups, we
+To understand why some automatic support is needed to create mashups, we
  give the following example.
- Suppose that a user wants to implement a Mashup of news feeds by selecting
+ Suppose that a user wants to implement a mashup of news feeds by selecting
  news on a news service or website and display both the list of the news
  and a geographic map that highlights the locations associated with the
  news.
@@ -415,8 +401,8 @@ To understand why some automatic support is needed to create Mashups, we
  To implement screen scraping techniques for the services that do not provide
  APIs, and to know the data structure and semantics of the input and output
  of each service in order to implement a data mediation solution.
- Here the Mashup tools can provide facilities to help the user solve some
- of the above mentioned problems.
+ At this point the mashup tools can provide facilities to help the user
+ solve some of the above mentioned problems.
 \end_layout
 
 \begin_layout Standard
@@ -428,11 +414,11 @@ All the tools are supposed to target “non-expert” users, but a programming
  Others necessitate medium programming effort given that only some functionaliti
 es need to be coded in an explicit way using a programming language; a graphical
  interface is offered to the user to express most of operations.
- Mashup nowadays are cool toys that provide mostly a limited functionality
- to a specific problem, there as integration and robust application models
- are missing.
+ Mashups nowadays are visually attractive toys that provide mostly a limited
+ functionality to a specific problem, there as integration and robust applicatio
+n models are missing.
  At this time, there is no tool that requires low or no programming effort
- by the user to build a Mashup, which is necessary to claim that the tools
+ by the user to build a mashup, which is necessary to claim that the tools
  are targeted for end-users.
  Before they make it into sophisticated applications that are easy to use,
  much work will have to go into distilling robust standards, protocols,
@@ -493,17 +479,6 @@ gain more easy access to open-source and free visualisation
 \end_layout
 
 \begin_layout Standard
-\begin_inset Marginal
-status collapsed
-
-\begin_layout Plain Layout
-Deze tekst moet nog verfijnd worden.
- Sommige stukken kunnen ook nog een andere plaats krijgen.
-\end_layout
-
-\end_inset
-
-
 \begin_inset Note Note
 status collapsed
 
@@ -575,11 +550,12 @@ This research was conducted in a two part study with the first part the
  research and to test and evaluate the concepts of mashup applications,
  accompanied by this thesis text to guide the reader trough the whole research
  project.
- Every sections in the thesis text adds some more information; the text
- started with an introduction on the general problem statement and will
- continue with the analysis of previous research work, followed by my own
- research, the explanation of the implementation and ending with the results
- and the discussion of it, including a view into possible future work.
+ Every sections in the thesis text adds some more information; after stating
+ the integration and importance of the problem an introduction here in this
+ chapter, the work will continue with the analysis of previous research
+ work, followed by own research, the explanation of the implementation and
+ ending with the results and the discussion of it, including a view into
+ possible future work.
 \end_layout
 
 \begin_layout Standard
@@ -612,24 +588,15 @@ Issues
 \end_layout
 
 \begin_layout Standard
-\begin_inset Marginal
-status collapsed
-
-\begin_layout Plain Layout
-Moeilijkheden die ik ben tegengekomen
-\end_layout
-
-\end_inset
-
-The Mashup approach opens new and broad opportunities for data/services
+The mashup approach opens new and broad opportunities for data/services
  consumers.
  However, the development investment is still considerable.
- In fact, a Mashup user needs to know, in addition to how to write code
+ In fact, a mashup user needs to know, in addition to how to write code
  using programming languages (e.g., Java Script, XML/HTML), how to use the
  different Web API's.
  In order to solve this problem, there is an increasing effort put into
  developing tools which are designed to support users with little programming
- knowledge in Mashup applications development.
+ knowledge in mashup applications development.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DiLorenzo:2009:DIM:1558334.1558343"
@@ -750,18 +717,6 @@ That brings me in the present, where I tackeled the problem.
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-Future Work
-\end_layout
-
-\begin_layout Standard
-Improvement of the current features
-\end_layout
-
-\begin_layout Section
-License/copyright
 \end_layout
 
 \end_body

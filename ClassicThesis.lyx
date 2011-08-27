@@ -118,16 +118,18 @@ filename "Titleback.lyx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Newpage cleardoublepage
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset CommandInset include
+LatexCommand include
+filename "Dedication.lyx"
+
 \end_inset
 
 
 \end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset include
-LatexCommand include
-filename "Dedication.lyx"
 
 \end_inset
 
@@ -295,10 +297,6 @@ Thoughts and findings
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
 \begin_inset CommandInset include
 LatexCommand include
 filename "Chapter04.lyx"
@@ -308,15 +306,10 @@ filename "Chapter04.lyx"
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
 \begin_inset CommandInset include
 LatexCommand include
 filename "Chapter05.lyx"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
@@ -328,12 +321,6 @@ filename "Chapter05.lyx"
 \end_inset
 
 
-\end_layout
-
-\begin_layout Part Introduction (ClassicThesis)
-\start_of_appendix
-This part contains information that is important to, but is not the main
- idea of, the main text.
 \end_layout
 
 \begin_layout Part

@@ -204,12 +204,26 @@ Most thesis authors put in a page of thanks to those who have helped them
 \end_layout
 
 \begin_layout Standard
-Many thanks to everybody who supported me troughout the making of this work.
+This thesis is dedicated to my parents and my friends who have keep supporting
+ me since the beginning of my studies.
+  Even the largest task can be accomplished if it is done one step at a
+ time.
+\end_layout
+
+\begin_layout Standard
+Thanks to my parents for all the support throughout my studies.
+ I am grateful especially to Niels Buekers for the care with which he reviewed
+ the implementation and this work.
+ He gave me a lot of support.
+ Professor Kris Luten, and Jan Meskens also provided material and support
+ at critical and opportune times: my thanks to them too.
+ In general I want to thank everyone else who supported throughout this
+ work.
 \end_layout
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
