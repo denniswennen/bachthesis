@@ -72,40 +72,6 @@ status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
-	filename gfx/ui_1_loading.jpg
-	lyxscale 50
-	width 100text%
-
-\end_inset
-
-
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:Yahoo-Pipe-loading"
-
-\end_inset
-
-Yahoo Pipe loading
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-wide false
-sideways false
-status collapsed
-
-\begin_layout Plain Layout
-\begin_inset Graphics
 	filename gfx/ui_2_dataview.jpg
 	lyxscale 50
 	width 100text%
@@ -122,7 +88,7 @@ name "fig:Interface-data-view"
 
 \end_inset
 
-Interface data view
+interface data view
 \end_layout
 
 \end_inset
@@ -156,7 +122,7 @@ name "fig:Data-Control-Dashboard"
 
 \end_inset
 
-Data Control Dashboard
+data control dashboard
 \end_layout
 
 \end_inset
@@ -190,7 +156,7 @@ name "fig:Google-Visualisation"
 
 \end_inset
 
-Google Visualisation
+Google Chart visualisation
 \end_layout
 
 \end_inset
@@ -218,14 +184,47 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Timeline
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Timeline-Visualisation"
 
 \end_inset
 
- Visualisation
+ Timeline visualisation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename gfx/ui_6_viz_map.jpg
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Timeline-Visualisation-1"
+
+\end_inset
+
+ Map visualisation
 \end_layout
 
 \end_inset

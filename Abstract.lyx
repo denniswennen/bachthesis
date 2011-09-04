@@ -117,7 +117,7 @@ pdfbookmark[1]{Abstract}{Abstract}
 \begin_layout Chapter*
 Abstract
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Of all your thesis, this part will be the most widely published and most
@@ -143,22 +143,36 @@ Of all your thesis, this part will be the most widely published and most
 \end_layout
 
 \begin_layout Standard
-Short summary of the contents in English.
- But a very important chapter.
- What is my thesis about? Which point do I want to make? I want to inspire.
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-dots
+This thesis is a work of research in the domain of Web Services and Web
+ mashups, in particular the data flow and integration between the services.
+ Mashup is a new application development approach that allows users to aggregate
+ multiple Web services (e.g.
+ Google Maps, Flickr, RSS feeds, etc..) to create a service for a new purpose
+ and to combine and visualise the original data sources.
+ The problem is that these services each have their own set of functionality
+ and format for data handling.
+ Creating a Web mashup is not a trival task and the development is time-consumin
+g and is asking for a profound re-usable framework to handle the differences
+ and strive for a better integration.
+ 
 \end_layout
 
-\end_inset
+\begin_layout Standard
+One of the important characteristics of the Web and also one of the most
+ interesting challenges is certainly its heterogeneity.
+ The analysis shows that this heterogeneity can be seen on data, processes,
+ and even user interfaces.
+ An implementation of a service is made where the data, fetched from the
+ Yahoo Pipes Web service is integrated and visualised in a client-side mashup.
+ The service is implemented in JavaScript and presented in a Web interface.
+ 
+\end_layout
 
-
+\begin_layout Standard
+Mashups are evolving toward services that are a mix of user interface and
+ traditional application logic at it seems to be a big challenge to identify
+ the components, the different data sources and to facilitate the development
+ and use of the composition.
 \end_layout
 
 \begin_layout Standard
@@ -189,22 +203,40 @@ Samenvatting
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
-Korte samenvatting van mijn thesis in het Nederlands
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-dots
+Deze thesis is een onderzoek in het domain van Web services and Web mashups,
+ met name de data flow en integratie tussen de verschillende services.
+ Mashup is een nieuwe aanpak voor de ontwikkeling van applicaties die aan
+ de gebruiker toelaat om verschillende Web services (bijv.
+ Google Maps, Flickr, RSS feeds, etc..) samen te voegen om zo een service
+ te creëren for een nieuw doel en om de data bronnen te combineren en te
+ visualiseren.
+ Het probleem is echter dat deze services ieder hun eigen set van functionalitei
+t bezitten en data op hun eigen manier verwerken.Het is geen triviale, maar
+ een tijdsrovende taak om een Web mashup te ontwikkelen, waarbij de ontwikkeling
+ vraagt om een degelijk en herbruikbaar framework, om zo te streven naar
+ een betere integratie en de verschillen tussen de services op een makkelijke
+ manier te overbruggen.
+ 
 \end_layout
 
-\end_inset
+\begin_layout Standard
+Een van de belangrijkste eigenschappen van het Web en ook een van de meest
+ interessante uitdagingen is zeker de heterogeniteit van het Web.
+ De analyse toont aan dat deze heterogeniteit zichtbaar is in de data, de
+ processen en zelf in de user interface.
+ Een implementatie van een Web Service werd gemaakt waar de data werd gehaald
+ bij de Yahoo Pipes Web Service en geïntegreerd werd in een client-side
+ mashup.
+ De service is geïmplementeerd in JavaSCript en wordt gepresenteerd in een
+ Web interface.
+ 
+\end_layout
 
-
+\begin_layout Standard
+Mashups evolueren continue naar services die een mix zijn van gebruikersinterfac
+e, traditionele applicatielogica en het blijkt een grote uitdaging om de
+ verschillende componenten te identificeren and om de ontwikkeling en het
+ gebruik van de compositie te vergemakkelijken.
 \end_layout
 
 \begin_layout Standard
@@ -215,8 +247,6 @@ dots
 \end_layout
 
 \begin_layout Standard
-Deze tekst is bedoeld als samenvatting, geschreven in het Nederlands.
- Het betref de hele studie samengevat ter verduidelijk van de Engelse tekst.
 \begin_inset ERT
 status open
 

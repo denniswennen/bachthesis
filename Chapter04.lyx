@@ -61,7 +61,13 @@
 \begin_body
 
 \begin_layout Chapter
-The Web Service implementation
+\begin_inset CommandInset label
+LatexCommand label
+name "chap:The-Pipez-Web"
+
+\end_inset
+
+The Pipez Web Service implementation
 \begin_inset Note Note
 status collapsed
 
@@ -157,6 +163,17 @@ goede ontwerpbeslissingen, verantwoording van de keuzes!!
 
 \end_layout
 
+\begin_layout Standard
+This part contains more details on the approach and possible solutions for
+ the problem statement.
+ It explains the process of the analysis of the requirements for the problem
+ statement and the design to meet these requirements.
+ It explains the JavaScript implementation of the webservice in detail.
+ This chapter is followed by a review of the implementation and a chapter
+ that contains the discussion of the results, any solutions found and the
+ general conclusion for this thesis.
+\end_layout
+
 \begin_layout Section
 Design decisions & issues
 \begin_inset Note Note
@@ -219,21 +236,23 @@ It's possible that the user has collected the data from different sources,
 \begin_layout Standard
 This chapter covers the process of the analysis of the literature study
  to solve the problem, with as result a Web service to visualise data via
- the use several JavaScript libraries.
+ the use of several JavaScript libraries.
  It is an iterative process of combining the different aspects of a mashup
  application.
  The result is a mashup application as a composition of data integration,
- application logic and representation trough a user interface and visualisation.
- Striving to an application that delivers an acceptable solution of the
- problem.
+ application logic and representation trough the user interface and visualisatio
+n.
+ Striving to create an application that delivers an acceptable solution
+ of the problem.
 \end_layout
 
 \begin_layout Standard
 The implemented Web service provides an abstraction layer between Yahoo
  Pipes and JavaScript visualisation libraries.
  Similar to the development environments, a mashup’s execution depends on
- the availability of additional browser plug-ins or extensions, JavaScript
- libraries in this case.
+ the availability of additional browser plug-ins or extensions where in
+ this case additional JavaScript libraries are imported to support the visualisa
+tions.
 \end_layout
 
 \begin_layout Standard
@@ -284,9 +303,10 @@ Security: Can the client directly access the service and content for the
 Performance: For importing the original data, the Yahoo Pipes server doesn't
  respond always adequateley which can sometimes introduce a large time variation
  in loading the data.
- The response from other included libraries are represented in the UI.
+ The response from other included libraries are represented in the UI in
+ the status display.
  This way the user knows of any issues or problems in loading time or parsing
- errors
+ errors.
 \end_layout
 
 \begin_layout Itemize
@@ -296,7 +316,7 @@ Stability: As regarding to data quality and consistency of the application,
  in time and therefore the service has no control over that data.
  The data however used, once the pipe data is loaded, is consistent and
  does not vary over time.
- It is only when the user loads a new data set, this is changed.
+ It is only when the user loads a new data set, the conditions are changed.
 \end_layout
 
 \begin_layout Itemize
@@ -372,18 +392,13 @@ In this subsection, some reasons for using the client-side mashup style
 
 \begin_layout Standard
 The service is more easily to implement than a server-side mashup.
- The mashup is made, using several other mashup services which provide their
- functionality trough an API.
+ The mashup is made, using several other mashup services (Google Chart,
+ Timeline and Google Maps) which provide their functionality trough an API.
  These are implemented in JavaScript and facilitate the use of its service,
  by simply referencing to the script URL.
  Then the necessary code is implemented into the Web Service by calling
- the API functions.
- Some mashup sites offer sample code or usefull tutorials that illustrates
- how to use the functions of the API.
- These tutorials provide a basic step for further integration of API functions
- into the own webservice.
- Further for a client-side mashup, a custom plug-in is not needed to implement
- the Web service application.
+ the API functions and a custom plug-in is not needed to implement the Web
+ service application.
  Most modern browsers support the techniques typically used in client-side
  mashups, including dynamic scripting and JSONP.
  JSON (JavaScript Object Notation) and more specific JSONP will be explained
@@ -436,12 +451,7 @@ In a server-side mashup, a service request is passed over the network from
  the response from the mashup server on the own server.
  However, in a client-side mashup, a service request and response are passed
  directly between the client and the mashup server, so receiving a response
- typically takes less time.
- Because a service request and response is passed directly between the client
- and the mashup server, and not through a server-side proxy, it reduces
- the processing load on the server.
- The performance of a client-side mashup is better due to the reduced time
- of waiting for server responses.
+ typically takes less time and it reduces the processing load on the server.
 \end_layout
 
 \begin_layout Standard
@@ -554,10 +564,11 @@ key "springerlink:10.1007/978-3-540-74974-5_2"
 \end_layout
 
 \begin_layout Standard
-Assuming you have no specific development tools, there are quite some aspects
- involved in creating a mashup application First, it is necessary to become
- familiar with the source providers (Yahoo Pipes for example) and identify
- how the data will be reused or extracted from the source.
+Assuming no specific development tools, there are quite some aspects involved
+ in creating a mashup application.
+ First, it is necessary to become familiar with the source providers (Yahoo
+ Pipes in this example) and identify how the data will be reused or extracted
+ from the source.
  As stated in 
 \begin_inset Flex CT - auto cross-reference
 status collapsed
@@ -569,7 +580,7 @@ sub:YahooPipes
 
 \end_inset
 
-Yahoo Pipes support a variety of functions to export the data, which still
+, Yahoo Pipes support a variety of functions to export the data, which still
  require parsing and interpretation to use the data in a later stage.
  To configure the data visualisation and the possible user interactions
  with the data view, an interaction with the application logic or the visualisat
@@ -599,78 +610,56 @@ Data component
 \end_layout
 
 \begin_layout Standard
-This level mainly concerns data mediation and integration.
+Yahoo Pipes is a powerful composition tool to aggregate, manipulate and
+ mashup content from around the web.
+ Data can have any source, whether the goal is to combine several RSS feeds
+ into one, create widgets for a website, plot favorite places on an interactive
+ map or convert HTML websites into RSS feeds, the possibilities are endless
+ with Pipes.
  Challenges at this level involve accessing and integrating data residing
- in multiple and heterogeneous sources such as web data and statistical
- or enterprise data.
+ in multiple and heterogeneous sources.
  Regarding the data mediation, the complexity comes from structural and
  semantics diversities of the schema to be merged.
  As any source of data can be possible, there cannot be a single defined
  structure or semantics.
- In some cases, data sources can be either structured for which a well defined
- data model is available (e.g., XML
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Extensible Markup Language
+ 
 \end_layout
 
-\end_inset
-
-, RSS
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-RSS (originally RDF Site Summary, often dubbed Really Simple Syndication)
- is a family of web feed formats used to publish frequently updated works—such
- as blog entries, news headlines, audio, and video—in a standardized format
-\begin_inset CommandInset citation
-LatexCommand citep
-key "libby:rss_spec"
-
-\end_inset
-
-
+\begin_layout Standard
+Data sources can be either structured for which a well defined data model
+ is available (e.g., XML, RSS or ATOM), or unstructured (e.g., audio, email
+ text, office documents).
+ The service keeps the structured data format intact as long as there are
+ no operators defined by the user to alter the data schema.
+ The output will be in the same structure as the input data, Yahoo Pipes
+ takes care of this proces quiete well as it keeps the input data in coherence
+ with the output data.
+ Most of sources will be e.g.
+ RSS news feeds and the delivered RSS output format is made available to
+ export the data.
 \end_layout
 
-\end_inset
-
- and ATOM
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-The name Atom applies to a pair of related standards.
- The Atom Syndication Format is an XML language used for web feeds, while
- the Atom Publishing Protocol (AtomPub or APP) is a simple HTTP-based protocol
- for creating and updating web resources.
-\end_layout
-
-\end_inset
-
-), or unstructured (e.g., audio, email text, office documents).
- In the latter case, the unstructured data needs to be pre-processed in
- order to extract their meaning and create structured data.
- So, this level consists of all possible data manipulations (conversion,
- filtering, format transformation, combination, etc.) needed to integrate
- different data sources.
+\begin_layout Standard
+The user can do all kinds of data manipulations like conversion, filtering,
+ format transformation, combination, etc.
+ needed to integrate different data sources.
  Each manipulation could be done by analyzing both syntax and semantics
  requirements.
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Halevy:2005:WYD:1103822.1103836"
+\end_layout
 
-\end_inset
-
-Yahoo Pipes main format in data handling is the RSS schema.
- In some extend, this mashup application provides a mechanism to narrow
- the data definitions.
- As the data output is formatted back into the RSS standard, whereby the
- items are structured in an a structered RSS file according to the specification.
- Every items has the required title (the title of the item), link (the URL
- of the item) and the desciption (the item synopsis).
+\begin_layout Standard
+The RSS data schema can be partly found in the processing of unstructured
+ data as Yahoo Pipes uses an 'item' (similar to an RSS item) as the unit
+ of output.
+ It is in the design and processing of the data by the user that this item,
+ the unit data element has to be defined.
+ However an item can contain any structure or content of data and thereby
+ the heterogeneity is still present.
+ As the data is further used by other services, which is the case in the
+ Pipez implementation, the format and structure has to be known to handle
+ the data in a correct way.
+ The further processing of the Yahoo Pipes output is explained more in detail
+ below.
 \end_layout
 
 \begin_layout Subsection
@@ -695,12 +684,13 @@ ns become more feature- and functionality-rich.
 \end_layout
 
 \begin_layout Standard
-The data to integrate was not suitable for further use as it was not representat
-ive and in the same domain as the original data.
+As stated above, the output data was not directly suitable for further in
+ the Pipez application logic, as there could be ambiguity about the data
+ contents, structure and schema.
  Some choices, considering data type conversion and parsing of common attributes
  had to be solved.
  In the implemented mashup application the data output from Yahoo Pipes
- is parsed into the Web service application via JSON.
+ is parsed into the Web service application via JSON data schema.
  This is a lightweight text-based open standard designed for human-readable
  data interchange.
  More details on the handling of the input data and the JSON format, is
@@ -726,10 +716,10 @@ Application logic
 The integration at the process level has been studied specially in the workflow
  and service oriented composition areas.
  At the process level, the choreography between the involved applications
- is defined.
+ and services is defined.
  The integration is done at the application layer and the composed process
  is developed by combining activities, generally exposed through API's.
- In the Mashups context, those languages are not enough for modeling application
+ In the mashups context, those languages are not enough for modeling application
 s since, for instance, they do not provide the connection to different remote
  resources, e.g., REST resources, and do not handle the interaction with the
  client browsers.
@@ -738,59 +728,6 @@ s since, for instance, they do not provide the connection to different remote
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DiLorenzo:2009:DIM:1558334.1558343"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Refreshing my skills about the JavaScript language.
- I had a course about it in the curriculum about 2 years ago.
- It was a basic course.
- Now and than I used some Javascript for the design of a few personal webpages.
-\end_layout
-
-\begin_layout Plain Layout
-I also followed a lot of tutorials online.
- I did a few at NetTuts about more advanced topics.
- Also some general subjects to improve my view.
- 
-\end_layout
-
-\begin_layout Plain Layout
-It seems that there is already done a lot of investigation about cross domain
- exchange of data.
- On the web JavaScript is a commonly used scripting language.
- My vision of the technology was not the right one it seems.
- And also for a lot of people Javascript is equal to annoying popups, malicious
- script and some fancy stuff that is not quite necessary.
- But it's more than that.
- There is a wide variety of libraries available for the language, of which
- the most popular are JQuery, Dojo and Prototype.
- These provide an extra layer above the scripting language.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection*
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Subsubsection*
-JQuery additions
-\end_layout
-
-\begin_layout Plain Layout
-Something about other libraries, JQuery?
-\end_layout
 
 \end_inset
 
@@ -822,15 +759,14 @@ key "SameOrigin"
 
 \end_inset
 
-.
- It is now the de facto security model used by web browsers.
- The Same Origin Policy “prevents document or script loaded from one origin
+and is now the de facto security model used by web browsers.
+ The Same Origin Policy prevents document or script loaded from one origin
  from getting or setting properties of a document from a different origin.
  The browser security model dictates that XMLHttpRequest, frames, etc.
  must have the same domain in order to communicate.
  This is a good implementation for security reasons, but it does make distribute
 d and service oriented, mash-up web development more difficult.
- There are some solutions to solving this problem.
+ There are some solutions to solving this problem, discussed briefly here.
 \end_layout
 
 \begin_layout Standard
@@ -845,7 +781,8 @@ For example a local proxy, but this method needs infrastructure as it can't
 \end_layout
 
 \begin_layout Standard
-Cross-Origin Resource Sharing (CORS)
+In the Pipez web service implementation, security issues have been solved
+ by using the Cross-Origin Resource Sharing (CORS)
 \begin_inset Foot
 status collapsed
 
@@ -855,9 +792,10 @@ http://www.w3.org/TR/cors/
 
 \end_inset
 
- is a browser technology specification, which defines ways for a web service
- to provide interfaces for sandboxed scripts coming from a different domain
- under same origin policy.
+.
+ It is a browser technology specification, which defines ways for a web
+ service to provide interfaces for sandboxed scripts coming from a different
+ domain under same origin policy.
  The standard works by adding new HTTP headers that allow servers to describe
  the set of origins that are permitted to read that information using a
  web browser.
@@ -891,18 +829,9 @@ User agents can discover via a preflight request whether a cross-origin
  
 \end_layout
 
-\begin_layout Itemize
-Server-side applications are enabled to discover that an HTTP request was
- deemed a cross-origin request by the user agent, through the Origin header.
- This extension enables server-side applications to enforce limitations
- (e.g.
- returning nothing) on the cross-origin requests that they are willing to
- service.
-\end_layout
-
 \begin_layout Standard
-CORS is a modern alternative to the JSONP pattern and an extend to the SOP
- model.
+CORS is a better alternative to the more used and unsafe JSONP pattern,
+ an extend to the SOP model.
  JSON-P works with the script-tage method , which requests to a remote data
  service location.
  The response (the loaded "JavaScript" content) is the name of a function
@@ -910,16 +839,22 @@ CORS is a modern alternative to the JSONP pattern and an extend to the SOP
  to it being the JSON data being requested.
  When the script executes, the function is called and passed the JSON data,
  allowing the requesting page to receive and process the data.
- While JSONP supports only the GET request method, CORS also supports other
- types of HTTP requests.
- Using CORS enables a web programmer to use regular XMLHttpRequest which
- supports better error handling than JSONP.
- On the other hand, JSONP works on legacy browsers which preclude CORS support.
- CORS is supported by most modern web browsers.
+ 
+\end_layout
+
+\begin_layout Standard
+Using CORS in the Pipez Web service, provides a security model which reduces
+ the chance on any potential security risks or malicious code insertion.
 \end_layout
 
 \begin_layout Subsubsection
-Parameters
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Screen-scraping-the"
+
+\end_inset
+
+Screen scraping the parameters
 \end_layout
 
 \begin_layout Standard
@@ -928,21 +863,6 @@ It is possible to provide user inputs when loading a pipe in Yahoo.
  displayed or a location on the map.
  Their website for browsing and running pipes, provides a form section where
  users can see the parameters and enter the values.
- However none of this information in provided when exporting in JSON or
- RSS.
- This is a drawback in functionality as users need to guess or even not
- beware of any input parameters when using the pipe.
- In the implementation a workaround is provided to tackle this problem.
- It's even a practice of the mashup concept itself.
-\end_layout
-
-\begin_layout Standard
-Mashups can extract content from web sites by a technique known as screen
- scraping.
- In this context, screen scraping denotes the process by which a tool attempts
- to extract information from the content provider by attempting to parse
- the provider's Web pages, which were originally intended for human consumption;
- the pipe information page in this case.
  (e.g.
  
 \begin_inset Foot
@@ -954,19 +874,42 @@ http://pipes.yahoo.com/pipes/pipe.info?_id=avkEShi32xG_EF6KZVUMqA
 
 \end_inset
 
-) This way semantic data structures representative of the necessary information
- that can be extracted, used and manipulated programmatically.
- Yahoo! Query Language
+) However none of this parameter information in provided in the JSON or
+ RSS pipe output.
+ This is a drawback in functionality as users need to guess or even not
+ beware of any input parameters when using the pipe.
+ 
+\end_layout
+
+\begin_layout Standard
+The solution to tackle this problem was the use of screen scraping tool
+ (see 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+
+sub:Screen-scraping
+\end_layout
+
+\end_inset
+
+ for more details).
+ The Yahoo! Query Language
 \begin_inset CommandInset citation
 LatexCommand citep
 key "YQL"
 
 \end_inset
 
- is used here in this case.
- It's an expressive SQL-like language that lets you query, filter, and join
- data across Web services.
- With YQL, apps run faster with fewer lines of code and a smaller network
+ is used here in this case to extract the parameter information.
+ YQL is an expressive SQL-like language that lets you query, filter, and
+ join data across Web services.
+ 
+\end_layout
+
+\begin_layout Standard
+With YQL, apps run faster with fewer lines of code and a smaller network
  footprint.
  Yahoo! and other websites across the Internet make much of their structured
  data available to developers, primarily through Web services.
@@ -976,7 +919,20 @@ key "YQL"
  To call the YQL Web Service, an application would call an HTTP GET method
  on this parametrised URL.
  The result data can be in XML or JSON format, the latter is used to get
- that information from the pipe info site into the webservice.
+ that information from the pipe info site into the Web service.
+ In 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+
+fig:Yahoo-Pipe-loading
+\end_layout
+
+\end_inset
+
+e.g.
+ the 'top' parameter is loaded via screen scraping.
 \end_layout
 
 \begin_layout Standard
@@ -995,11 +951,48 @@ sub:Screen-scraping
  programmatic contract between content-provider and content-consumer.
  The second issue is the lack of sophisticated, re-usable screen-scraping
  toolkit software.
- The lack of API function to get the Yahoo Pipes parameters via YQL which
- serves as the screen scraping tool.
+ The lack of API functions to get the Yahoo Pipes parameters via YQL, made
+ the the use of screen scraping necessary.
  The result can be considered as not really an elegant solution, altough
  YQL provides a decent framework and does the job well and delivers a feasible
  solution.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename gfx/ui_1_loading.jpg
+	lyxscale 50
+	width 100text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Yahoo-Pipe-loading"
+
+\end_inset
+
+Yahoo Pipes loading
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1013,6 +1006,12 @@ Parsing & conversion of data
 \end_layout
 
 \begin_layout Subsubsection*
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:JSON-1"
+
+\end_inset
+
 JSON
 \end_layout
 
@@ -1407,6 +1406,13 @@ In the user interface there is also a small section for highlighting and
  If the result has been found, it appears in the indicated color.
  This way the UI provides also a filter function to display a more narrow
  data set.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "api:timeline"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*

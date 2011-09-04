@@ -113,6 +113,33 @@ This section might go through several drafts to make it read well and logically,
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+This part contains the problem statement, the importance of the research
+ and were it fits into the broad domain of computer science.
+ Also the organisation and structure of the research, including some issues
+ can be found in this part
+\end_layout
+
+\begin_layout Plain Layout
+This part contains two chapters.
+ In the first chapter the description and analysis of previous work done
+ can be found.
+ It cites work in the more broader domain related to my research.
+ It also handles a theoretical approach, and discusses some other related
+ webservices.
+ The second chapter contains the general approach to the problem, including
+ technologies used in relation to the research domain.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Problem statement
 \begin_inset Note Note
@@ -140,7 +167,7 @@ The Internet and related technologies have created an new world in which
  form communities among users with similar interests to achieve efficiency
  and improve performance.
  On the Web, Web services are emerging as a major technology for deploying
- automated interactions between distributed and heterogeneous applications,
+ automated interactions between distributed and heterogeneous applications
  and for connecting business processes, which might span companies’ boundaries.
  It simply indicates a way to create new Web experiences by combining existing
  Web resources, utilizing data and Web APIs.
@@ -153,7 +180,11 @@ key "servicesmashups/MIC.2008.110"
 
 \end_inset
 
- A lot of libraries are provided for creating visualization in JavaScript.
+ 
+\end_layout
+
+\begin_layout Standard
+A lot of libraries are provided for creating visualization in JavaScript.
  An advantage is that in most cases these API's are well documented.
  The situation gets more complex when data needs to be coupled to this visualiza
 tions.
@@ -172,25 +203,29 @@ fig:JSdatastructure
 .
  For small data sets, this can be done manually, but for large data sets
  the task can get tricky or be a lot of work.
- The goal of this thesis in the first place is to give an overview of the
+ 
+\end_layout
+
+\begin_layout Standard
+The goal of this thesis in the first place is to give an overview of the
  current 
 \lang british
 mashups
 \lang american
  on the Web, how the concept is evolving, the issues that need to be tackled
  and it's impact on using the Web we know it today.
- The theory is than translated into practice by implementation of a Web
- service in JavaScript.
- During the implementation, aspects like data integration, the composition
- of mashup components and usability will be handled.
+ The study is translated into practice by implementation of a Web service
+ in JavaScript in which aspects like data integration, the composition of
+ mashup components and usability will be investigated.
  More specific, the implementation will be a Yahoo Pipes Visualizer: a case
  of a Web mashup which serves as an abstraction layer between the Yahoo
  Pipes as data source and JavaScript visualization libraries.
  This kind of service has the goal to simplify the collection, filtering
- and using data in user friendly way, without the need to create complex
+ and using of data in user friendly way, without the need to create complex
  data structures manually.
- In the following sections I will explain in more details why this research
- is important and how it fits into the general domain of computer science.
+ In the following sections will be explained in more details why this research
+ is important in the context of the web and as a tool for non-skilled web
+ users.
 \end_layout
 
 \begin_layout Standard
@@ -229,11 +264,15 @@ JavaScript datastructure example
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
 \begin_layout Section
 Integration in the broader domain of computer science
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The first browser ran on a computer that almost no one outside of a university
  or research lab used.
  The Web itself consisted of a some small exchange of information.
@@ -264,13 +303,13 @@ The first browser ran on a computer that almost no one outside of a university
  
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 The World Wide Web is growing at phenomenal rates, as witnessed by every
  recent estimation.
  The explosion both of hosts and of users on the Web, has made it even more
  important of managing such enormous amount of data.
  People are not interested in every bit of information available on the
- Web, but instead want to find the information they want to find.
+ Web, but instead want the information they want to find.
  This may be more easily said than done.
  The Web is constantly evolving with the growing popularity and use of Web
  2.0, which is associated with web applications that facilitate information
@@ -280,7 +319,14 @@ The World Wide Web is growing at phenomenal rates, as witnessed by every
 , software and information are provided to computers and other devices as
  a utility over a network.
  A simpler definition is that Web 2.0 can be seen as a shift from transaction-bas
-ed Web pages to interaction-based ones.
+ed Web pages to interaction-based ones
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Anderson2007WEB2"
+
+\end_inset
+
+.
  This is where the power of the user comes in and is mashed, mixed, and
  multiplied to create new value.
  Mashup tools are a great way to collect, filter and create data on the
@@ -288,7 +334,7 @@ ed Web pages to interaction-based ones.
  information.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Social-networking sites, wikis, blogs, and mashups are just some of the
  components that make this possible.
  The success of services from Google, Facebook, Wikipedia and Flickr has
@@ -298,7 +344,7 @@ Social-networking sites, wikis, blogs, and mashups are just some of the
  remixable, the entire system is turning into both a platform and the database.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Note Note
 status collapsed
 
@@ -327,6 +373,11 @@ the web becomes more and more interactive
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Importance
 \begin_inset Note Note
@@ -344,8 +395,8 @@ area of study, write something on each of the topics
 \begin_layout Standard
 In the context of the Web, the mashup concept has emerged, and researchers
  have developed a huge number of Web 2.0 applications.
- It also shows that the needs for integrating these rich data and service
- sources are rapidly increasing.
+ It also shows that the needs for integrating complex data source and rich,
+ interactive service sources are rapidly increasing.
 \begin_inset CommandInset citation
 LatexCommand citep
 key "DiLorenzo:2009:DIM:1558334.1558343"
@@ -364,22 +415,21 @@ e approaches can create new content.
  and integration of mashups.
  This will help move mashup development from manual and time-consuming scripting
  to a set of easy-to-find and extensible parameterized patterns that characteriz
-e most of the heterogeneities among mashup services.
+e most of the heterogeneities among mashup services
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Yu:2008:UMD:1439188.1439257"
 
 \end_inset
 
-The common interest and use of Web mashups is widespread.
+.
+ The common interest and use of Web mashups is widespread.
  As stated on Programmable Web there are already more than 6000 mashups
  on this day with an average of 2.8 mashups added to the directory each day
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://www.programmableweb.com/mashups
-\end_layout
+ 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "programmableweb"
 
 \end_inset
 
@@ -393,28 +443,44 @@ To understand why some automatic support is needed to create mashups, we
  news on a news service or website and display both the list of the news
  and a geographic map that highlights the locations associated with the
  news.
- Typically a lot of programming is involved; from fetching the heterogeneous
- data and integrating it into the map service.
- In fact, the user needs to know not only how to write the code, but also
- to understand the available API services and how they work in order to
- use them and get the data output.
- To implement screen scraping techniques for the services that do not provide
- APIs, and to know the data structure and semantics of the input and output
- of each service in order to implement a data mediation solution.
+ Typically there is a lot of programming is involved; from fetching the
+ heterogeneous data from different sources and process and integrating it
+ into the map service.
+ The user needs to know how to write the code for implementing the application
+ logic and to get a grip on the different service API's in order to use
+ them and get the data output processed.
+ The user has to have knowledge to implement screen scraping techniques
+ for the services that do not provide APIs, and to be familiar with the
+ data structure and semantics of the input and output of each service in
+ order to implement a data mediation solution.
  At this point the mashup tools can provide facilities to help the user
  solve some of the above mentioned problems.
 \end_layout
 
 \begin_layout Standard
-All the tools are supposed to target “non-expert” users, but a programming
- knowledge is usually required.
- Some tools require considerable programming effort since the whole process
- needs to be implemented manually using instructions expressed in programming
- language such as Java Script.
- Others necessitate medium programming effort given that only some functionaliti
-es need to be coded in an explicit way using a programming language; a graphical
- interface is offered to the user to express most of operations.
- Mashups nowadays are visually attractive toys that provide mostly a limited
+The mashup approach opens new and broad opportunities for data/services
+ consumers.
+ However, the development investment is still considerable.
+ All the tools are supposed to target “non-expert” users, but even a programming
+ knowledge (e.g., Java Script, XML/HTML, PHP) is usually required.
+ Some tools require a considerable effort since the whole datra aggregation
+ and application functionality needs to be implemented manually.
+ In fact, a mashup user needs to know, in addition to how to write code
+ using programming languages , how to use the different Web API's.
+ In order to solve this problem, there is an increasing effort put into
+ developing tools which are designed to support users with little programming
+ knowledge in mashup applications development.
+\begin_inset CommandInset citation
+LatexCommand citep
+key "DiLorenzo:2009:DIM:1558334.1558343"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mashups nowadays are visually attractive toys that provide mostly a limited
  functionality to a specific problem, there as integration and robust applicatio
 n models are missing.
  At this time, there is no tool that requires low or no programming effort
@@ -542,10 +608,10 @@ Structure of the work
 
 \begin_layout Standard
 This research was conducted in a two part study with the first part the
- theoretical approach, where the topic was placed and analysed in a more
- widespread context and secondly the implementation of a client-side Web
- service in JavaScript to create an abstraction layer between data sources
- and visualisations.
+ theoretical approach, where data aggregation and webserice mashup were
+ analysed and secondly the implementation of a client-side Web service in
+ JavaScript to create an abstraction layer between data sources and visualisatio
+ns.
  The Web service implementation was made to show various aspects from the
  research and to test and evaluate the concepts of mashup applications,
  accompanied by this thesis text to guide the reader trough the whole research
@@ -577,29 +643,6 @@ Yahoo Pipes is a mashup web service which can be a data provider and will
  and can possible highlight information that was otherwise hard to find
  or nearly visible.
 \end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Section
-Issues
-\end_layout
-
-\begin_layout Standard
-The mashup approach opens new and broad opportunities for data/services
- consumers.
- However, the development investment is still considerable.
- In fact, a mashup user needs to know, in addition to how to write code
- using programming languages (e.g., Java Script, XML/HTML), how to use the
- different Web API's.
- In order to solve this problem, there is an increasing effort put into
- developing tools which are designed to support users with little programming
- knowledge in mashup applications development.
-\begin_inset CommandInset citation
-LatexCommand citep
-key "DiLorenzo:2009:DIM:1558334.1558343"
 
 \end_inset
 

@@ -235,47 +235,25 @@ Mashup is a new application development approach that allows users to aggregate
  original reason for producing the raw source data.
  The main characteristics of the mashup are combination, visualization,
  and aggregation.
- It is important to make existing data more useful, moreover for personal
- and professional use.
- To be able to permanently access the data of other services, mashups are
- generally client applications or hosted online.
- Since 2010, two major mashup vendors have added support for hosted deployment
- based on Cloud computing solutions; that are Internet-based computing,
- whereby shared resources, software, and information are provided to computers
- and other devices on demand, like the electricity grid.
- In the past years, more and more Web applications have published APIs that
- enable software developers to easily integrate data and functions instead
- of building them by themselves.
- Mashups can be considered to have an active role in the evolution of social
- software and Web 2.0.
- mashup composition tools are usually simple enough to be used by end-users.
- They generally do not require programming skills and rather support visual
- wiring of GUI widgets, services and components together.
- Therefore, these tools contribute to a new vision of the Web, where users
- are able to contribute.
  
-\begin_inset CommandInset citation
-LatexCommand citep
-key "Wikipedia:mashup"
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-In contrast, even if the Mashup approach opens new and broader opportunities
- for data/service consumers, the development process still requires the
- users to know not only how to write code using programming languages, but
- also how to use the different Web API's from different services.
- The tools for creating mashups are supposed to target “non-expert” users,
+It is important to make existing data more useful, in both cases for end-user
+ as for application developers.
+ In the past years, more and more Web applications have published APIs that
+ enable software developers to easily integrate data and functions instead
+ of building them by themselves.
+ But even if the Mashup approach opens new and broader opportunities for
+ data/service consumers, the development process still requires the users
+ to know not only how to write code using programming languages, but also
+ how to use the different Web API's from different services.
+ 
+\end_layout
+
+\begin_layout Standard
+The tools for creating mashups are supposed to target “non-expert” users,
  but a programming knowledge is usually required.
- Some tools require considerable programming effort since the whole process
- needs to be implemented manually using instructions expressed in programming
- language such as Java Script.
- Others necessitate medium programming effort given that only some functionaliti
-es need to be coded in an explicit way using a programming language; a graphical
- interface is offered to the user to express most of operations.
  At this time, there is no tool that requires low or no programming effort
  by the user to build a Mashup, which is necessary to claim that the tools
  are targeted for end-users.
@@ -288,7 +266,6 @@ key "DiLorenzo:2009:DIM:1558334.1558343"
  In order to solve this problem, there is increasing effort put into developing
  tools which are designed to support users with little programming knowledge
  in Mashup applications development.
- 
 \end_layout
 
 \begin_layout Subsection
@@ -327,7 +304,8 @@ key "ibm:thenewbreed"
 
 \end_inset
 
-
+Here in this section some of the more common mashup applications are highlighted
+ with a brief description.
 \end_layout
 
 \begin_layout Subsubsection*
@@ -351,14 +329,31 @@ http://pipes.yahoo.com
 
 \end_inset
 
- is a web-based tool provided by Yahoo.
- that provides a graphical user interface for building data mashups that
- aggregate web feeds, web pages, and other services, creating Web-based
- apps from various sources, and publishing those apps.
- The application works by enabling users to "pipe" information from different
+ is a web-based tool provided by Yahoo that provides a graphical user interface
+ (see 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+
+fig:Yahoo-Pipes-Visual
+\end_layout
+
+\end_inset
+
+) for building data mashups that aggregates news feeds, web pages, and other
+ services, creating Web-based apps from various sources, and publishing
+ those apps.
+ The interface provided is a workspace for collecting and filtering data,
+ accompanied with a good documentation and user guidelines inside the workspace,
+ but still requires some programming skills to get the desirable results.
+\end_layout
+
+\begin_layout Standard
+The application works by enabling users to "pipe" information from different
  sources.
  A pipe is composed of one or more modules, each one performing a single
- task like retrieving feeds from a web source, filter, sort or merge feeds..
+ task like retrieving feeds from a web source, filter, sort or merge feeds.
  A typical example of a mashup is the 'New York Times through Flickr'
 \begin_inset Foot
 status collapsed
@@ -378,7 +373,7 @@ key "pipes:NYTtruFlickr"
 
 , a pipe which takes The New York Times RSS feed and adds a photo from Flickr
  based on the keywords of each item.
- Also the 'Apartment Near Something'
+ An other example is the 'Apartment Near Something'
 \begin_inset Foot
 status collapsed
 
@@ -388,16 +383,15 @@ http://pipes.yahoo.com/pipes/pipe.info?_id=1mrlkB232xGjJDdwXqIxGw
 
 \end_inset
 
- made Yahoo Pipes more popular.
+ , an application which made Yahoo Pipes and web mashups in general more
+ popular.
  
 \end_layout
 
 \begin_layout Standard
-An API documentation with examples are provided.
- There is also a community with a forum to post questions and pipes created
- by other can be browsed and forked onto your own creations.
- That way work done by others can easily be duplicated for further use.
- Pipes can be cloned and adapted to differents needs for each user.
+There is also a community with a forum to post questions and pipes created
+ by other can be browsed and forked onto your own creations so the work
+ done by others can easily be duplicated and adapted for further use.
  The possibilities are endless, which enables a lot of creativity in collecting
  and creating content.
  It is a fairly easy application for aggreating data, with a visual User
@@ -406,7 +400,15 @@ An API documentation with examples are provided.
  interface.
  This interface with a human-readable output makes it more accesible for
  the less skilled programmers.
- The users can build mashup applications by aggregating and manipulating
+ Altough it is stated here as 'easy' functionality, this needs to be taken
+ in consideration.
+ The service is not too complex for users who have any programming background,
+ altough the less experienced end-user will certainly have more difficulties
+ in learning and using the service.
+\end_layout
+
+\begin_layout Standard
+The users can build mashup applications by aggregating and manipulating
  data from web feeds (RSS, ATOM), web pages, and other services.
  (e.g.
  CSV) The content can be viewed on the pipe's website as a list of items
@@ -423,13 +425,67 @@ JavaScrip Object Notation, further explained in the next chapter.
 \end_inset
 
  or RSS output.
- The webservice implemented in this work, provides additional functionality
- by going on step further: making the data more accessable for visualisation.
+\end_layout
+
+\begin_layout Standard
+The webservice 'Pipez', which is implemented in this work and made use of
+ the Yahoo Pipes services, will be explained more in detail in 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+
+chap:The-Pipez-Web
+\end_layout
+
+\end_inset
+
+.
+ It provides additional functionality by going on step further: making the
+ aggreageted data more accessable for visualisation.
  In JavaScript, there are written a lot of libraries to visualise data in
  all kinds of ways.
- But there is one mayor drawback and that is the access to the data.
- The libraries that make use of JavaScript, have limited or library-specific
- functionality in terms of data access.
+ One mayor drawback is the access to the data in an automated way, such
+ that manual data entry is reduced to a minimum where the available JavaScript
+ libraries in most cases have limited or library-specific functionality
+ in terms of data access.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename gfx/pipes_visual_interface.jpg
+	lyxscale 50
+	width 135text%
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Yahoo-Pipes-Visual"
+
+\end_inset
+
+Yahoo Pipes Visual Interface
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection*
@@ -579,8 +635,14 @@ WSO2
 \end_layout
 
 \begin_layout Standard
-The WSO2 Mashup Server is an open source mashup platform that hosts JavaScript
- based mashups.
+The WSO2 Mashup Server
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Wikipedia:wso2"
+
+\end_inset
+
+ is an open source mashup platform that hosts JavaScript based mashups.
  WSO2 is stated as the ideal platform for defining composite services for
  user interfaces and mobile applications, a simple way to deploy services
  developed in JavaScript.
@@ -620,7 +682,7 @@ Data mediation involves converting, transforming, and combining the data
  elements from one or multiple services to meet the needs of the operations
  of another.
  For instance, mediating between data models of tags represented in both
- the Flickr and the Google Map API'.
+ the Flickr and the Google Map API.
  
 \end_layout
 
@@ -646,6 +708,10 @@ key "LanguageforWebAPIs"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Different types of mashups:
 \end_layout
 
@@ -675,11 +741,17 @@ ve action among businesses and developers.
  used (typesofmashups:Peenikal).
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Architecturally, there are two styles of mashups: web-based and server-based.
- Web-based mashups typically use the user’s web browser to combine and reformat
- the data, server-based mashups analyze and reformat the data on a remote
- server and transmit the data to the user’s browser in its final form.
+Architecturally, there are two styles of mashups: client-based and server-based.
+ Client-based (or Web-based) mashups are typically loaded in the user’s
+ web browser to combine and reformat the data whereas server-based mashups
+ analyze and reformat the data on a remote server and transmit the data
+ to the user’s browser in its final form.
 \end_layout
 
 \begin_layout Subsubsection
@@ -691,7 +763,7 @@ A mashup application is architecturally composed of three different components
  that are meant to operate seperatly on a logical and physical level (they
  are likely separated by both network and organizational boundaries).
  The components are: the Application Programmable Interface (API) or content
- providers, the mashup site with the User Interface, and the client's Web
+ providers, the mashup site with the user interface, and the client's Web
  browser
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -724,18 +796,29 @@ sec:Technologies
 .
  However, many interesting potential data-sources do not (yet) conveniently
  expose their API's.
- Mashups that extract content from sites like Wikipedia, TV Guide, and virtually
- all government and public domain Web sites do so by a technique known as
- screen scraping.
- In this context, screen scraping denotes the process by which a tool attempts
- to extract information from the content provider by attempting to parse
- the provider's Web pages, which were originally intended for human consumption.
+ Mashups that extract content from sites like Wikipedia and virtually all
+ government and public domain Web sites do so by a technique known as screen
+ scraping.
+ In this context, screen scraping (see 
+\begin_inset Flex CT - auto cross-reference
+status collapsed
+
+\begin_layout Plain Layout
+
+sub:Screen-scraping
+\end_layout
+
+\end_inset
+
+) denotes the process by which a tool attempts to extract information from
+ the content provider by attempting to parse the provider's Web pages, which
+ were originally intended for human reading.
  
 \end_layout
 
 \begin_layout Itemize
-The mashup site.
- This is where the mashup is hosted.
+The mashup site is where the mashup and the application logic is hosted,
+ mostly on a remote server.
  Interestingly enough, just because this is where the mashup logic resides,
  it is not necessarily where it is executed.
  On one hand, mashups can be implemented similarly to traditional Web applicatio
@@ -751,8 +834,12 @@ ns using server-side dynamic content generation technologies like Java servlets,
  meaning that they are very oriented towards the interactive user-experience.
  (Rich internet applications are one hallmark of what's now being termed
  "Web 2.0", the next generation of services available on the World Wide Web.)
- The benefits of client-side mashing include less overhead on behalf of
- the mashup server (data can be retrieved directly from the content provider)
+ 
+\begin_inset Newline newline
+\end_inset
+
+The benefits of client-side mashing include less overhead on behalf of the
+ mashup server (data can be retrieved directly from the content provider)
  and a more seamless user-experience (pages can request updates for portions
  of their content without having to refresh the entire page).
  The Google Maps API is intended for access through browser-side JavaScript,
@@ -831,15 +918,19 @@ There is some dispute over whether the term Ajax is an acronym or not (some
  It comprises several technologies focused around the asynchronous loading
  and presentation of content: XHTML and CSS for style presentation, the
  Document Object Model (DOM) API exposed by the browser for dynamic display
- and interaction With Ajax, asynchronous data exchange, typically of XML
- data and browser-side scripting, where mostly JavaScript is used.
+ and interaction with Ajax, asynchronous data exchange, typically of XML
+ data and browser-side scripting.
  Web applications and can send data to, and retrieve data from, a server
  without interfering with the display and behavior of the existing page.
  When used together, the goal of these technologies is to create a, interactive
  and smooth Web experience for the user when interacting with the website
  elements, by exchanging small amounts of data with the content servers
  rather than reload an entire webpage.
- You can construct Ajax engines for mashups from various Ajax toolkits and
+ 
+\end_layout
+
+\begin_layout Standard
+Ajax engines for mashups can be constructed from various Ajax toolkits and
  libraries, usually implemented in JavaScript.
  The Google Maps API includes a proprietary Ajax engine, and the effect
  it has on the user experience is powerful: it behaves like a truly local
@@ -854,22 +945,16 @@ Web protocols: SOAP and REST
 
 \begin_layout Standard
 Both SOAP (Services-Oriented Access Protocol)
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://www.w3.org/TR/soap12-part1/#intro
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "specs:SOAP"
 
 \end_inset
 
  and REST (Representational State Transfer)
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-http://en.wikipedia.org/wiki/Representational_State_Transfer
-\end_layout
+\begin_inset CommandInset citation
+LatexCommand citet
+key "Wikipedia:REST"
 
 \end_inset
 
@@ -891,10 +976,14 @@ key "ibm:thenewbreed"
 \end_inset
 
  Because its focus has shifted from object-based systems towards the interoperab
-ility of message exchang, the protocol name changes.
+ility of message exchange, the protocol name changes.
  Originally the term was an acronym for Simple Object Access Protocol, but
  it has been renamed to Services-Oriented Access Protocol (or just SOAP).
- There are two main components of the SOAP specification: The first is the
+ 
+\end_layout
+
+\begin_layout Standard
+There are two main components of the SOAP specification: The first is the
  use of an platform independent XML message format for encoding, and the
  second is the message structure, which consists of a header and a body.
  The header is used to exchange contextual information that is not specific
@@ -949,17 +1038,20 @@ As mentioned earlier, lack of API's from content providers often force mashup
  A handful of mashups use screen scraping technology for gathering data,
  especially when pulling data from the public sectors or sources that lack
  the support of an API.
- For example, in the implemented webservice this tool is used to retrieve
+ 
+\end_layout
+
+\begin_layout Standard
+For example, in the implemented webservice this tool is used to retrieve
  information on the input parameters, as the Yahoo Pipes Web Service did
  not include any API for acquiring that data.
  Screen scraping is often considered an inelegant solution, and for good
- reasons.
- It has two primary inherent drawbacks.
+ reasons as it has two primary inherent drawbacks.
  The first is that, unlike APIs with interfaces, scraping has no specific
  programmatic contract between content-provider and content-consumer.
  Scrapers must design their tools around a model of the source content and
  hope that the provider consistently adheres to this model of presentation.
- Web sites have a tendency to overhaul their look-and-feel periodically
+ Web sites have a tendency to reconsider their look-and-feel periodically
  to remain up to date and in style, which brings severe maintenance headaches
  on behalf of the scrapers because their tools are likely to fail.
  The second issue is the lack of a decent toolkit to reuse screen-scraping
@@ -988,12 +1080,23 @@ The inelegant aspects of screen scraping are directly traceable to the fact
  It has the goal of creating Web infrastructure that merges data with metadata
  to give it meaning and so making it suitable for automation, integration
  and re-use.
- The W3C family of specifications collectively known as the Resource Description
- Framework (RDF) serves this purpose of providing methodologies to establish
- syntactic structures that describe data.
+ 
+\end_layout
+
+\begin_layout Standard
+The W3C family of specifications collectively known as the Resource Description
+ Framework (RDF) 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "specs:rdf"
+
+\end_inset
+
+ serves this purpose of providing methodologies to establish syntactic structure
+s that describe data.
  An RDF-Schema adds to RDF's ability to encode concepts in a machine-readable
  way, in extend because XML in itself can describe the same piece of data
- in too many ways so it's meaning is to ambiguous.
+ in too many ways so it's meaning is too ambiguous.
  Once data objects can be described in a data model, RDF provides for the
  construction of relationships between data objects through subject-predicate-ob
 ject triples; e.g.
@@ -1015,8 +1118,8 @@ The combination of data model and graph of relationships allows for the
 
 \end_inset
 
- Inference engines might then "mash" these separate model instances and
- give it a meaning.
+ Different web service engines might then "mash" these separate model instances
+ and give it a meaning.
  RDF data is quickly finding adoption in a variety of domains such RSS or
  more social networking applications like FOAF (Friend of a friend).
 \end_layout
@@ -1042,6 +1145,12 @@ RSS and ATOM
 
 \begin_layout Standard
 RSS (originally RDF Site Summary, often dubbed Really Simple Syndication)
+\begin_inset CommandInset citation
+LatexCommand citep
+key "libby:rss_spec"
+
+\end_inset
+
  is a family of XML-based formats.
  In this context, syndication implies that a Web site that wants to distribute
  content creates an RSS document and registers the document with an RSS
@@ -1050,13 +1159,21 @@ RSS (originally RDF Site Summary, often dubbed Really Simple Syndication)
  and react to it in an appropriate manner.
  RSS can be used in different ways for content distribution, its most widespread
  usage is in distributing news headlines on the Web.
- RSS has been adopted to syndicate a wide variety of content, ranging from
- news articles and headlines, changelogs for CVS checkins or Wiki pages,
- project updates, and even audiovisual data such as radio programs.
- Version 1.0 is RDF-based, but the most recent, version 2.0, is not.
- Atom is a newer, but similar, syndication protocol.
- It is a proposed standard at the Internet Engineering Task Force (IETF).
- The name Atom applies to a pair of related standards.
+ RSS has been adopted to unite a wide variety of content, ranging from news
+ articles and headlines, changelogs for CVS checkins or Wiki pages, project
+ updates, and even audiovisual data such as radio programs.
+ 
+\end_layout
+
+\begin_layout Standard
+Atom
+\begin_inset CommandInset citation
+LatexCommand citet
+key "specs:atom"
+
+\end_inset
+
+ is a newer, but similar protocol and applies to a pair of related standards.
  The Atom Syndication Format is an XML language used for web feeds, while
  the Atom Publishing Protocol (AtomPub or APP) is a simple HTTP-based protocol
  for creating and updating web resources.
@@ -1081,13 +1198,9 @@ There are a number of challenges to address when integrating data from different
  identifiers and schema mismatch, abstraction level mismatch, data accuracy.
 \end_layout
 
-\begin_layout Subsection*
-Text/Data Mismatch 
-\end_layout
-
 \begin_layout Standard
-Heterogeneity can occurs not only in the schema of the data, but also in
- the actual data values themselves.
+Text/Data Mismatch: Heterogeneity can occurs not only in the schema of the
+ data, but also in the actual data values themselves.
  Human language is often ambiguous - the same company might be referred
  to in several variations (e.g.
  IBM, International Business Machines, and Big Blue).
@@ -1104,20 +1217,17 @@ Object Identity and Separate Schema Structured data is available in a lot
  differ in how they state what essentially the same fact is.
  The differences exist both on the level of individual objects and the schema
  level and in addition, each source typically uses its own schema.
- Thus, Methods have to be in place for reconciling different representations
+ Thus methods have to be in place for reconciling different representations
  of objects and schema.
  
 \end_layout
 
-\begin_layout Subsection*
-Abstraction Levels 
-\end_layout
-
 \begin_layout Standard
-Since data can being published at different levels of abstraction (e.g.
+Abstraction levels: Since data can being published at different levels of
+ abstraction (e.g.
  person, company, country, or sector), data aggregated for the individual
- viewpoint may not match data e.g.
- from statistical offices.
+ viewpoint may not match data from e.g.
+ statistical offices.
  There are differences in geographic aggregation (e.g.
  region data from one source and country-level data from another).
  A related issue is the use of local currencies (USD vs.
@@ -1127,7 +1237,7 @@ Since data can being published at different levels of abstraction (e.g.
 
 \begin_layout Standard
 Another problem is the fact that much more of the data we need to manage
- is semi-structured, and is often the result of trying to extract structure
+ is semi-structured and is often the result of trying to extract structure
  from unstructured data.
  Hence, we need to manage data where the values, attributes names and semantics
  are often uncertain or ambiguous.
@@ -1190,15 +1300,7 @@ Format and access
 \end_layout
 
 \begin_layout Standard
-A Mashup application integrates data described in different formats, coming
- from different sources.
- For example, a web feed format is used to publish updated content such
- as blog entries, frequently updated news and so on; tabular format is suitable
- for describing table-based data models such as spreadsheets, structered
- text and CSV files.
- HTML and XML, markup-based format  is commonly used to publish content
- rich multimedia data such as video, audio and images.
- These types of data can be available to the user from different data sources,
+Types of data can be available to the user from different data sources,
  where the most common sources can be a traditional database systems, local
  files that are available in the user's file system, Web pages, Web services
  and Web applications.
@@ -1215,19 +1317,21 @@ n between humans and computers.
  API's can be also seen as a useful mediation for data and applications.
  By allowing data retrieval and data exchange between applications, API's
  increase the integration between the web services.
- On the Web, providers like Google, Yahoo, eBay and Flickr offer web APIs
+ On the Web, providers like Google, Yahoo, eBay and Flickr offer web API's
  for retrieving content from their web sites.
  However, content for some common data sources is protected and not always
- exposed trought the API's.
- Other techniques are needed to extract information; a tool for this purpose
- is known as screen scraping.
- API's help the developers access and consume data and resources without
+ exposed trought the API's, here the screen scraping technique can be used,
+ as stated before.
+\end_layout
+
+\begin_layout Standard
+API's help the developers access and consume data and resources without
  going in to much detail on their internal structure.
- Here we consider the role of APIs from the data integration point of view
+ Here we consider the role of APIs from the data integration point of view,
  in the sense that they offer specific types and formats of data.
  It should be noted that an API can offer several formats of data, e.g., CSV,
  XML, JSON etc.
- and depends on the functionality of the API.
+ and it depends on the functionality of the API.
 \end_layout
 
 \begin_layout Subsection
@@ -1235,10 +1339,8 @@ Internal data model
 \end_layout
 
 \begin_layout Standard
-As stated before, the objective of a Mashup application is to combine different
- resources, data in our case, to produce a new application.
- These resources come generally from different sources, are in different
- formats with different semantics.
+As stated before, the objective of a mashup application is to combine different
+ resources to produce a new application.
  To support this, each mashup tool uses an internal data model.
  An internal data model is a single global schema that represents a general
  view on the data.
@@ -1247,21 +1349,21 @@ As stated before, the objective of a Mashup application is to combine different
  In a graph-based model, the graph refers to the model based on a XML specificat
 ion.
  This can include pure XML, RDF, RSS, JSON etc.
- Most of the Mashup applications use a Graph-based model as an internal
+ Most of the mashup applications use a graph-based model as an internal
  data model.
  The use is motivated by the fact that most of today’s data available on
- the web are in this format and also, most of the Mashup tools are available
+ the web are in this format and also, most of the mashup tools are available
  via the Web.
- That is, all the data that are used by the Mashup tools, in this category,
+ That is, all the data that are used by the Mmhup tools, in this category,
  transform the input data into an XML representation before processing it.
- In an Objectbased model, the internal data is in the form of objects (in
- the classical sense of the object-oriented programming).
+ In an Object-based model, the internal data is in the form of objects in
+ the classical sense of the object-oriented programming.
  An object is an instance of a class which defines the features of an element,
  including the element’s characteristics (its attributes, fields or properties)
  and the element’s behaviors (methods).
  It should be noted that in this case, there is no explicit transformation,
  performed by the tool, like in the case of the graph-based model, but the
- programmer needs to define the structure of the object according to her
+ programmer needs to define the structure of the object according to the
  data
 \begin_inset CommandInset citation
 LatexCommand citep
@@ -1275,8 +1377,14 @@ key "DiLorenzo:2009:DIM:1558334.1558343"
 \begin_layout Standard
 Another data format that is gaining more popularity is JSON (which can be
  thought of a subset of JavaScript).
- JSON will be explained more in detail in sub:JSONand The format is a lot
- leaner than XML.
+ JSON will be explained more in detail in I
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:JSON-1"
+
+\end_inset
+
+and the format is a lot leaner than XML.
  This has several side-effects, e.g.
  JSON is generally smaller than a XML document and there for faster to work
  with.
@@ -1297,13 +1405,17 @@ Data mapping
 
 \begin_layout Standard
 To instantiate an internal data model from an external data source, the
- Mashup tools must provide strategies to specify the correspondences between
+ mashup tools must provide strategies to specify the correspondences between
  their internal data model and the desired data sources.
  This is achieved by means of data mapping.
  Data mapping is the process needed to identify the similarities and differences
  between the elements of the source data model and the internal data model.
- Generally speaking, a data mapping can be: (i) manual, where all the correspond
-ences between the internal data model and the source data model are manually
+ 
+\end_layout
+
+\begin_layout Standard
+Generally speaking, a data mapping can be: (i) manual, where all the corresponde
+nces between the internal data model and the source data model are manually
  specified, one by one, by the application designer.
  In this case, the tool should then provide some facilities for the user
  to design the transformation.
@@ -1311,12 +1423,13 @@ ences between the internal data model and the source data model are manually
  names and types) to propose some possible mapping configurations.
  Automatic, where all the correspondences between the two data models are
  automatically generated, without user intervention.
- This is a challenging issue in the data integration area.
- Since the Mashup area is in its “early stage
-\begin_inset Quotes erd
-\end_inset
+ 
+\end_layout
 
-, this type of mapping is not supported by any Mashup tool.
+\begin_layout Standard
+This is a challenging issue in the data integration area.
+ Since the mashup area is in its early stage of evolution, this type of
+ mapping is not supported by any mashup tool.
  It should be noted that the mapping process may require an intermediary
  step, i.e., a wrapping step, in order to transform the source format to the
  internal format, e.g., from CSV to XML.
@@ -1345,9 +1458,9 @@ Data Flow Operators
 
 \begin_layout Standard
 Data flow operators allow performing operations either on the structure
- of the data (similar to the data definition language/ operators in the
- relational model), or on the data (content) itself (similar to the data
- manipulation language/ operator in the relational model).
+ of the data (similar to the data definition language/operators in the relationa
+l model), or on the data (content) itself (similar to the data manipulation
+ language/ operator in the relational model).
  More concretely, data flow operators support: (i) restructuring of the
  schema of the incoming data, e.g., adding new elements, adding new attributes
  to elements; (ii) elaborating on a data set such as extracting a particular
@@ -1408,18 +1521,21 @@ Mashup Output
 \end_layout
 
 \begin_layout Standard
-A user might be interested in exporting the data flow result in another
- format in order to reuse it or to process it with another particular applicatio
-n for further processing instead of visualizing it in the Mashup itself.
- That is, we can distinguish two main output categories: Human oriented
+A user might be interested in exporting the mashup result in another format
+ in order to reuse it with another particular application for further processing
+ instead of visualizing the data in the Mashup itself.
+ That is, we can distinguish two main output categories: human oriented
  output and application oriented output.
- In the Human oriented output, the output is targeted for human interpretation
+ 
+\end_layout
+
+\begin_layout Standard
+In the Human oriented output, the output is targeted for human interpretation
  and to be readable, e.g.
  a visualization on a map, on an HTML page, etc.
- That is, for this category the output can be considered as the final stage
- of the whole process.
- For the processing oriented output, the output is mainly targeted for machine/m
-ashup processing.
+ For this category the output can be considered as the final stage of the
+ whole process, where for the processing oriented output, the output is
+ mainly targeted for machine/mashup processing.
  This is interesting in the case where the considered data needs to be further
  processed.
  It should be noted that this category can, at some stage, include the first
@@ -1455,9 +1571,13 @@ Mashups are based on the emerging technologies of the Web 2.0 in which people
  This task is made more difficult especially since the targeted public with
  the Web 2.0 is, or supposed to be, a general public and not expert in computing
  or security.
- This dimension defines the modality that the tool offers to enable resources
- sharing by guaranteeing privacy and security in the created Mashup applications.
- This is a challenging area in the current Mashup and a lot of work remains
+ 
+\end_layout
+
+\begin_layout Standard
+This dimension defines the modality that the tool offers to enable resources
+ sharing by guaranteeing privacy and security in the created mashup applications.
+ It is a challenging area in the current mashup and a lot of work remains
  to be done.
  This dimension includes the following three indicators: 1) What is shared
  in the Mashup?, 2) How is this shared? and 3) Who are the users with whom
@@ -1470,7 +1590,11 @@ Mashups are based on the emerging technologies of the Web 2.0 in which people
  The 'who' as for it can be public a certain group, or a particular user.
  Notice that for each member, different sharing policies (what and how)
  can be specified and applied.
- For example, GME and Yahoo Pipes allow implementing sharing policies.
+ 
+\end_layout
+
+\begin_layout Standard
+For example, GME and Yahoo Pipes allow implementing sharing policies.
  In Yahoo Pipes, if a private element is used (Private string or Private
  text input) the code of the shared Mashup is available as well as the Mashup
  output.
@@ -1491,25 +1615,28 @@ Data Security
 \begin_layout Standard
 Because a client-side mashup brings in code or content from another site,
  you need to assess the risks of these outside additions to the own website.
- In some cases, the risk is small.
  For example, if an image or an RSS feed is fetched, the image or content
  might not be available, which is a limited risk.
  The browser might display a symbol indicating that an image is missing,
- or the RSS feed might not appear on the page.
- But the application would not likely be impacted in any other way.
- In other words, the missing content would not damage the mashup service
- or the client browser.
- But when a JavaScript file from another site was included, the risk increases.
+ or the RSS feed might not appear on the page but the application would
+ not likely be impacted in any other way and the missing content would not
+ damage the mashup service or the client browser.
+ 
+\end_layout
+
+\begin_layout Standard
+As stated in the previous case, the security risk is small but increases
+ when a JavaScript file from another site is included, which is a common
+ practice in mashup applications.
  In fact, bringing in a JavaScript file gets around a basic security protection
  for Ajax interactions called the browser security sandbox, also known as
  the XMLHttpRequest sandbox.
- Many mashups make use of the Ajax functionality.
  An XMLHttpRequest is a JavaScript object that is used to exchange data
  asynchronously between a web client and web server in an Ajax transaction.
  To protect against possible maliciousness attacks, most browsers allow
  JavaScript code that contains an XMLHttpRequest to communicate only with
  the site from which the browser loaded the code.
- The specification is known as the Same Orgin Policy..
+ The specification is known as the Same Orgin Policy.
 \end_layout
 
 \begin_layout Subsubsection*
